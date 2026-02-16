@@ -15,7 +15,7 @@ export function Panel({ children, className, variant = "default", hover = false 
         variant === "default" && "bg-bg-panel/90 border border-border-subtle",
         variant === "elevated" && "bg-bg-elevated/90 border border-border-default",
         variant === "bordered" && "bg-bg-panel/90 border border-border-gold",
-        hover && "panel-glow transition-all duration-300 cursor-pointer",
+        hover && "forge-panel-glow transition-all duration-300 cursor-pointer",
         className
       )}
     >

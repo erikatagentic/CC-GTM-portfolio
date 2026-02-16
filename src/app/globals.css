@@ -1,50 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Alegreya+Sans:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  /* BG3 Backgrounds */
-  --color-bg-darkest: #0d0b09;
-  --color-bg-dark: #1a1410;
-  --color-bg-panel: #1e1a15;
-  --color-bg-elevated: #2a2218;
-  --color-bg-surface: #3d2817;
+  /* Mechanicus Backgrounds - Cold dark metallics */
+  --color-bg-darkest: #0a0b0d;
+  --color-bg-dark: #12141a;
+  --color-bg-panel: #1a1c24;
+  --color-bg-elevated: #20242e;
+  --color-bg-surface: #2a2f3d;
 
-  /* BG3 Gold family */
-  --color-gold-muted: #7d604a;
-  --color-gold-base: #c9a961;
-  --color-gold-bright: #e0a40b;
-  --color-gold-light: #f0d794;
-  --color-gold-cream: #E6DBC2;
+  /* Mars Red - Primary accent */
+  --color-mars-dark: #5c1a1a;
+  --color-mars-base: #a31919;
+  --color-mars-bright: #d32f2f;
+  --color-mars-light: #e57373;
 
-  /* BG3 Text */
-  --color-text-primary: #E6DBC2;
-  --color-text-secondary: #cbac95;
-  --color-text-muted: #af8768;
-  --color-text-disabled: #7C6354;
-  --color-text-dark: #584537;
+  /* Metallic Gold - Secondary accent (cooler, industrial) */
+  --color-gold-muted: #6b6347;
+  --color-gold-base: #b8a869;
+  --color-gold-bright: #d4af37;
+  --color-gold-light: #e8d69a;
+  --color-gold-cream: #d8d4c8;
 
-  /* BG3 Accents */
-  --color-purple-deep: #744979;
-  --color-purple-light: #d0a1d3;
-  --color-red-burnt: #b84028;
+  /* Tech Teal - Data readouts, HUD elements */
+  --color-tech-dark: #1a4d4d;
+  --color-tech-base: #26a69a;
+  --color-tech-bright: #4dd0e1;
 
-  /* Rarity Colors */
-  --color-rarity-common: #c8c8c8;
-  --color-rarity-uncommon: #1a9f3c;
-  --color-rarity-rare: #4a86c8;
-  --color-rarity-very-rare: #9b59b6;
-  --color-rarity-legendary: #e6a800;
+  /* Text - Cool greys */
+  --color-text-primary: #d8d4c8;
+  --color-text-secondary: #b4aea0;
+  --color-text-muted: #8a8578;
+  --color-text-disabled: #605c52;
+  --color-text-dark: #4a4640;
+
+  /* Rarity Colors - 40k classification */
+  --color-rarity-common: #9e9e9e;
+  --color-rarity-uncommon: #26a69a;
+  --color-rarity-rare: #5c6bc0;
+  --color-rarity-very-rare: #ab47bc;
+  --color-rarity-legendary: #d4af37;
 
   /* Borders */
-  --color-border-subtle: #584537;
-  --color-border-default: #7d604a;
-  --color-border-gold: #c9a961;
-  --color-border-bright: #e0a40b;
+  --color-border-subtle: #2a2f3d;
+  --color-border-default: #3d4252;
+  --color-border-gold: #b8a869;
+  --color-border-bright: #d4af37;
+  --color-border-mars: #a31919;
 
   /* Fonts */
-  --font-display: "Cinzel", serif;
-  --font-heading: "Alegreya", serif;
-  --font-body: "Alegreya Sans", sans-serif;
+  --font-display: "Rajdhani", sans-serif;
+  --font-heading: "Rajdhani", sans-serif;
+  --font-body: "Roboto", sans-serif;
   --font-ui: "Inter", sans-serif;
 }
 
@@ -54,16 +61,16 @@ html {
 }
 
 body {
-  background-color: #0d0b09;
-  color: #E6DBC2;
-  font-family: "Alegreya Sans", sans-serif;
+  background-color: #0a0b0d;
+  color: #d8d4c8;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
 
 /* Selection styling */
 ::selection {
-  background-color: rgba(224, 164, 11, 0.3);
-  color: #f0d794;
+  background-color: rgba(211, 47, 47, 0.3);
+  color: #e57373;
 }
 
 /* Scrollbar styling */
@@ -72,54 +79,60 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1410;
+  background: #12141a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #584537;
+  background: #3d4252;
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7d604a;
+  background: #6b6347;
 }
 
-/* Gold glow utility */
-.gold-glow {
-  text-shadow: 0 0 8px rgba(240, 215, 148, 0.3);
+/* Forge glow utility */
+.forge-glow {
+  text-shadow: 0 0 8px rgba(211, 47, 47, 0.4);
 }
 
-.gold-glow-strong {
-  text-shadow: 0 0 12px rgba(224, 164, 11, 0.5);
+.forge-glow-strong {
+  text-shadow: 0 0 12px rgba(211, 47, 47, 0.6), 0 0 24px rgba(211, 47, 47, 0.3);
 }
 
 /* Panel glow on hover */
-.panel-glow:hover {
-  box-shadow: 0 0 20px rgba(224, 164, 11, 0.15);
+.forge-panel-glow:hover {
+  box-shadow: 0 0 20px rgba(211, 47, 47, 0.2), 0 0 40px rgba(38, 166, 154, 0.1);
 }
 
-/* Parchment texture overlay */
-.parchment-overlay {
+/* Metal overlay - subtle scanline effect */
+.metal-overlay {
   position: relative;
 }
 
-.parchment-overlay::before {
+.metal-overlay::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(13, 11, 9, 0.3) 100%);
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(38, 166, 154, 0.02) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(38, 166, 154, 0.02) 3px
+  );
   pointer-events: none;
 }
 
-/* Divider */
-.gold-divider {
+/* Forge divider */
+.forge-divider {
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    #c9a961 20%,
-    #e0a40b 50%,
-    #c9a961 80%,
+    #a31919 20%,
+    #d4af37 50%,
+    #a31919 80%,
     transparent 100%
   );
 }
@@ -135,15 +148,31 @@ body {
   100% { background-position: 200% center; }
 }
 
-@keyframes pulseGold {
-  0%, 100% { box-shadow: 0 0 8px rgba(224, 164, 11, 0.2); }
-  50% { box-shadow: 0 0 16px rgba(224, 164, 11, 0.4); }
+@keyframes pulseForge {
+  0%, 100% { box-shadow: 0 0 8px rgba(211, 47, 47, 0.3), 0 0 16px rgba(38, 166, 154, 0.1); }
+  50% { box-shadow: 0 0 16px rgba(211, 47, 47, 0.5), 0 0 24px rgba(38, 166, 154, 0.2); }
 }
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-.animate-pulse-gold {
-  animation: pulseGold 3s ease-in-out infinite;
+.animate-pulse-forge {
+  animation: pulseForge 3s ease-in-out infinite;
+}
+
+/* Tech grid overlay for data-heavy sections */
+.tech-grid {
+  position: relative;
+}
+
+.tech-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(38, 166, 154, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38, 166, 154, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
 }

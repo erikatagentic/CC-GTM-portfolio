@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Panel } from "@/components/ui/Panel";
 import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "The Grimoire",
+  title: "The Codex",
 };
 
 const CHAPTERS = [
@@ -14,7 +13,7 @@ const CHAPTERS = [
     title: "Cold Email Fundamentals",
     description: "Subject lines, body copy, testing methodology, and what actually moves reply rates.",
     category: "Outbound Foundations",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "deliverability",
@@ -22,7 +21,7 @@ const CHAPTERS = [
     title: "Deliverability",
     description: "Domain infrastructure, warming protocols, catch-all handling, and diagnostics.",
     category: "Outbound Foundations",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "clay-data-enrichment",
@@ -30,7 +29,7 @@ const CHAPTERS = [
     title: "Clay & Data Enrichment",
     description: "Waterfall enrichment, provider routing, credit optimization, and signal-before-spend.",
     category: "Data & Enrichment",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "campaign-architecture",
@@ -38,7 +37,7 @@ const CHAPTERS = [
     title: "Campaign Architecture",
     description: "System design, multi-channel orchestration, sequencing, and metrics that matter.",
     category: "Systems",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "linkedin-outbound",
@@ -46,7 +45,7 @@ const CHAPTERS = [
     title: "LinkedIn Outbound",
     description: "Connection targeting, DM frameworks, cadence, and content as distribution.",
     category: "Systems",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "automation-n8n",
@@ -54,7 +53,7 @@ const CHAPTERS = [
     title: "Automation with n8n",
     description: "Common GTM workflows, Slack approvals, CRM sync, and intent detection.",
     category: "Systems",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "gtm-engineering",
@@ -62,7 +61,7 @@ const CHAPTERS = [
     title: "GTM Engineering",
     description: "What it is, the SDR cost math, signal processing, and the era of the GTM Architect.",
     category: "Strategy",
-    status: "coming soon",
+    status: "classified",
   },
   {
     slug: "icp-targeting",
@@ -70,31 +69,31 @@ const CHAPTERS = [
     title: "ICP & Targeting",
     description: "ICP framework, signal stacking, account tiering, and why targeting beats copy.",
     category: "Strategy",
-    status: "coming soon",
+    status: "classified",
   },
 ];
 
-export default function GrimoirePage() {
+export default function CodexPage() {
   return (
     <div className="flex flex-col gap-10">
       <div>
-        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-gold-light gold-glow-strong tracking-wide uppercase">
-          The Grimoire
+        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+          The Codex
         </h1>
         <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
           8 chapters of GTM engineering knowledge. Frameworks, systems, and hard-won lessons from 200+ campaign audits.
         </p>
       </div>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
       <div className="flex flex-col gap-4">
         {CHAPTERS.map((chapter) => (
           <div key={chapter.slug}>
             <Panel variant="default" hover>
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-border-gold bg-bg-darkest">
-                  <span className="font-[family-name:var(--font-display)] text-lg font-bold text-gold-base">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-border-mars bg-bg-darkest">
+                  <span className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base">
                     {chapter.number}
                   </span>
                 </div>
@@ -103,7 +102,7 @@ export default function GrimoirePage() {
                     <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-text-primary">
                       {chapter.title}
                     </h3>
-                    <Badge rarity="common">{chapter.status}</Badge>
+                    <Badge rarity="standard">{chapter.status}</Badge>
                   </div>
                   <p className="text-sm text-text-muted leading-relaxed">{chapter.description}</p>
                   <span className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-disabled mt-2 inline-block">

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type Rarity = "common" | "uncommon" | "rare" | "very-rare" | "legendary";
+type Rarity = "standard" | "field-tested" | "sanctified" | "relic" | "archaeotech";
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -9,14 +9,14 @@ interface BadgeProps {
 }
 
 const rarityStyles: Record<Rarity, string> = {
-  common: "border-rarity-common/50 text-rarity-common bg-rarity-common/10",
-  uncommon: "border-rarity-uncommon/50 text-rarity-uncommon bg-rarity-uncommon/10",
-  rare: "border-rarity-rare/50 text-rarity-rare bg-rarity-rare/10",
-  "very-rare": "border-rarity-very-rare/50 text-rarity-very-rare bg-rarity-very-rare/10",
-  legendary: "border-rarity-legendary/50 text-rarity-legendary bg-rarity-legendary/10",
+  standard: "border-rarity-common/50 text-rarity-common bg-rarity-common/10",
+  "field-tested": "border-rarity-uncommon/50 text-rarity-uncommon bg-rarity-uncommon/10",
+  sanctified: "border-rarity-rare/50 text-rarity-rare bg-rarity-rare/10",
+  relic: "border-rarity-very-rare/50 text-rarity-very-rare bg-rarity-very-rare/10",
+  archaeotech: "border-rarity-legendary/50 text-rarity-legendary bg-rarity-legendary/10",
 };
 
-export function Badge({ children, rarity = "common", className }: BadgeProps) {
+export function Badge({ children, rarity = "standard", className }: BadgeProps) {
   return (
     <span
       className={cn(

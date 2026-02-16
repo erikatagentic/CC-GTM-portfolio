@@ -5,44 +5,44 @@ import { Panel } from "@/components/ui/Panel";
 const SECTIONS = [
   {
     href: "/grimoire",
-    icon: "📜",
-    title: "The Grimoire",
+    icon: "📡",
+    title: "The Codex",
     description: "8 chapters of GTM engineering knowledge. Cold email, Clay, deliverability, and more.",
   },
   {
     href: "/chronicles",
-    icon: "📖",
-    title: "Chronicles",
-    description: "Long-form dispatches from the frontlines of outbound and pipeline building.",
+    icon: "📋",
+    title: "Dispatches",
+    description: "Long-form reports from the frontlines of outbound and pipeline building.",
   },
   {
     href: "/quest-log",
     icon: "⚔️",
-    title: "Quest Log",
+    title: "Mission Log",
     description: "Daily build log. What shipped, what broke, what I learned.",
   },
   {
     href: "/character-sheet",
-    icon: "🛡️",
-    title: "Character Sheet",
-    description: "Stats, credentials, and the full backstory.",
+    icon: "🎖️",
+    title: "Service Record",
+    description: "Stats, credentials, and the complete service history.",
   },
   {
     href: "/armory",
-    icon: "🗡️",
-    title: "The Armory",
+    icon: "🔧",
+    title: "Arsenal",
     description: "The tool stack. Every weapon in the GTM arsenal.",
   },
   {
     href: "/arc",
     icon: "🗺️",
-    title: "The Arc",
-    description: "From health science to GTM engineering. The full quest chain.",
+    title: "The Crusade",
+    description: "From health science to GTM engineering. The full campaign chain.",
   },
   {
     href: "/vitals",
-    icon: "💎",
-    title: "Vitals",
+    icon: "📊",
+    title: "Diagnostics",
     description: "Live stats. XP, progression, content metrics.",
   },
 ];
@@ -53,11 +53,11 @@ export default function Home() {
       {/* Hero */}
       <section className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-gold-light gold-glow-strong tracking-wide uppercase">
-            The Guildhall
+          <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+            Command Deck
           </h1>
           <p className="font-[family-name:var(--font-heading)] text-lg text-text-secondary max-w-2xl">
-            Every skill, every campaign, every lesson -- documented. The GTM engineering playbook,
+            Every skill, every campaign, every lesson -- documented. The GTM engineering codex,
             built in public.
           </p>
         </div>
@@ -66,12 +66,12 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
-      {/* Quest Board */}
+      {/* Operations Board */}
       <section className="flex flex-col gap-6">
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider">
-          Quest Board
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider">
+          Operations Board
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SECTIONS.map((section) => (
@@ -96,7 +96,7 @@ export default function Home() {
 
       {/* System Status */}
       <section className="flex flex-col gap-4">
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider">
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider">
           System Status
         </h2>
         <Panel variant="elevated">

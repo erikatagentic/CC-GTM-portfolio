@@ -5,15 +5,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "GTM Playbook | Erik Hernal",
-    template: "%s | GTM Playbook",
+    default: "GTM Codex | Erik Hernal",
+    template: "%s | GTM Codex",
   },
   description:
-    "The GTM engineering playbook. Cold email, Clay, automation, and pipeline systems. Built by Erik Hernal.",
+    "The GTM engineering codex. Cold email, Clay, automation, and pipeline systems. Built by Erik Hernal.",
   openGraph: {
-    title: "GTM Playbook | Erik Hernal",
+    title: "GTM Codex | Erik Hernal",
     description:
-      "The GTM engineering playbook. Cold email, Clay, automation, and pipeline systems.",
+      "The GTM engineering codex. Cold email, Clay, automation, and pipeline systems.",
     type: "website",
   },
 };

@@ -23,15 +23,15 @@ export function StatBlock({ stats, className }: StatBlockProps) {
       {stats.map((stat) => (
         <div
           key={stat.abbreviation}
-          className="group relative flex flex-col items-center border border-border-default bg-bg-elevated/80 p-3 text-center transition-all duration-300 hover:border-border-gold"
+          className="group relative flex flex-col items-center border border-border-default bg-bg-elevated/80 p-3 text-center transition-all duration-300 hover:border-border-mars"
         >
           <span className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-muted">
             {stat.abbreviation}
           </span>
-          <span className="mt-1 font-[family-name:var(--font-display)] text-2xl font-bold text-gold-light">
+          <span className="mt-1 font-[family-name:var(--font-display)] text-2xl font-bold text-mars-light">
             {stat.value}
           </span>
-          <span className="text-xs font-[family-name:var(--font-ui)] text-gold-base">
+          <span className="text-xs font-[family-name:var(--font-ui)] text-mars-base">
             {getModifier(stat.value)}
           </span>
           {/* Tooltip */}

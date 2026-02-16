@@ -6,7 +6,7 @@ import { XPBar } from "@/components/ui/XPBar";
 import { getCharacterStats, CURRENT_XP, CHARACTER_NAME } from "@/lib/rpg";
 
 export const metadata: Metadata = {
-  title: "Character Sheet",
+  title: "Service Record",
 };
 
 const STATS = [
@@ -29,33 +29,33 @@ const PROFICIENCIES = [
   "CRM Pipeline Design",
 ];
 
-const BACKSTORY = [
+const SERVICE_HISTORY = [
   {
-    title: "Origin",
+    title: "Recruitment",
     text: "Started in health science, pivoted to product management. Spent years at Honey (acquired by PayPal), GrowthPhysics, and Medely learning how products grow.",
   },
   {
-    title: "The Growth Arc",
+    title: "Campaign History",
     text: "Became Head of Growth at Cleverly for 3 years. Ran outbound at scale. Learned what works and what doesn't through 200+ campaign audits and millions of data points.",
   },
   {
-    title: "Current Quest",
+    title: "Current Deployment",
     text: "Founded Lumos, a GTM engineering agency. Building outbound systems that replace SDR headcount with automation. Clay, n8n, cold email, LinkedIn -- the full stack. Also serving as GTM Engineer at Hey Agentic.",
   },
 ];
 
-export default function CharacterSheetPage() {
+export default function ServiceRecordPage() {
   const stats = getCharacterStats(CURRENT_XP);
 
   return (
     <div className="flex flex-col gap-10">
       {/* Header */}
       <div>
-        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-gold-light gold-glow-strong tracking-wide uppercase">
-          Character Sheet
+        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+          Service Record
         </h1>
         <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary">
-          The full stat block. Credentials, skills, and backstory.
+          The complete service record. Credentials, skills, and deployment history.
         </p>
       </div>
 
@@ -63,7 +63,7 @@ export default function CharacterSheetPage() {
       <Panel variant="bordered">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold text-gold-light tracking-wide">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold text-mars-light tracking-wide">
               {CHARACTER_NAME}
             </h2>
             <p className="text-sm text-text-secondary font-[family-name:var(--font-heading)] mt-1">
@@ -71,8 +71,8 @@ export default function CharacterSheetPage() {
             </p>
           </div>
           <div className="flex gap-2">
-            <Badge rarity="legendary">Tier {stats.currentTier.level}</Badge>
-            <Badge rarity="rare">{stats.currentTier.title}</Badge>
+            <Badge rarity="archaeotech">Tier {stats.currentTier.level}</Badge>
+            <Badge rarity="sanctified">{stats.currentTier.title}</Badge>
           </div>
         </div>
         <div className="mt-4">
@@ -88,18 +88,18 @@ export default function CharacterSheetPage() {
 
       {/* Ability Scores */}
       <section>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider mb-4">
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Ability Scores
         </h2>
         <StatBlock stats={STATS} />
       </section>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
       {/* Proficiencies */}
       <section>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider mb-4">
-          Proficiencies
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
+          Specializations
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {PROFICIENCIES.map((prof) => (
@@ -107,7 +107,7 @@ export default function CharacterSheetPage() {
               key={prof}
               className="flex items-center gap-2 px-3 py-2 border border-border-subtle bg-bg-panel/60"
             >
-              <span className="text-gold-base text-sm">&#9670;</span>
+              <span className="text-mars-base text-sm">&#9670;</span>
               <span className="text-sm text-text-primary font-[family-name:var(--font-body)]">
                 {prof}
               </span>
@@ -116,17 +116,17 @@ export default function CharacterSheetPage() {
         </div>
       </section>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
-      {/* Backstory */}
+      {/* Service History */}
       <section>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider mb-4">
-          Backstory
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
+          Service History
         </h2>
         <div className="flex flex-col gap-4">
-          {BACKSTORY.map((section) => (
+          {SERVICE_HISTORY.map((section) => (
             <Panel key={section.title} variant="default">
-              <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-gold-light mb-2">
+              <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-mars-light mb-2">
                 {section.title}
               </h3>
               <p className="text-text-secondary leading-relaxed">{section.text}</p>
@@ -135,11 +135,11 @@ export default function CharacterSheetPage() {
         </div>
       </section>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
       {/* Connect */}
       <section>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider mb-4">
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Connect
         </h2>
         <div className="flex flex-wrap gap-3">
@@ -153,7 +153,7 @@ export default function CharacterSheetPage() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-border-default bg-bg-elevated/60 text-sm font-[family-name:var(--font-ui)] text-text-primary hover:border-border-gold hover:text-gold-base transition-all"
+              className="px-4 py-2 border border-border-default bg-bg-elevated/60 text-sm font-[family-name:var(--font-ui)] text-text-primary hover:border-border-mars hover:text-mars-base transition-all"
             >
               {link.label}
             </a>

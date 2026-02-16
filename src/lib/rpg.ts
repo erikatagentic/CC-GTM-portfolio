@@ -7,16 +7,16 @@ export interface Tier {
 }
 
 export const TIERS: Tier[] = [
-  { level: 1, title: "Apprentice", xpRequired: 0 },
-  { level: 2, title: "Journeyman", xpRequired: 1000 },
-  { level: 3, title: "Adept", xpRequired: 2500 },
-  { level: 4, title: "Expert", xpRequired: 5000 },
-  { level: 5, title: "Master", xpRequired: 10000 },
-  { level: 6, title: "Grand Master", xpRequired: 20000 },
-  { level: 7, title: "Sage", xpRequired: 35000 },
-  { level: 8, title: "Archmage", xpRequired: 55000 },
-  { level: 9, title: "Legendary", xpRequired: 80000 },
-  { level: 10, title: "Mythic", xpRequired: 100000 },
+  { level: 1, title: "Initiate", xpRequired: 0 },
+  { level: 2, title: "Acolyte", xpRequired: 1000 },
+  { level: 3, title: "Specialist", xpRequired: 2500 },
+  { level: 4, title: "Veteran", xpRequired: 5000 },
+  { level: 5, title: "Battle-Tested", xpRequired: 10000 },
+  { level: 6, title: "Forge Master", xpRequired: 20000 },
+  { level: 7, title: "Arch-Magos", xpRequired: 35000 },
+  { level: 8, title: "Fabricator", xpRequired: 55000 },
+  { level: 9, title: "Lord Commander", xpRequired: 80000 },
+  { level: 10, title: "Primarch", xpRequired: 100000 },
 ];
 
 export const XP_VALUES = {
@@ -83,8 +83,8 @@ export function getCharacterStats(xp: number): CharacterStats {
     currentTier,
     nextTier,
     progressToNext,
-    className: "GTM Architect",
-    subclass: "Pipeline Smith",
+    className: "Tech-Adept",
+    subclass: "Pipeline Artificer",
     grade: "A",
   };
 }

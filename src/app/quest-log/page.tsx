@@ -3,22 +3,22 @@ import { Panel } from "@/components/ui/Panel";
 import { GradeCard } from "@/components/ui/GradeCard";
 
 export const metadata: Metadata = {
-  title: "Quest Log",
+  title: "Mission Log",
 };
 
-export default function QuestLogPage() {
+export default function MissionLogPage() {
   return (
     <div className="flex flex-col gap-10">
       <div>
-        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-gold-light gold-glow-strong tracking-wide uppercase">
-          Quest Log
+        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+          Mission Log
         </h1>
         <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
           Daily build log. What shipped, what broke, what I learned. Every entry scored and graded.
         </p>
       </div>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
       {/* Preview entry */}
       <Panel variant="bordered">
@@ -31,7 +31,7 @@ export default function QuestLogPage() {
               </span>
             </div>
             <p className="text-sm text-text-secondary leading-relaxed">
-              Shipped the GTM Playbook site. Character sheet, armory, grimoire structure.
+              Shipped the GTM Codex site. Service record, arsenal, codex structure.
               The system is live. Everything from here is incremental.
             </p>
             <div className="flex gap-4 mt-3">

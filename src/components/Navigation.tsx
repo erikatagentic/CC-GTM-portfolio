@@ -6,14 +6,14 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { href: "/", label: "Guildhall", icon: "🏰" },
-  { href: "/grimoire", label: "Grimoire", icon: "📜" },
-  { href: "/chronicles", label: "Chronicles", icon: "📖" },
-  { href: "/quest-log", label: "Quest Log", icon: "⚔️" },
-  { href: "/character-sheet", label: "Character", icon: "🛡️" },
-  { href: "/armory", label: "Armory", icon: "🗡️" },
-  { href: "/arc", label: "The Arc", icon: "🗺️" },
-  { href: "/vitals", label: "Vitals", icon: "💎" },
+  { href: "/", label: "Command Deck", icon: "⚙️" },
+  { href: "/grimoire", label: "The Codex", icon: "📡" },
+  { href: "/chronicles", label: "Dispatches", icon: "📋" },
+  { href: "/quest-log", label: "Mission Log", icon: "⚔️" },
+  { href: "/character-sheet", label: "Service Record", icon: "🎖️" },
+  { href: "/armory", label: "Arsenal", icon: "🔧" },
+  { href: "/arc", label: "The Crusade", icon: "🗺️" },
+  { href: "/vitals", label: "Diagnostics", icon: "📊" },
 ];
 
 export function Navigation() {
@@ -26,8 +26,8 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-[family-name:var(--font-display)] text-lg font-bold text-gold-base group-hover:text-gold-bright transition-colors gold-glow">
-              GTM PLAYBOOK
+            <span className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base group-hover:text-mars-bright transition-colors forge-glow">
+              GTM CODEX
             </span>
           </Link>
 
@@ -45,7 +45,7 @@ export function Navigation() {
                   className={cn(
                     "px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors",
                     isActive
-                      ? "text-gold-base"
+                      ? "text-mars-base"
                       : "text-text-muted hover:text-text-primary"
                   )}
                 >
@@ -98,7 +98,7 @@ export function Navigation() {
                   className={cn(
                     "flex items-center gap-3 px-3 py-2.5 text-sm font-[family-name:var(--font-ui)]",
                     isActive
-                      ? "text-gold-base bg-bg-elevated/50"
+                      ? "text-mars-base bg-bg-elevated/50"
                       : "text-text-muted hover:text-text-primary hover:bg-bg-elevated/30"
                   )}
                 >

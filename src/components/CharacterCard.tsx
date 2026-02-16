@@ -6,18 +6,18 @@ export function CharacterCard() {
   const stats = getCharacterStats(CURRENT_XP);
 
   return (
-    <div className="relative border border-border-gold bg-bg-panel/90 p-6 sm:p-8 animate-pulse-gold">
+    <div className="relative border border-border-mars bg-bg-panel/90 p-6 sm:p-8 animate-pulse-forge">
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-gold-bright" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-gold-bright" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-gold-bright" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-gold-bright" />
+      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-mars-bright" />
+      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-mars-bright" />
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-mars-bright" />
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-mars-bright" />
 
       <div className="flex flex-col gap-4">
         {/* Name + Class */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-gold-light gold-glow-strong tracking-wide">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide">
               {CHARACTER_NAME}
             </h2>
             <p className="font-[family-name:var(--font-heading)] text-sm text-text-secondary mt-0.5">
@@ -25,17 +25,17 @@ export function CharacterCard() {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <Badge rarity="legendary">
+            <Badge rarity="archaeotech">
               Tier {stats.currentTier.level}
             </Badge>
-            <Badge rarity="rare">
+            <Badge rarity="sanctified">
               {stats.currentTier.title}
             </Badge>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="gold-divider" />
+        <div className="forge-divider" />
 
         {/* XP Bar */}
         <XPBar
@@ -55,7 +55,7 @@ export function CharacterCard() {
             { label: "Clay Days", value: "187" },
           ].map((stat) => (
             <div key={stat.label} className="text-center p-2 border border-border-subtle bg-bg-elevated/50">
-              <div className="font-[family-name:var(--font-display)] text-lg font-bold text-gold-base">
+              <div className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base">
                 {stat.value}
               </div>
               <div className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-muted mt-0.5">

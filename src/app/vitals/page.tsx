@@ -5,24 +5,24 @@ import { getCharacterStats, CURRENT_XP, TIERS } from "@/lib/rpg";
 import { formatNumber } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Vitals",
+  title: "Diagnostics",
 };
 
-export default function VitalsPage() {
+export default function DiagnosticsPage() {
   const stats = getCharacterStats(CURRENT_XP);
 
   return (
     <div className="flex flex-col gap-10">
       <div>
-        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-gold-light gold-glow-strong tracking-wide uppercase">
-          Vitals
+        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+          Diagnostics
         </h1>
         <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
           Live system metrics. XP, progression, and content stats.
         </p>
       </div>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
       {/* Current Tier */}
       <Panel variant="bordered">
@@ -32,12 +32,12 @@ export default function VitalsPage() {
               <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-text-muted">
                 Current Rank
               </span>
-              <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold text-gold-light">
+              <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold text-mars-light">
                 {stats.currentTier.title}
               </h2>
             </div>
             <div className="text-right">
-              <span className="font-[family-name:var(--font-display)] text-3xl font-bold text-gold-bright">
+              <span className="font-[family-name:var(--font-display)] text-3xl font-bold text-mars-bright">
                 {formatNumber(stats.totalXP)}
               </span>
               <span className="text-sm text-text-muted ml-1">XP</span>
@@ -55,7 +55,7 @@ export default function VitalsPage() {
 
       {/* Stats Grid */}
       <section>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider mb-4">
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Campaign Stats
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -66,7 +66,7 @@ export default function VitalsPage() {
             { label: "Days in Clay", value: "187" },
           ].map((stat) => (
             <Panel key={stat.label} variant="elevated" className="text-center">
-              <div className="font-[family-name:var(--font-display)] text-xl font-bold text-gold-base">
+              <div className="font-[family-name:var(--font-display)] text-xl font-bold text-mars-base">
                 {stat.value}
               </div>
               <div className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-muted mt-1">
@@ -79,8 +79,8 @@ export default function VitalsPage() {
 
       {/* Tier Progression Map */}
       <section>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold-base uppercase tracking-wider mb-4">
-          Tier Progression
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
+          Rank Progression
         </h2>
         <div className="flex flex-col gap-2">
           {TIERS.map((tier) => {
@@ -91,19 +91,19 @@ export default function VitalsPage() {
                 key={tier.level}
                 className={`flex items-center gap-4 px-4 py-3 border transition-all ${
                   isCurrent
-                    ? "border-border-gold bg-bg-elevated/80"
+                    ? "border-border-mars bg-bg-elevated/80"
                     : isCurrentOrPast
                     ? "border-border-subtle bg-bg-panel/60"
                     : "border-border-subtle/50 bg-bg-panel/30 opacity-50"
                 }`}
               >
                 <span className={`font-[family-name:var(--font-display)] text-sm font-bold w-6 ${
-                  isCurrent ? "text-gold-bright" : isCurrentOrPast ? "text-gold-muted" : "text-text-disabled"
+                  isCurrent ? "text-mars-bright" : isCurrentOrPast ? "text-gold-muted" : "text-text-disabled"
                 }`}>
                   {tier.level}
                 </span>
                 <span className={`font-[family-name:var(--font-heading)] font-bold flex-1 ${
-                  isCurrent ? "text-gold-light" : isCurrentOrPast ? "text-text-primary" : "text-text-disabled"
+                  isCurrent ? "text-mars-light" : isCurrentOrPast ? "text-text-primary" : "text-text-disabled"
                 }`}>
                   {tier.title}
                 </span>
@@ -111,7 +111,7 @@ export default function VitalsPage() {
                   {formatNumber(tier.xpRequired)} XP
                 </span>
                 {isCurrent && (
-                  <span className="text-xs font-[family-name:var(--font-ui)] text-gold-bright uppercase tracking-wider">
+                  <span className="text-xs font-[family-name:var(--font-ui)] text-mars-bright uppercase tracking-wider">
                     Current
                   </span>
                 )}

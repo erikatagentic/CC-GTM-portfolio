@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "./Badge";
 
-type Rarity = "common" | "uncommon" | "rare" | "very-rare" | "legendary";
+type Rarity = "standard" | "field-tested" | "sanctified" | "relic" | "archaeotech";
 
 interface EquipmentSlotProps {
   slot: string;
@@ -13,19 +13,19 @@ interface EquipmentSlotProps {
 }
 
 const rarityBorders: Record<Rarity, string> = {
-  common: "border-rarity-common/30 hover:border-rarity-common/60",
-  uncommon: "border-rarity-uncommon/30 hover:border-rarity-uncommon/60",
-  rare: "border-rarity-rare/30 hover:border-rarity-rare/60",
-  "very-rare": "border-rarity-very-rare/30 hover:border-rarity-very-rare/60",
-  legendary: "border-rarity-legendary/30 hover:border-rarity-legendary/60",
+  standard: "border-rarity-common/30 hover:border-rarity-common/60",
+  "field-tested": "border-rarity-uncommon/30 hover:border-rarity-uncommon/60",
+  sanctified: "border-rarity-rare/30 hover:border-rarity-rare/60",
+  relic: "border-rarity-very-rare/30 hover:border-rarity-very-rare/60",
+  archaeotech: "border-rarity-legendary/30 hover:border-rarity-legendary/60",
 };
 
 const rarityGlow: Record<Rarity, string> = {
-  common: "",
-  uncommon: "hover:shadow-[0_0_12px_rgba(26,159,60,0.15)]",
-  rare: "hover:shadow-[0_0_12px_rgba(74,134,200,0.15)]",
-  "very-rare": "hover:shadow-[0_0_12px_rgba(155,89,182,0.15)]",
-  legendary: "hover:shadow-[0_0_16px_rgba(230,168,0,0.2)]",
+  standard: "",
+  "field-tested": "hover:shadow-[0_0_12px_rgba(38,166,154,0.15)]",
+  sanctified: "hover:shadow-[0_0_12px_rgba(92,107,192,0.15)]",
+  relic: "hover:shadow-[0_0_12px_rgba(171,71,188,0.15)]",
+  archaeotech: "hover:shadow-[0_0_16px_rgba(212,175,55,0.2)]",
 };
 
 export function EquipmentSlot({
@@ -55,7 +55,7 @@ export function EquipmentSlot({
           </span>
           <Badge rarity={rarity}>{rarity.replace("-", " ")}</Badge>
         </div>
-        <span className="font-[family-name:var(--font-heading)] text-lg font-bold text-text-primary group-hover:text-gold-light transition-colors">
+        <span className="font-[family-name:var(--font-heading)] text-lg font-bold text-text-primary group-hover:text-mars-light transition-colors">
           {name}
         </span>
         <span className="text-sm text-text-secondary leading-relaxed">{description}</span>

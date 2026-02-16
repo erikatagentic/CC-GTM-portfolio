@@ -20,7 +20,7 @@ export function XPBar({
   return (
     <div className={cn("w-full", className)}>
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-gold-base">
+        <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-mars-base">
           {tierTitle}
         </span>
         {nextTierTitle && (
@@ -31,7 +31,7 @@ export function XPBar({
       </div>
       <div className="relative h-3 w-full overflow-hidden border border-border-default bg-bg-darkest">
         <div
-          className="h-full bg-gradient-to-r from-gold-muted via-gold-base to-gold-bright transition-all duration-700 ease-out"
+          className="h-full bg-gradient-to-r from-mars-dark via-mars-base to-mars-bright transition-all duration-700 ease-out"
           style={{ width: `${Math.round(progress * 100)}%` }}
         />
       </div>

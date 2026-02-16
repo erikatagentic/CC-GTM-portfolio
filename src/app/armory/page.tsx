@@ -2,82 +2,82 @@ import type { Metadata } from "next";
 import { EquipmentSlot } from "@/components/ui/EquipmentSlot";
 
 export const metadata: Metadata = {
-  title: "The Armory",
+  title: "Arsenal",
 };
 
 const EQUIPMENT = [
   {
-    slot: "Main Hand",
+    slot: "Primary Weapon",
     name: "Clay",
     description: "Data enrichment engine. Waterfall logic, signal stacking, 5M+ contacts enriched. The core weapon in every GTM system I build.",
-    rarity: "legendary" as const,
+    rarity: "archaeotech" as const,
     icon: "🏺",
   },
   {
-    slot: "Off Hand",
+    slot: "Secondary System",
     name: "n8n",
     description: "Workflow automation. CRM syncs, Slack approvals, intent detection, multi-step orchestration. The connective tissue.",
-    rarity: "very-rare" as const,
+    rarity: "relic" as const,
     icon: "🔗",
   },
   {
-    slot: "Armor",
+    slot: "Armor Plating",
     name: "Instantly",
     description: "Cold email sending infrastructure. Domain rotation, warming, deliverability monitoring. The outbound backbone.",
-    rarity: "rare" as const,
+    rarity: "sanctified" as const,
     icon: "📧",
   },
   {
-    slot: "Helm",
+    slot: "Tactical Helm",
     name: "Sales Navigator",
     description: "Targeting and lead list building. Boolean search, saved searches, account lists. Precision targeting.",
-    rarity: "rare" as const,
+    rarity: "sanctified" as const,
     icon: "🔍",
   },
   {
-    slot: "Gauntlets",
+    slot: "Interface Gauntlets",
     name: "HeyReach",
     description: "LinkedIn automation at scale. Connection requests, messaging sequences, multi-account management.",
-    rarity: "rare" as const,
+    rarity: "sanctified" as const,
     icon: "🤝",
   },
   {
-    slot: "Boots",
+    slot: "Servo-Boots",
     name: "PhantomBuster",
     description: "Scraping and LinkedIn data extraction. Profile scraping, post scraping, search scraping. The data harvester.",
-    rarity: "uncommon" as const,
+    rarity: "field-tested" as const,
     icon: "👻",
   },
   {
-    slot: "Ring",
+    slot: "Augmetic Implant",
     name: "Airtable",
     description: "CRM, content OS, campaign tracking. The single source of truth for everything that matters.",
-    rarity: "uncommon" as const,
+    rarity: "field-tested" as const,
     icon: "💍",
   },
   {
-    slot: "Amulet",
+    slot: "Reliquary",
     name: "Cursor + Claude",
     description: "AI-assisted development and content creation. Building systems, analyzing data, writing at machine speed.",
-    rarity: "very-rare" as const,
+    rarity: "relic" as const,
     icon: "🔮",
   },
 ];
 
-export default function ArmoryPage() {
+export default function ArsenalPage() {
   return (
     <div className="flex flex-col gap-10">
       {/* Header */}
       <div>
-        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-gold-light gold-glow-strong tracking-wide uppercase">
-          The Armory
+        <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+          Arsenal
         </h1>
         <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
-          Every tool in the GTM arsenal. Equipped, battle-tested, and ranked by rarity.
+          Every tool in the GTM arsenal. Equipped, battle-tested, and ranked by classification.
         </p>
       </div>
 
-      <div className="gold-divider" />
+      <div className="forge-divider" />
 
       {/* Equipment Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -89,14 +89,14 @@ export default function ArmoryPage() {
       {/* Legend */}
       <div className="flex flex-wrap items-center gap-4 mt-4 p-4 border border-border-subtle bg-bg-panel/50">
         <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-text-muted mr-2">
-          Rarity:
+          Classification:
         </span>
         {[
-          { label: "Common", color: "text-rarity-common" },
-          { label: "Uncommon", color: "text-rarity-uncommon" },
-          { label: "Rare", color: "text-rarity-rare" },
-          { label: "Very Rare", color: "text-rarity-very-rare" },
-          { label: "Legendary", color: "text-rarity-legendary" },
+          { label: "Standard", color: "text-rarity-common" },
+          { label: "Field-Tested", color: "text-rarity-uncommon" },
+          { label: "Sanctified", color: "text-rarity-rare" },
+          { label: "Relic", color: "text-rarity-very-rare" },
+          { label: "Archaeotech", color: "text-rarity-legendary" },
         ].map((r) => (
           <span key={r.label} className={`text-xs font-[family-name:var(--font-ui)] ${r.color}`}>
             {r.label}
