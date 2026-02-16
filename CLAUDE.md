@@ -170,6 +170,7 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 | `.forge-panel-glow-strong` | Stronger hover glow (dual red + teal) |
 | `.metal-brush` | Faint diagonal brushed-metal sheen (1.5-2% white corners) |
 | `.badge-glow` | Subtle currentColor glow halo via ::after (auto-applied to non-standard rarities) |
+| `.binary-cant-bg` | Faint scrolling binary text background (ASCII "MECHANICUS OMNISSIAH"), Mars red at 1.8% opacity, 120s scroll animation |
 
 ---
 
@@ -179,14 +180,14 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 
 6 pages accessible via sticky top navbar:
 
-| Route | Label | Icon | Status |
-|-------|-------|------|--------|
-| `/` | Command Deck | ⚙️ | Complete |
-| `/grimoire` | The Codex | 📡 | Scaffolded (chapters listed, content "classified") |
-| `/chronicles` | Dispatches | 📋 | Placeholder |
-| `/quest-log` | Mission Log | ⚔️ | Placeholder |
-| `/character-sheet` | Service Record | 🎖️ | Complete (includes Campaign History timeline) |
-| `/armory` | Arsenal | 🔧 | Complete |
+| Route | Label | Icon (SVG) | Status |
+|-------|-------|------------|--------|
+| `/` | Command Deck | NavCogIcon (gear) | Complete |
+| `/grimoire` | The Codex | NavScrollIcon (data-scroll) | Scaffolded (chapters listed, content "classified") |
+| `/chronicles` | Dispatches | NavVoxIcon (vox-caster) | Placeholder |
+| `/quest-log` | Mission Log | NavForgeIcon (anvil) | Placeholder |
+| `/character-sheet` | Service Record | NavAquilaIcon (aquila badge) | Complete (includes Campaign History timeline) |
+| `/armory` | Arsenal | NavOmniIcon (wrench-cog) | Complete |
 
 ### Page Content Summary
 
@@ -216,8 +217,8 @@ src/
 │   ├── character-sheet/page.tsx # Service Record (includes Campaign History)
 │   └── armory/page.tsx         # Arsenal
 ├── components/
-│   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client")
-│   ├── Footer.tsx              # Brand + external links (server)
+│   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client"), Mechanicus SVG icons
+│   ├── Footer.tsx              # CogMechanicum logo + Aquila seal + binary cant (server)
 │   ├── CharacterCard.tsx       # Hero card with stats + XP ("use client")
 │   └── ui/
 │       ├── Badge.tsx           # Rarity-classified labels (5 tiers)
@@ -225,7 +226,10 @@ src/
 │       ├── XPBar.tsx           # Progression bar (Mars red gradient)
 │       ├── StatBlock.tsx       # D&D-style ability score grid
 │       ├── EquipmentSlot.tsx   # Tool cards with rarity borders/glows
-│       └── GradeCard.tsx       # S-D performance grade display
+│       ├── GradeCard.tsx       # S-D performance grade display
+│       ├── MechanicusIcons.tsx # 11 Mechanicus SVG icons (CogMechanicum, ServoSkull, Aquila, 6 nav icons, CogIcon)
+│       ├── CogDivider.tsx      # Cog-centered divider (replaces forge-divider), size: sm/md/lg
+│       └── ToolIcons.tsx       # 8 tool-specific SVG icons for Arsenal page
 └── lib/
     ├── utils.ts                # cn(), formatNumber(), formatDate()
     └── rpg.ts                  # Tier system, XP values, character stats
