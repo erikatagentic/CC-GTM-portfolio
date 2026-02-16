@@ -8,7 +8,7 @@ interface EquipmentSlotProps {
   name: string;
   description: string;
   rarity: Rarity;
-  icon: string;
+  icon: React.ReactNode;
   className?: string;
 }
 

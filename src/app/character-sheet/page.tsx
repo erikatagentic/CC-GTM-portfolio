@@ -56,7 +56,7 @@ const ACTS = [
   },
   {
     act: "IV",
-    title: "The Arch-Mechanicus",
+    title: "The Archmagos",
     period: "2023 - Present",
     description: "Founded Lumos. GTM Engineer at Hey Agentic. Building systems that replace SDR headcount with automation. Clay, n8n, cold email, LinkedIn -- the full stack.",
     lesson: "The best GTM teams don't need more people. They need better plumbing.",

@@ -262,16 +262,16 @@ src/
 
 | Level | Title | XP Required |
 |-------|-------|-------------|
-| 1 | Initiate | 0 |
+| 1 | Menial | 0 |
 | 2 | Acolyte | 1,000 |
-| 3 | Specialist | 2,500 |
-| 4 | Veteran | 5,000 |
-| 5 | Battle-Tested | 10,000 |
-| 6 | Forge Master | 20,000 |
-| 7 | Arch-Magos | 35,000 |
-| 8 | Fabricator | 55,000 |
-| 9 | Lord Commander | 80,000 |
-| 10 | Primarch | 100,000 |
+| 3 | Tech-Adept | 2,500 |
+| 4 | Enginseer | 5,000 |
+| 5 | Artisan | 10,000 |
+| 6 | Magos | 20,000 |
+| 7 | Archmagos | 35,000 |
+| 8 | Forge Master | 55,000 |
+| 9 | Fabricator Locum | 80,000 |
+| 10 | Fabricator-General | 100,000 |
 
 ### XP Values
 
@@ -287,7 +287,7 @@ src/
 ### Character
 
 - **Class**: Tech-Adept
-- **Subclass**: Pipeline Artificer
+- **Subclass**: Pipeline Artisan
 - **Current XP**: 3,250 (update `CURRENT_XP` in rpg.ts as progress is made)
 - **Character Name**: Erik Hernal
 

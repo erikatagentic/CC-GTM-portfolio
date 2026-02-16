@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import { EquipmentSlot } from "@/components/ui/EquipmentSlot";
+import {
+  ClayIcon,
+  N8nIcon,
+  InstantlyIcon,
+  SalesNavIcon,
+  HeyReachIcon,
+  PhantomBusterIcon,
+  AirtableIcon,
+  CursorClaudeIcon,
+} from "@/components/ui/ToolIcons";
 
 export const metadata: Metadata = {
   title: "Arsenal",
@@ -11,56 +21,56 @@ const EQUIPMENT = [
     name: "Clay",
     description: "Data enrichment engine. Waterfall logic, signal stacking, 5M+ contacts enriched. The core weapon in every GTM system I build.",
     rarity: "archaeotech" as const,
-    icon: "🏺",
+    icon: <ClayIcon />,
   },
   {
     slot: "Secondary System",
     name: "n8n",
     description: "Workflow automation. CRM syncs, Slack approvals, intent detection, multi-step orchestration. The connective tissue.",
     rarity: "relic" as const,
-    icon: "🔗",
+    icon: <N8nIcon />,
   },
   {
     slot: "Armor Plating",
     name: "Instantly",
     description: "Cold email sending infrastructure. Domain rotation, warming, deliverability monitoring. The outbound backbone.",
     rarity: "sanctified" as const,
-    icon: "📧",
+    icon: <InstantlyIcon />,
   },
   {
     slot: "Tactical Helm",
     name: "Sales Navigator",
     description: "Targeting and lead list building. Boolean search, saved searches, account lists. Precision targeting.",
     rarity: "sanctified" as const,
-    icon: "🔍",
+    icon: <SalesNavIcon />,
   },
   {
     slot: "Interface Gauntlets",
     name: "HeyReach",
     description: "LinkedIn automation at scale. Connection requests, messaging sequences, multi-account management.",
     rarity: "sanctified" as const,
-    icon: "🤝",
+    icon: <HeyReachIcon />,
   },
   {
     slot: "Servo-Boots",
     name: "PhantomBuster",
     description: "Scraping and LinkedIn data extraction. Profile scraping, post scraping, search scraping. The data harvester.",
     rarity: "field-tested" as const,
-    icon: "👻",
+    icon: <PhantomBusterIcon />,
   },
   {
     slot: "Augmetic Implant",
     name: "Airtable",
     description: "CRM, content OS, campaign tracking. The single source of truth for everything that matters.",
     rarity: "field-tested" as const,
-    icon: "💍",
+    icon: <AirtableIcon />,
   },
   {
     slot: "Reliquary",
     name: "Cursor + Claude",
     description: "AI-assisted development and content creation. Building systems, analyzing data, writing at machine speed.",
     rarity: "relic" as const,
-    icon: "🔮",
+    icon: <CursorClaudeIcon />,
   },
 ];
 

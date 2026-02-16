@@ -7,16 +7,16 @@ export interface Tier {
 }
 
 export const TIERS: Tier[] = [
-  { level: 1, title: "Initiate", xpRequired: 0 },
+  { level: 1, title: "Menial", xpRequired: 0 },
   { level: 2, title: "Acolyte", xpRequired: 1000 },
-  { level: 3, title: "Specialist", xpRequired: 2500 },
-  { level: 4, title: "Veteran", xpRequired: 5000 },
-  { level: 5, title: "Battle-Tested", xpRequired: 10000 },
-  { level: 6, title: "Forge Master", xpRequired: 20000 },
-  { level: 7, title: "Arch-Magos", xpRequired: 35000 },
-  { level: 8, title: "Fabricator", xpRequired: 55000 },
-  { level: 9, title: "Lord Commander", xpRequired: 80000 },
-  { level: 10, title: "Primarch", xpRequired: 100000 },
+  { level: 3, title: "Tech-Adept", xpRequired: 2500 },
+  { level: 4, title: "Enginseer", xpRequired: 5000 },
+  { level: 5, title: "Artisan", xpRequired: 10000 },
+  { level: 6, title: "Magos", xpRequired: 20000 },
+  { level: 7, title: "Archmagos", xpRequired: 35000 },
+  { level: 8, title: "Forge Master", xpRequired: 55000 },
+  { level: 9, title: "Fabricator Locum", xpRequired: 80000 },
+  { level: 10, title: "Fabricator-General", xpRequired: 100000 },
 ];
 
 export const XP_VALUES = {
@@ -84,7 +84,7 @@ export function getCharacterStats(xp: number): CharacterStats {
     nextTier,
     progressToNext,
     className: "Tech-Adept",
-    subclass: "Pipeline Artificer",
+    subclass: "Pipeline Artisan",
     grade: "A",
   };
 }
