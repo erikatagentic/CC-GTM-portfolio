@@ -10,6 +10,7 @@ import {
   AirtableIcon,
   CursorClaudeIcon,
 } from "@/components/ui/ToolIcons";
+import { CogDivider } from "@/components/ui/CogDivider";
 
 export const metadata: Metadata = {
   title: "Arsenal",
@@ -79,6 +80,9 @@ export default function ArsenalPage() {
     <div className="flex flex-col gap-10">
       {/* Header */}
       <div>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // EQUIPMENT MANIFEST
+        </span>
         <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
           Arsenal
         </h1>
@@ -87,7 +91,7 @@ export default function ArsenalPage() {
         </p>
       </div>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       {/* Equipment Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

@@ -369,3 +369,28 @@ body::before {
   opacity: 0.3;
   pointer-events: none;
 }
+
+/* Binary cant background — faint Mechanicus data stream */
+@keyframes binaryCantScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.binary-cant-bg::before {
+  content: "01001101 01000101 01000011 01001000 01000001 01001110 01001001 01000011 01010101 01010011 00100000 01001111 01001101 01001110 01001001 01010011 01010011 01001001 01000001 01001000 00100000 01001101 01000101 01000011 01001000 01000001 01001110 01001001 01000011 01010101 01010011 00100000 01001111 01001101 01001110 01001001 01010011 01010011 01001001 01000001 01001000 00100000";
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 200%;
+  z-index: 0;
+  pointer-events: none;
+  font-family: monospace;
+  font-size: 8px;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  word-break: break-all;
+  color: var(--color-mars-base);
+  opacity: 0.018;
+  animation: binaryCantScroll 120s linear infinite;
+}

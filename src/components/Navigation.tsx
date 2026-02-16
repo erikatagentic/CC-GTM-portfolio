@@ -4,14 +4,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  CogMechanicum,
+  NavCogIcon,
+  NavVoxIcon,
+  NavScrollIcon,
+  NavForgeIcon,
+  NavAquilaIcon,
+  NavOmniIcon,
+} from "@/components/ui/MechanicusIcons";
 
 const NAV_LINKS = [
-  { href: "/", label: "Command Deck", icon: "⚙️" },
-  { href: "/grimoire", label: "The Codex", icon: "📡" },
-  { href: "/chronicles", label: "Dispatches", icon: "📋" },
-  { href: "/quest-log", label: "Mission Log", icon: "⚔️" },
-  { href: "/character-sheet", label: "Service Record", icon: "🎖️" },
-  { href: "/armory", label: "Arsenal", icon: "🔧" },
+  { href: "/", label: "Command Deck", icon: <NavCogIcon /> },
+  { href: "/grimoire", label: "The Codex", icon: <NavScrollIcon /> },
+  { href: "/chronicles", label: "Dispatches", icon: <NavVoxIcon /> },
+  { href: "/quest-log", label: "Mission Log", icon: <NavForgeIcon /> },
+  { href: "/character-sheet", label: "Service Record", icon: <NavAquilaIcon /> },
+  { href: "/armory", label: "Arsenal", icon: <NavOmniIcon /> },
 ];
 
 export function Navigation() {
@@ -24,6 +33,7 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
+            <CogMechanicum className="w-7 h-7 text-mars-base group-hover:text-mars-bright transition-colors" />
             <span className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base group-hover:text-mars-bright transition-colors forge-glow">
               GTM CODEX
             </span>
@@ -41,12 +51,13 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors border-b",
+                    "flex items-center gap-1.5 px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors border-b",
                     isActive
                       ? "text-mars-base border-mars-base/50"
                       : "text-text-muted hover:text-text-primary border-transparent"
                   )}
                 >
+                  <span className="opacity-70">{link.icon}</span>
                   {link.label}
                 </Link>
               );

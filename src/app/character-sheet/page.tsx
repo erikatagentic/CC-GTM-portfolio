@@ -4,6 +4,7 @@ import { Panel } from "@/components/ui/Panel";
 import { Badge } from "@/components/ui/Badge";
 import { XPBar } from "@/components/ui/XPBar";
 import { getCharacterStats, CURRENT_XP, CHARACTER_NAME } from "@/lib/rpg";
+import { CogDivider } from "@/components/ui/CogDivider";
 
 export const metadata: Metadata = {
   title: "Service Record",
@@ -86,6 +87,9 @@ export default function ServiceRecordPage() {
     <div className="flex flex-col gap-10">
       {/* Header */}
       <div>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // IMPERIAL RECORD
+        </span>
         <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
           Service Record
         </h1>
@@ -123,16 +127,22 @@ export default function ServiceRecordPage() {
 
       {/* Ability Scores */}
       <section>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // APTITUDE ASSESSMENT
+        </span>
         <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Ability Scores
         </h2>
         <StatBlock stats={STATS} />
       </section>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       {/* Proficiencies */}
       <section>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // CERTIFIED COMPETENCIES
+        </span>
         <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Specializations
         </h2>
@@ -151,10 +161,13 @@ export default function ServiceRecordPage() {
         </div>
       </section>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       {/* Service History */}
       <section>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // DEPLOYMENT RECORDS
+        </span>
         <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Service History
         </h2>
@@ -170,10 +183,13 @@ export default function ServiceRecordPage() {
         </div>
       </section>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       {/* Campaign History */}
       <section>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // TEMPORAL LOG
+        </span>
         <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Campaign History
         </h2>
@@ -216,10 +232,13 @@ export default function ServiceRecordPage() {
         </div>
       </section>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       {/* Connect */}
       <section>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // VOX CHANNELS
+        </span>
         <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
           Connect
         </h2>

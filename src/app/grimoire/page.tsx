@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Panel } from "@/components/ui/Panel";
 import { Badge } from "@/components/ui/Badge";
+import { CogDivider } from "@/components/ui/CogDivider";
 
 export const metadata: Metadata = {
   title: "The Codex",
@@ -77,6 +78,9 @@ export default function CodexPage() {
   return (
     <div className="flex flex-col gap-10">
       <div>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // SACRED KNOWLEDGE
+        </span>
         <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
           The Codex
         </h1>
@@ -85,7 +89,7 @@ export default function CodexPage() {
         </p>
       </div>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       <div className="flex flex-col gap-4">
         {CHAPTERS.map((chapter) => (

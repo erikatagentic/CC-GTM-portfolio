@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Panel } from "@/components/ui/Panel";
 import { GradeCard } from "@/components/ui/GradeCard";
+import { CogDivider } from "@/components/ui/CogDivider";
 
 export const metadata: Metadata = {
   title: "Mission Log",
@@ -10,6 +11,9 @@ export default function MissionLogPage() {
   return (
     <div className="flex flex-col gap-10">
       <div>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // FIELD OPERATIONS
+        </span>
         <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
           Mission Log
         </h1>
@@ -18,7 +22,7 @@ export default function MissionLogPage() {
         </p>
       </div>
 
-      <div className="forge-divider" />
+      <CogDivider />
 
       {/* Preview entry */}
       <Panel variant="bordered">

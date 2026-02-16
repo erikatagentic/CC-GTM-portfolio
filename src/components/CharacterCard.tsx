@@ -1,6 +1,7 @@
 import { getCharacterStats, CURRENT_XP, CHARACTER_NAME } from "@/lib/rpg";
 import { Badge } from "./ui/Badge";
 import { XPBar } from "./ui/XPBar";
+import { CogDivider } from "./ui/CogDivider";
 
 export function CharacterCard() {
   const stats = getCharacterStats(CURRENT_XP);
@@ -35,7 +36,7 @@ export function CharacterCard() {
         </div>
 
         {/* Divider */}
-        <div className="forge-divider" />
+        <CogDivider size="sm" />
 
         {/* XP Bar */}
         <XPBar
