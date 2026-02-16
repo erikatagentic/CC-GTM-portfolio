@@ -74,7 +74,7 @@ body::after {
   inset: 0;
   z-index: 99;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.15) 80%, rgba(0,0,0,0.35) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.25) 70%, rgba(0,0,0,0.55) 100%);
 }
 
 /* Noise grain overlay */
@@ -84,7 +84,7 @@ body::before {
   inset: 0;
   z-index: 98;
   pointer-events: none;
-  opacity: 0.025;
+  opacity: 0.07;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -116,16 +116,16 @@ body::before {
 
 /* Forge glow utility */
 .forge-glow {
-  text-shadow: 0 0 8px rgba(211, 47, 47, 0.4);
+  text-shadow: 0 0 10px rgba(211, 47, 47, 0.5), 0 0 20px rgba(211, 47, 47, 0.2);
 }
 
 .forge-glow-strong {
-  text-shadow: 0 0 12px rgba(211, 47, 47, 0.6), 0 0 24px rgba(211, 47, 47, 0.3), 0 0 40px rgba(38, 166, 154, 0.08);
+  text-shadow: 0 0 14px rgba(211, 47, 47, 0.7), 0 0 28px rgba(211, 47, 47, 0.4), 0 0 50px rgba(38, 166, 154, 0.15);
 }
 
 /* Panel glow on hover */
 .forge-panel-glow:hover {
-  box-shadow: 0 0 20px rgba(211, 47, 47, 0.2), 0 0 40px rgba(38, 166, 154, 0.1);
+  box-shadow: 0 0 15px rgba(211, 47, 47, 0.3), 0 0 30px rgba(211, 47, 47, 0.15), 0 0 50px rgba(38, 166, 154, 0.1);
 }
 
 /* Metal overlay - subtle scanline effect */
@@ -166,10 +166,10 @@ body::before {
 .forge-divider::after {
   content: "";
   position: absolute;
-  inset: 0;
-  filter: blur(4px);
+  inset: -2px 0;
+  filter: blur(6px);
   background: inherit;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* Keyframes */
@@ -184,8 +184,8 @@ body::before {
 }
 
 @keyframes pulseForge {
-  0%, 100% { box-shadow: 0 0 8px rgba(211, 47, 47, 0.3), 0 0 16px rgba(38, 166, 154, 0.1); }
-  50% { box-shadow: 0 0 16px rgba(211, 47, 47, 0.5), 0 0 24px rgba(38, 166, 154, 0.2); }
+  0%, 100% { box-shadow: 0 0 12px rgba(211, 47, 47, 0.4), 0 0 24px rgba(211, 47, 47, 0.15), 0 0 40px rgba(38, 166, 154, 0.1); }
+  50% { box-shadow: 0 0 20px rgba(211, 47, 47, 0.6), 0 0 40px rgba(211, 47, 47, 0.25), 0 0 60px rgba(38, 166, 154, 0.15); }
 }
 
 .animate-fade-in {
@@ -214,27 +214,28 @@ body::before {
 
 /* Industrial panel — double-border, inset lighting, deep shadow */
 .panel-industrial {
-  outline: 1px solid rgba(42, 47, 61, 0.6);
+  outline: 1px solid rgba(61, 66, 82, 0.7);
   outline-offset: 3px;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.03),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.2),
-    0 4px 12px rgba(0, 0, 0, 0.4);
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(163, 25, 25, 0.15);
 }
 
 /* Shadow layers */
 .shadow-forge {
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 8px 16px rgba(0, 0, 0, 0.2),
-    0 16px 32px rgba(0, 0, 0, 0.1);
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 0 2px rgba(163, 25, 25, 0.1);
 }
 
 .shadow-forge-lg {
   box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.4),
-    0 12px 24px rgba(0, 0, 0, 0.3),
-    0 24px 48px rgba(0, 0, 0, 0.15);
+    0 4px 8px rgba(0, 0, 0, 0.5),
+    0 16px 32px rgba(0, 0, 0, 0.4),
+    0 0 3px rgba(163, 25, 25, 0.15);
 }
 
 /* Corner accents — top corners */
@@ -322,8 +323,8 @@ body::before {
     -45deg,
     transparent,
     transparent 8px,
-    rgba(212, 175, 55, 0.06) 8px,
-    rgba(212, 175, 55, 0.06) 16px
+    rgba(212, 175, 55, 0.08) 8px,
+    rgba(212, 175, 55, 0.08) 16px
   );
 }
 
@@ -347,10 +348,10 @@ body::before {
 .metal-brush {
   background-image: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.015) 0%,
-    transparent 40%,
-    transparent 60%,
-    rgba(255, 255, 255, 0.02) 100%
+    rgba(255, 255, 255, 0.04) 0%,
+    transparent 35%,
+    transparent 65%,
+    rgba(255, 255, 255, 0.03) 100%
   );
 }
 
@@ -364,7 +365,7 @@ body::before {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  box-shadow: 0 0 8px currentColor;
-  opacity: 0.2;
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  opacity: 0.3;
   pointer-events: none;
 }

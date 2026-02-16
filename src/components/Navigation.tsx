@@ -19,7 +19,7 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b-2 border-border-default bg-bg-dark/95 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b-2 border-border-default bg-bg-dark/95 backdrop-blur-md shadow-[0_2px_12px_rgba(163,25,25,0.15),0_1px_3px_rgba(0,0,0,0.4)]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}

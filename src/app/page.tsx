@@ -84,10 +84,10 @@ export default function Home() {
 
       {/* System Status */}
       <section className="flex flex-col gap-4">
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider">
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
           System Status
         </h2>
-        <Panel variant="elevated">
+        <Panel variant="elevated" className="hazard-stripe">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { label: "Content Engine", status: "Operational", color: "text-rarity-uncommon" },
@@ -95,7 +95,7 @@ export default function Home() {
               { label: "Knowledge Base", status: "Building", color: "text-rarity-legendary" },
             ].map((system) => (
               <div key={system.label} className="flex items-center gap-3">
-                <div className={`h-2 w-2 rounded-full ${system.color} bg-current`} />
+                <div className={`h-2.5 w-2.5 rounded-full ${system.color} bg-current shadow-[0_0_6px_currentColor]`} />
                 <div>
                   <div className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-text-muted">
                     {system.label}

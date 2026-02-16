@@ -6,12 +6,12 @@ export function CharacterCard() {
   const stats = getCharacterStats(CURRENT_XP);
 
   return (
-    <div className="relative border border-border-mars bg-bg-panel/90 p-6 sm:p-8 animate-pulse-forge shadow-forge-lg">
+    <div className="relative border-2 border-border-mars bg-bg-panel/90 p-6 sm:p-8 animate-pulse-forge shadow-forge-lg metal-brush">
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-mars-bright" />
-      <div className="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-mars-bright" />
-      <div className="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-mars-bright" />
-      <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-mars-bright" />
+      <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-mars-bright" />
+      <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-mars-bright" />
+      <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-mars-bright" />
+      <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-mars-bright" />
 
       <div className="flex flex-col gap-4">
         {/* Name + Class */}
@@ -54,8 +54,8 @@ export function CharacterCard() {
             { label: "AI Data Points", value: "1.4M+" },
             { label: "Clay Days", value: "187" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center p-2 border border-border-subtle bg-bg-elevated/50">
-              <div className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base">
+            <div key={stat.label} className="text-center p-2 border border-border-subtle bg-bg-elevated/50 metal-brush">
+              <div className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base forge-glow">
                 {stat.value}
               </div>
               <div className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-muted mt-0.5">
