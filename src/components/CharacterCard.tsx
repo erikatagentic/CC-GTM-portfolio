@@ -6,12 +6,12 @@ export function CharacterCard() {
   const stats = getCharacterStats(CURRENT_XP);
 
   return (
-    <div className="relative border border-border-mars bg-bg-panel/90 p-6 sm:p-8 animate-pulse-forge">
+    <div className="relative border border-border-mars bg-bg-panel/90 p-6 sm:p-8 animate-pulse-forge shadow-forge-lg">
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-mars-bright" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-mars-bright" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-mars-bright" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-mars-bright" />
+      <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-mars-bright" />
+      <div className="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-mars-bright" />
+      <div className="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-mars-bright" />
+      <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-mars-bright" />
 
       <div className="flex flex-col gap-4">
         {/* Name + Class */}

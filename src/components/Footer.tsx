@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-subtle bg-bg-dark/50 mt-20">
+    <footer className="border-t-2 border-border-default bg-bg-dark/50 mt-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10">
         <div className="forge-divider mb-8" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col items-center sm:items-start gap-1">
             <span className="font-[family-name:var(--font-display)] text-sm text-gold-muted tracking-wider">
-              GTM CODEX
+              ⚙ GTM CODEX ⚙
             </span>
             <span className="text-xs text-text-disabled font-[family-name:var(--font-ui)]">
               Built by Erik Hernal

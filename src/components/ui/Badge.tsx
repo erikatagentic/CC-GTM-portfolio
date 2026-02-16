@@ -22,6 +22,7 @@ export function Badge({ children, rarity = "standard", className }: BadgeProps) 
       className={cn(
         "inline-flex items-center px-2.5 py-0.5 text-xs font-medium font-[family-name:var(--font-ui)] uppercase tracking-wider border",
         rarityStyles[rarity],
+        rarity !== "standard" && "badge-glow",
         className
       )}
     >

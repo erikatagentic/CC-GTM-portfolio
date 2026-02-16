@@ -12,8 +12,6 @@ const NAV_LINKS = [
   { href: "/quest-log", label: "Mission Log", icon: "⚔️" },
   { href: "/character-sheet", label: "Service Record", icon: "🎖️" },
   { href: "/armory", label: "Arsenal", icon: "🔧" },
-  { href: "/arc", label: "The Crusade", icon: "🗺️" },
-  { href: "/vitals", label: "Diagnostics", icon: "📊" },
 ];
 
 export function Navigation() {
@@ -21,7 +19,7 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border-subtle bg-bg-dark/95 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b-2 border-border-default bg-bg-dark/95 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -43,10 +41,10 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors",
+                    "px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors border-b",
                     isActive
-                      ? "text-mars-base"
-                      : "text-text-muted hover:text-text-primary"
+                      ? "text-mars-base border-mars-base/50"
+                      : "text-text-muted hover:text-text-primary border-transparent"
                   )}
                 >
                   {link.label}

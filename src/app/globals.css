@@ -67,6 +67,29 @@ body {
   min-height: 100vh;
 }
 
+/* Page vignette — darkened edges */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.15) 80%, rgba(0,0,0,0.35) 100%);
+}
+
+/* Noise grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
 /* Selection styling */
 ::selection {
   background-color: rgba(211, 47, 47, 0.3);
@@ -97,7 +120,7 @@ body {
 }
 
 .forge-glow-strong {
-  text-shadow: 0 0 12px rgba(211, 47, 47, 0.6), 0 0 24px rgba(211, 47, 47, 0.3);
+  text-shadow: 0 0 12px rgba(211, 47, 47, 0.6), 0 0 24px rgba(211, 47, 47, 0.3), 0 0 40px rgba(38, 166, 154, 0.08);
 }
 
 /* Panel glow on hover */
@@ -126,15 +149,27 @@ body {
 
 /* Forge divider */
 .forge-divider {
-  height: 1px;
+  position: relative;
+  height: 2px;
   background: linear-gradient(
     90deg,
     transparent 0%,
+    #5c1a1a 10%,
     #a31919 20%,
     #d4af37 50%,
     #a31919 80%,
+    #5c1a1a 90%,
     transparent 100%
   );
+}
+
+.forge-divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: blur(4px);
+  background: inherit;
+  opacity: 0.5;
 }
 
 /* Keyframes */
@@ -174,5 +209,162 @@ body {
     linear-gradient(rgba(38, 166, 154, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(38, 166, 154, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* Industrial panel — double-border, inset lighting, deep shadow */
+.panel-industrial {
+  outline: 1px solid rgba(42, 47, 61, 0.6);
+  outline-offset: 3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Shadow layers */
+.shadow-forge {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-forge-lg {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 24px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Corner accents — top corners */
+.corner-accents {
+  position: relative;
+}
+
+.corner-accents::before,
+.corner-accents::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+.corner-accents::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #a31919;
+  border-left: 2px solid #a31919;
+}
+
+.corner-accents::after {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid #a31919;
+  border-right: 2px solid #a31919;
+}
+
+/* Corner accents — bottom corners (apply alongside corner-accents parent) */
+.corner-accents-bottom {
+  position: relative;
+}
+
+.corner-accents-bottom::before,
+.corner-accents-bottom::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+.corner-accents-bottom::before {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid #a31919;
+  border-left: 2px solid #a31919;
+}
+
+.corner-accents-bottom::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #a31919;
+  border-right: 2px solid #a31919;
+}
+
+/* Purity seal — gold cog */
+.purity-seal {
+  position: relative;
+}
+
+.purity-seal::after {
+  content: "⚙";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #d4af37;
+  background: #12141a;
+  border: 1px solid #b8a869;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Hazard stripe — diagonal gold lines */
+.hazard-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(212, 175, 55, 0.06) 8px,
+    rgba(212, 175, 55, 0.06) 16px
+  );
+}
+
+/* Dual glow — Mars red + teal text-shadow */
+.forge-glow-dual {
+  text-shadow:
+    0 0 10px rgba(211, 47, 47, 0.5),
+    0 0 20px rgba(211, 47, 47, 0.25),
+    0 0 40px rgba(38, 166, 154, 0.12);
+}
+
+/* Stronger panel hover glow */
+.forge-panel-glow-strong:hover {
+  box-shadow:
+    0 0 20px rgba(211, 47, 47, 0.25),
+    0 0 40px rgba(211, 47, 47, 0.1),
+    0 0 60px rgba(38, 166, 154, 0.08);
+}
+
+/* Brushed metal sheen */
+.metal-brush {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.015) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+/* Badge glow — currentColor halo for non-standard rarities */
+.badge-glow {
+  position: relative;
+}
+
+.badge-glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  box-shadow: 0 0 8px currentColor;
+  opacity: 0.2;
   pointer-events: none;
 }

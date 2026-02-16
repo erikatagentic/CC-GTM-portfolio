@@ -30,7 +30,7 @@
 - Hey Agentic: `https://heyagentic.ai`
 
 ### RPG Progression
-The site uses a gamified progression system that tracks real work output (blog posts, chapters, commits, campaigns audited) as XP. This drives tier advancement, character stats, and the Diagnostics page.
+The site uses a gamified progression system that tracks real work output (blog posts, chapters, commits, campaigns audited) as XP. This drives tier advancement, character stats, and the Service Record page.
 
 ---
 
@@ -155,10 +155,21 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 | `.forge-glow-strong` | Stronger Mars red text-shadow (12px + 24px dual blur) |
 | `.forge-panel-glow` | Hover: Mars red + teal box-shadow on panels |
 | `.metal-overlay` | Pseudo-element with repeating teal scanlines (2% opacity) |
-| `.forge-divider` | 1px horizontal gradient: transparent → Mars red → gold → Mars red → transparent |
+| `.forge-divider` | 2px horizontal gradient with glow halo: transparent → Mars dark → Mars red → gold → Mars red → Mars dark → transparent |
 | `.tech-grid` | Pseudo-element with 20x20px teal grid (5% opacity) |
 | `.animate-pulse-forge` | 3s infinite Mars red + teal pulsing box-shadow |
 | `.animate-fade-in` | 0.5s ease-out fade-in with 8px Y-translate |
+| `.panel-industrial` | Double-border (outline + offset 3px), inset top-light/bottom-dark, deeper drop shadow |
+| `.shadow-forge` | Triple-layer box-shadow (2/8/16px) for elevated panels |
+| `.shadow-forge-lg` | Extra-deep shadow (4/12/24px) for hero elements |
+| `.corner-accents` | Mars red 12px corner brackets (top-left, top-right) via ::before/::after |
+| `.corner-accents-bottom` | Mars red 12px corner brackets (bottom-left, bottom-right) |
+| `.purity-seal` | Small gold cog seal circle, positioned top-right |
+| `.hazard-stripe` | Diagonal gold stripes at 6% opacity |
+| `.forge-glow-dual` | Combined Mars red + teal text-shadow |
+| `.forge-panel-glow-strong` | Stronger hover glow (dual red + teal) |
+| `.metal-brush` | Faint diagonal brushed-metal sheen (1.5-2% white corners) |
+| `.badge-glow` | Subtle currentColor glow halo via ::after (auto-applied to non-standard rarities) |
 
 ---
 
@@ -166,7 +177,7 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 
 ### Navigation
 
-8 pages accessible via sticky top navbar:
+6 pages accessible via sticky top navbar:
 
 | Route | Label | Icon | Status |
 |-------|-------|------|--------|
@@ -174,24 +185,18 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 | `/grimoire` | The Codex | 📡 | Scaffolded (chapters listed, content "classified") |
 | `/chronicles` | Dispatches | 📋 | Placeholder |
 | `/quest-log` | Mission Log | ⚔️ | Placeholder |
-| `/character-sheet` | Service Record | 🎖️ | Complete |
+| `/character-sheet` | Service Record | 🎖️ | Complete (includes Campaign History timeline) |
 | `/armory` | Arsenal | 🔧 | Complete |
-| `/arc` | The Crusade | 🗺️ | Complete |
-| `/vitals` | Diagnostics | 📊 | Complete |
 
 ### Page Content Summary
 
-**Command Deck** (`/`) — CharacterCard hero + Operations Board (7 section cards) + System Status indicators.
+**Command Deck** (`/`) — CharacterCard hero + Operations Board (5 section cards) + System Status indicators.
 
 **The Codex** (`/grimoire`) — 8 GTM knowledge chapters: Cold Email Fundamentals, Deliverability, Clay & Data Enrichment, Campaign Architecture, LinkedIn Outbound, Automation with n8n, GTM Engineering, ICP & Targeting. All marked "classified" pending content.
 
-**Service Record** (`/character-sheet`) — Nameplate with tier badges, XP bar, 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements), 8 specializations, service history (Recruitment / Campaign History / Current Deployment), connect links.
+**Service Record** (`/character-sheet`) — Nameplate with tier badges, XP bar, 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements), 8 specializations, service history (Recruitment / Campaign History / Current Deployment), campaign history timeline (4 acts from Initiate to Arch-Mechanicus), connect links.
 
 **Arsenal** (`/armory`) — 8 tools with rarity classifications: Clay (Archaeotech), n8n (Relic), Instantly (Sanctified), Sales Navigator (Sanctified), HeyReach (Sanctified), PhantomBuster (Field-Tested), Airtable (Field-Tested), Cursor + Claude (Relic). Includes classification legend.
-
-**The Crusade** (`/arc`) — 4-act career timeline: The Initiate (Pre-2018), The Forge Apprentice (2018-2020), The Campaign Marshal (2020-2023), The Arch-Mechanicus (2023-Present). Each with description and "Intel gathered" lesson.
-
-**Diagnostics** (`/vitals`) — Current rank display, XP bar, campaign stats grid (4 metrics), rank progression ladder (all 10 tiers with current/past indicators).
 
 ---
 
@@ -208,10 +213,8 @@ src/
 │   ├── grimoire/page.tsx       # The Codex
 │   ├── chronicles/page.tsx     # Dispatches
 │   ├── quest-log/page.tsx      # Mission Log
-│   ├── character-sheet/page.tsx # Service Record
-│   ├── armory/page.tsx         # Arsenal
-│   ├── arc/page.tsx            # The Crusade
-│   └── vitals/page.tsx         # Diagnostics
+│   ├── character-sheet/page.tsx # Service Record (includes Campaign History)
+│   └── armory/page.tsx         # Arsenal
 ├── components/
 │   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client")
 │   ├── Footer.tsx              # Brand + external links (server)

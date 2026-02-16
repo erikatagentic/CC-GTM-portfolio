@@ -25,25 +25,13 @@ const SECTIONS = [
     href: "/character-sheet",
     icon: "🎖️",
     title: "Service Record",
-    description: "Stats, credentials, and the complete service history.",
+    description: "Stats, credentials, campaign history, and the complete service record.",
   },
   {
     href: "/armory",
     icon: "🔧",
     title: "Arsenal",
     description: "The tool stack. Every weapon in the GTM arsenal.",
-  },
-  {
-    href: "/arc",
-    icon: "🗺️",
-    title: "The Crusade",
-    description: "From health science to GTM engineering. The full campaign chain.",
-  },
-  {
-    href: "/vitals",
-    icon: "📊",
-    title: "Diagnostics",
-    description: "Live stats. XP, progression, content metrics.",
   },
 ];
 
@@ -70,7 +58,7 @@ export default function Home() {
 
       {/* Operations Board */}
       <section className="flex flex-col gap-6">
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider">
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
           Operations Board
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
