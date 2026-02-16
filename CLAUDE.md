@@ -8,8 +8,10 @@
 ## Workflow Rules
 
 - **Auto-commit**: Commit after every meaningful change. Do not batch unrelated changes.
-- **Auto-update docs**: After making changes, update this CLAUDE.md without being asked.
+- **Auto-update docs**: After making changes, update this CLAUDE.md without being asked. Keep all sections (file tree, navigation, utility classes, component interfaces) in sync with actual code.
+- **Auto-changelog**: After every commit, append an entry to `CHANGELOG.md` with the date, commit hash, and a brief description of what changed and why. Group entries by date. Use the format defined at the top of CHANGELOG.md.
 - **Plans before execution**: For multi-step or ambiguous tasks, present a plan before writing code. Get approval first.
+- **Push + verify**: After committing, always push to remote and confirm the push succeeded.
 
 ---
 
