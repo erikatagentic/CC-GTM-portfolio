@@ -3,8 +3,11 @@ import { StatBlock } from "@/components/ui/StatBlock";
 import { Panel } from "@/components/ui/Panel";
 import { Badge } from "@/components/ui/Badge";
 import { XPBar } from "@/components/ui/XPBar";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { CTASection } from "@/components/ui/CTASection";
 import { getCharacterStats, CURRENT_XP, CHARACTER_NAME } from "@/lib/rpg";
 import { CogDivider } from "@/components/ui/CogDivider";
+import { TESTIMONIALS } from "@/lib/testimonials";
 
 export const metadata: Metadata = {
   title: "Service Record",
@@ -163,6 +166,23 @@ export default function ServiceRecordPage() {
 
       <CogDivider />
 
+      {/* Field Commendations (Social Proof) */}
+      <section>
+        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+          // COMMENDATIONS FROM THE FIELD
+        </span>
+        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
+          Field Commendations
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {TESTIMONIALS.map((testimonial, i) => (
+            <TestimonialCard key={i} {...testimonial} />
+          ))}
+        </div>
+      </section>
+
+      <CogDivider />
+
       {/* Service History */}
       <section>
         <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
@@ -234,31 +254,9 @@ export default function ServiceRecordPage() {
 
       <CogDivider />
 
-      {/* Connect */}
+      {/* CTA */}
       <section>
-        <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-          // VOX CHANNELS
-        </span>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
-          Connect
-        </h2>
-        <div className="flex flex-wrap gap-3">
-          {[
-            { label: "LinkedIn", href: "https://linkedin.com/in/erikhernal/" },
-            { label: "Lumos", href: "https://lumosco.ai" },
-            { label: "Hey Agentic", href: "https://heyagentic.ai" },
-          ].map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 border border-border-default bg-bg-elevated/60 text-sm font-[family-name:var(--font-ui)] text-text-primary hover:border-border-mars hover:text-mars-base transition-all"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+        <CTASection />
       </section>
     </div>
   );

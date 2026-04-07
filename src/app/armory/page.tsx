@@ -23,6 +23,9 @@ const EQUIPMENT = [
     description: "Data enrichment engine. Waterfall logic, signal stacking, 5M+ contacts enriched. The core weapon in every GTM system I build.",
     rarity: "archaeotech" as const,
     icon: <ClayIcon />,
+    projectLink: "/work#clay-enrichment",
+    projectLabel: "Clay Enrichment Pipeline",
+    deployments: 47, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Secondary System",
@@ -30,6 +33,9 @@ const EQUIPMENT = [
     description: "Workflow automation. CRM syncs, Slack approvals, intent detection, multi-step orchestration. The connective tissue.",
     rarity: "relic" as const,
     icon: <N8nIcon />,
+    projectLink: "/work#n8n-automation",
+    projectLabel: "n8n Automation Stack",
+    deployments: 32, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Armor Plating",
@@ -37,6 +43,9 @@ const EQUIPMENT = [
     description: "Cold email sending infrastructure. Domain rotation, warming, deliverability monitoring. The outbound backbone.",
     rarity: "sanctified" as const,
     icon: <InstantlyIcon />,
+    projectLink: "/work#cold-email",
+    projectLabel: "Cold Email Infrastructure",
+    deployments: 85, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Tactical Helm",
@@ -44,6 +53,9 @@ const EQUIPMENT = [
     description: "Targeting and lead list building. Boolean search, saved searches, account lists. Precision targeting.",
     rarity: "sanctified" as const,
     icon: <SalesNavIcon />,
+    projectLink: "/work#linkedin-outbound",
+    projectLabel: "LinkedIn Outbound System",
+    deployments: 60, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Interface Gauntlets",
@@ -51,6 +63,9 @@ const EQUIPMENT = [
     description: "LinkedIn automation at scale. Connection requests, messaging sequences, multi-account management.",
     rarity: "sanctified" as const,
     icon: <HeyReachIcon />,
+    projectLink: "/work#linkedin-outbound",
+    projectLabel: "LinkedIn Outbound System",
+    deployments: 28, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Servo-Boots",
@@ -58,6 +73,7 @@ const EQUIPMENT = [
     description: "Scraping and LinkedIn data extraction. Profile scraping, post scraping, search scraping. The data harvester.",
     rarity: "field-tested" as const,
     icon: <PhantomBusterIcon />,
+    deployments: 15, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Augmetic Implant",
@@ -65,6 +81,7 @@ const EQUIPMENT = [
     description: "CRM, content OS, campaign tracking. The single source of truth for everything that matters.",
     rarity: "field-tested" as const,
     icon: <AirtableIcon />,
+    deployments: 40, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
     slot: "Reliquary",

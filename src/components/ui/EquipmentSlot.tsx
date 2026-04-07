@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Badge } from "./Badge";
 
@@ -10,6 +11,9 @@ interface EquipmentSlotProps {
   rarity: Rarity;
   icon: React.ReactNode;
   className?: string;
+  projectLink?: string;
+  projectLabel?: string;
+  deployments?: number;
 }
 
 const rarityBorders: Record<Rarity, string> = {
@@ -35,6 +39,9 @@ export function EquipmentSlot({
   rarity,
   icon,
   className,
+  projectLink,
+  projectLabel,
+  deployments,
 }: EquipmentSlotProps) {
   return (
     <div
@@ -49,16 +56,29 @@ export function EquipmentSlot({
         {icon}
       </div>
       <div className="flex flex-col gap-1">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <span className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-muted">
             {slot}
           </span>
           <Badge rarity={rarity}>{rarity.replace("-", " ")}</Badge>
+          {deployments && (
+            <span className="text-[10px] font-[family-name:var(--font-ui)] text-text-muted">
+              {deployments} deployments
+            </span>
+          )}
         </div>
         <span className="font-[family-name:var(--font-heading)] text-lg font-bold text-text-primary group-hover:text-mars-light transition-colors">
           {name}
         </span>
         <span className="text-sm text-text-secondary leading-relaxed">{description}</span>
+        {projectLink && projectLabel && (
+          <Link
+            href={projectLink}
+            className="text-xs font-[family-name:var(--font-ui)] text-mars-base hover:text-mars-bright transition-colors"
+          >
+            See: {projectLabel} &rarr;
+          </Link>
+        )}
       </div>
     </div>
   );
