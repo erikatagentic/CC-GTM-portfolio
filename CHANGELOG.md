@@ -10,7 +10,7 @@ Format: `[hash] Description of change`
 
 ### Terminology Pass
 
-`pending` **Translate 40k jargon to recruiter-readable labels.** Kept all visual effects (forge-glow, rarity borders, CogDividers, metal-brush) but swapped confusing labels: War Campaigns→Projects, Arsenal→Tools, Service Record→Experience, Command Deck→GTM Engineer. Equipment slots now describe actual functions (Core Platform, Automation, Email Infrastructure). Timeline acts use career stages instead of 40k ranks. CTA changed from "VOX CHANNEL OPEN" to "Let's Work Together". CharacterCard class/subclass now shows "GTM Engineer · Outbound Systems" instead of "Tech-Adept · Pipeline Artisan".
+`fbc20bd` **Translate 40k jargon to recruiter-readable labels.** Kept all visual effects (forge-glow, rarity borders, CogDividers, metal-brush) but swapped confusing labels: War Campaigns→Projects, Arsenal→Tools, Service Record→Experience, Command Deck→GTM Engineer. Equipment slots now describe actual functions (Core Platform, Automation, Email Infrastructure). Timeline acts use career stages instead of 40k ranks. CTA changed from "VOX CHANNEL OPEN" to "Let's Work Together". CharacterCard class/subclass now shows "GTM Engineer · Outbound Systems" instead of "Tech-Adept · Pipeline Artisan".
 
 ### Single-Page Conversion
 
