@@ -8,6 +8,10 @@ Format: `[hash] Description of change`
 
 ## 2026-04-07
 
+### Terminology Pass
+
+`pending` **Translate 40k jargon to recruiter-readable labels.** Kept all visual effects (forge-glow, rarity borders, CogDividers, metal-brush) but swapped confusing labels: War Campaigns→Projects, Arsenal→Tools, Service Record→Experience, Command Deck→GTM Engineer. Equipment slots now describe actual functions (Core Platform, Automation, Email Infrastructure). Timeline acts use career stages instead of 40k ranks. CTA changed from "VOX CHANNEL OPEN" to "Let's Work Together". CharacterCard class/subclass now shows "GTM Engineer · Outbound Systems" instead of "Tech-Adept · Pipeline Artisan".
+
 ### Single-Page Conversion
 
 `9957b74` **Convert 4-page site to single-page with anchor navigation.** Consolidated all content into one scrollable page: Hero, War Campaigns (5 full case studies), Arsenal (8 tools), Service Record (ability scores + campaign timeline), Social Proof, and CTA. Navigation converted from route links to anchor links with smooth scrolling. Removed System Status section, Name Plate (redundant with CharacterCard), Proficiencies (covered by Arsenal), and Service History panels (covered by timeline). Deleted work, character-sheet, and armory page files. All old routes redirect to /.

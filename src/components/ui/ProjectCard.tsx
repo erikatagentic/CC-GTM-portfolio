@@ -90,7 +90,7 @@ export function ProjectCard({
         {/* Compact: link to full case study */}
         {compact && (
           <span className="text-xs font-[family-name:var(--font-ui)] text-mars-base group-hover:text-mars-bright transition-colors mt-1">
-            Read field report &rarr;
+            View case study &rarr;
           </span>
         )}
       </div>

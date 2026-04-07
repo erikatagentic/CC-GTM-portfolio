@@ -83,8 +83,8 @@ export function getCharacterStats(xp: number): CharacterStats {
     currentTier,
     nextTier,
     progressToNext,
-    className: "Tech-Adept",
-    subclass: "Pipeline Artisan",
+    className: "GTM Engineer",
+    subclass: "Outbound Systems",
     grade: "A",
   };
 }

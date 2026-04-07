@@ -6,7 +6,7 @@ interface CTASectionProps {
 }
 
 export function CTASection({
-  heading = "VOX CHANNEL OPEN",
+  heading = "Let's Work Together",
   subtext = "Looking for a GTM engineer? Let's talk.",
 }: CTASectionProps) {
   return (
@@ -14,7 +14,7 @@ export function CTASection({
       <div className="flex flex-col items-center text-center gap-4">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // OPEN TRANSMISSION
+            // GET IN TOUCH
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
             {heading}

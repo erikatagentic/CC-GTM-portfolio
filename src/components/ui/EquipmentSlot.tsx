@@ -63,7 +63,7 @@ export function EquipmentSlot({
           <Badge rarity={rarity}>{rarity.replace("-", " ")}</Badge>
           {deployments && (
             <span className="text-[10px] font-[family-name:var(--font-ui)] text-text-muted">
-              {deployments} deployments
+              {deployments} projects
             </span>
           )}
         </div>

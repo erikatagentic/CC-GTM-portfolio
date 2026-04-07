@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/MechanicusIcons";
 
 const NAV_LINKS = [
-  { href: "#work", label: "War Campaigns", icon: <NavScrollIcon /> },
-  { href: "#arsenal", label: "Arsenal", icon: <NavOmniIcon /> },
-  { href: "#service-record", label: "Service Record", icon: <NavAquilaIcon /> },
+  { href: "#work", label: "Projects", icon: <NavScrollIcon /> },
+  { href: "#arsenal", label: "Tools", icon: <NavOmniIcon /> },
+  { href: "#service-record", label: "Experience", icon: <NavAquilaIcon /> },
   { href: "#contact", label: "Contact", icon: <NavCogIcon /> },
 ];
 

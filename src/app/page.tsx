@@ -33,7 +33,7 @@ const STATS = [
 const ACTS = [
   {
     act: "I",
-    title: "The Initiate",
+    title: "The Foundation",
     period: "Pre-2018",
     description: "Health science background. Learning how systems work at the biological level. Developing the analytical mindset that would later define every campaign audit.",
     lesson: "Complex systems have patterns. Find the pattern, find the lever.",
@@ -41,7 +41,7 @@ const ACTS = [
   },
   {
     act: "II",
-    title: "The Forge Apprentice",
+    title: "Product Management",
     period: "2018 - 2020",
     description: "Product Management at Honey (acquired by PayPal for $4B), GrowthPhysics, and Medely. Building products, understanding users, learning what makes people act.",
     lesson: "Users don't care about features. They care about outcomes.",
@@ -49,7 +49,7 @@ const ACTS = [
   },
   {
     act: "III",
-    title: "The Campaign Marshal",
+    title: "Growth Leadership",
     period: "2020 - 2023",
     description: "Head of Growth at Cleverly for 3 years. Running outbound at scale. 200+ campaigns audited. Learning what actually moves pipeline vs. what just looks good on a slide.",
     lesson: "Most outbound fails because of targeting, not copy. Fix the list first.",
@@ -57,7 +57,7 @@ const ACTS = [
   },
   {
     act: "IV",
-    title: "The Archmagos",
+    title: "GTM Engineering",
     period: "2023 - Present",
     description: "Founded Lumos. GTM Engineer at Hey Agentic. Building systems that replace SDR headcount with automation. Clay, n8n, cold email, LinkedIn -- the full stack.",
     lesson: "The best GTM teams don't need more people. They need better plumbing.",
@@ -67,7 +67,7 @@ const ACTS = [
 
 const EQUIPMENT = [
   {
-    slot: "Primary Weapon",
+    slot: "Core Platform",
     name: "Clay",
     description: "Data enrichment engine. Waterfall logic, signal stacking, 5M+ contacts enriched. The core weapon in every GTM system I build.",
     rarity: "archaeotech" as const,
@@ -77,7 +77,7 @@ const EQUIPMENT = [
     deployments: 47, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Secondary System",
+    slot: "Automation",
     name: "n8n",
     description: "Workflow automation. CRM syncs, Slack approvals, intent detection, multi-step orchestration. The connective tissue.",
     rarity: "relic" as const,
@@ -87,7 +87,7 @@ const EQUIPMENT = [
     deployments: 32, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Armor Plating",
+    slot: "Email Infrastructure",
     name: "Instantly",
     description: "Cold email sending infrastructure. Domain rotation, warming, deliverability monitoring. The outbound backbone.",
     rarity: "sanctified" as const,
@@ -97,7 +97,7 @@ const EQUIPMENT = [
     deployments: 85, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Tactical Helm",
+    slot: "Prospecting",
     name: "Sales Navigator",
     description: "Targeting and lead list building. Boolean search, saved searches, account lists. Precision targeting.",
     rarity: "sanctified" as const,
@@ -107,7 +107,7 @@ const EQUIPMENT = [
     deployments: 60, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Interface Gauntlets",
+    slot: "LinkedIn Automation",
     name: "HeyReach",
     description: "LinkedIn automation at scale. Connection requests, messaging sequences, multi-account management.",
     rarity: "sanctified" as const,
@@ -117,7 +117,7 @@ const EQUIPMENT = [
     deployments: 28, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Servo-Boots",
+    slot: "Data Extraction",
     name: "PhantomBuster",
     description: "Scraping and LinkedIn data extraction. Profile scraping, post scraping, search scraping. The data harvester.",
     rarity: "field-tested" as const,
@@ -125,7 +125,7 @@ const EQUIPMENT = [
     deployments: 15, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Augmetic Implant",
+    slot: "CRM & Ops",
     name: "Airtable",
     description: "CRM, content OS, campaign tracking. The single source of truth for everything that matters.",
     rarity: "field-tested" as const,
@@ -133,7 +133,7 @@ const EQUIPMENT = [
     deployments: 40, /* [PLACEHOLDER: Erik confirm count] */
   },
   {
-    slot: "Reliquary",
+    slot: "AI Development",
     name: "Cursor + Claude",
     description: "AI-assisted development and content creation. Building systems, analyzing data, writing at machine speed.",
     rarity: "relic" as const,
@@ -151,10 +151,10 @@ export default function Home() {
             <CogMechanicum className="w-10 h-10 sm:w-12 sm:h-12 text-mars-base" />
             <div>
               <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-                // TRANSMISSION INCOMING
+                // ERIK HERNAL
               </span>
               <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
-                Command Deck
+                GTM Engineer
               </h1>
             </div>
           </div>
@@ -175,13 +175,13 @@ export default function Home() {
       <section id="work" className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // FIELD REPORTS
+            // CASE STUDIES
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
-            War Campaigns
+            Projects
           </h2>
           <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
-            Real systems built for real pipelines. Each campaign below is a project with outcomes,
+            Real systems built for real pipelines. Each one below is a project with outcomes,
             not a slide deck.
           </p>
         </div>
@@ -202,13 +202,13 @@ export default function Home() {
       <section id="arsenal" className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // EQUIPMENT MANIFEST
+            // TECH STACK
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
-            Arsenal
+            Tools
           </h2>
           <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
-            Every tool in the GTM arsenal. Equipped, battle-tested, and ranked by classification.
+            The GTM stack. Every tool I use daily, ranked by how much I rely on it.
           </p>
         </div>
 
@@ -220,7 +220,7 @@ export default function Home() {
 
         <div className="flex flex-wrap items-center gap-4 p-4 border border-border-subtle bg-bg-panel/50">
           <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-text-muted mr-2">
-            Classification:
+            Proficiency:
           </span>
           {[
             { label: "Standard", color: "text-rarity-common" },
@@ -242,23 +242,23 @@ export default function Home() {
       <section id="service-record" className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // IMPERIAL RECORD
+            // EXPERIENCE
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
-            Service Record
+            Experience
           </h2>
           <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary">
-            Credentials, aptitudes, and deployment history.
+            Skills, credentials, and career history.
           </p>
         </div>
 
         {/* Ability Scores */}
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // APTITUDE ASSESSMENT
+            // SKILLS
           </span>
           <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
-            Ability Scores
+            Skills
           </h3>
           <StatBlock stats={STATS} />
         </div>
@@ -268,10 +268,10 @@ export default function Home() {
         {/* Campaign History Timeline */}
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // TEMPORAL LOG
+            // CAREER TIMELINE
           </span>
           <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
-            Campaign History
+            Timeline
           </h3>
           <div className="relative">
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-border-mars via-border-default to-transparent" />
@@ -296,7 +296,7 @@ export default function Home() {
                       <p className="text-sm text-text-secondary leading-relaxed">{act.description}</p>
                       <div className="border-t border-border-subtle pt-2 mt-1">
                         <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-gold-muted">
-                          Intel gathered:
+                          Takeaway:
                         </span>
                         <p className="text-sm text-mars-light font-[family-name:var(--font-heading)] italic mt-1">
                           &ldquo;{act.lesson}&rdquo;
@@ -317,10 +317,10 @@ export default function Home() {
       <section id="social-proof" className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // COMMENDATIONS FROM THE FIELD
+            // TESTIMONIALS
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
-            Field Commendations
+            Testimonials
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
