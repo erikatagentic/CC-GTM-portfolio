@@ -1,49 +1,13 @@
 import Link from "next/link";
 import { CharacterCard } from "@/components/CharacterCard";
 import { Panel } from "@/components/ui/Panel";
-import {
-  CogMechanicum,
-  ServoSkull,
-  NavScrollIcon,
-  NavVoxIcon,
-  NavForgeIcon,
-  NavAquilaIcon,
-  NavOmniIcon,
-} from "@/components/ui/MechanicusIcons";
+import { CogMechanicum, ServoSkull } from "@/components/ui/MechanicusIcons";
 import { CogDivider } from "@/components/ui/CogDivider";
-
-const SECTIONS = [
-  {
-    href: "/grimoire",
-    icon: <NavScrollIcon className="w-5 h-5" />,
-    title: "The Codex",
-    description: "8 chapters of GTM engineering knowledge. Cold email, Clay, deliverability, and more.",
-  },
-  {
-    href: "/chronicles",
-    icon: <NavVoxIcon className="w-5 h-5" />,
-    title: "Dispatches",
-    description: "Long-form reports from the frontlines of outbound and pipeline building.",
-  },
-  {
-    href: "/quest-log",
-    icon: <NavForgeIcon className="w-5 h-5" />,
-    title: "Mission Log",
-    description: "Daily build log. What shipped, what broke, what I learned.",
-  },
-  {
-    href: "/character-sheet",
-    icon: <NavAquilaIcon className="w-5 h-5" />,
-    title: "Service Record",
-    description: "Stats, credentials, campaign history, and the complete service record.",
-  },
-  {
-    href: "/armory",
-    icon: <NavOmniIcon className="w-5 h-5" />,
-    title: "Arsenal",
-    description: "The tool stack. Every weapon in the GTM arsenal.",
-  },
-];
+import { ProjectCard } from "@/components/ui/ProjectCard";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { CTASection } from "@/components/ui/CTASection";
+import { PROJECTS } from "@/lib/projects";
+import { TESTIMONIALS } from "@/lib/testimonials";
 
 export default function Home() {
   return (
@@ -55,16 +19,18 @@ export default function Home() {
             <CogMechanicum className="w-10 h-10 sm:w-12 sm:h-12 text-mars-base" />
             <div>
               <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-                // COMMAND TERMINAL
+                // TRANSMISSION INCOMING
               </span>
               <h1 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
                 Command Deck
               </h1>
             </div>
           </div>
-          <p className="font-[family-name:var(--font-heading)] text-lg text-text-secondary max-w-2xl">
-            Every skill, every campaign, every lesson -- documented. The GTM engineering codex,
-            built in public.
+          <p className="font-[family-name:var(--font-heading)] text-lg sm:text-xl text-text-primary max-w-2xl">
+            I build outbound systems that replace SDR headcount with automation.
+          </p>
+          <p className="text-sm text-text-muted font-[family-name:var(--font-ui)]">
+            200+ campaigns. 5M+ contacts enriched. Clay Top 1%. Ex-PM at Honey (PayPal $4B).
           </p>
         </div>
 
@@ -74,38 +40,61 @@ export default function Home() {
       {/* Divider */}
       <CogDivider size="lg" />
 
-      {/* Operations Board */}
+      {/* Projects Preview */}
       <section className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // ACTIVE DEPLOYMENTS
+            // WAR CAMPAIGNS
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
-            Operations Board
+            Field Reports
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SECTIONS.map((section) => (
-            <Link key={section.href} href={section.href}>
-              <Panel variant="default" hover className="h-full">
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-mars-base/70">{section.icon}</span>
-                    <h3 className="font-[family-name:var(--font-heading)] text-base font-bold text-text-primary">
-                      {section.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-text-muted leading-relaxed">
-                    {section.description}
-                  </p>
-                </div>
-              </Panel>
-            </Link>
+          {PROJECTS.slice(0, 3).map((project) => (
+            <ProjectCard key={project.slug} {...project} compact />
+          ))}
+        </div>
+        <Link
+          href="/work"
+          className="text-sm font-[family-name:var(--font-ui)] text-mars-base hover:text-mars-bright transition-colors uppercase tracking-wider"
+        >
+          View all campaigns &rarr;
+        </Link>
+      </section>
+
+      {/* Divider */}
+      <CogDivider />
+
+      {/* Social Proof */}
+      <section className="flex flex-col gap-6">
+        <div>
+          <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+            // COMMENDATIONS FROM THE FIELD
+          </span>
+          <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
+            Field Commendations
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {TESTIMONIALS.map((testimonial, i) => (
+            <TestimonialCard key={i} {...testimonial} />
           ))}
         </div>
       </section>
 
-      {/* System Status */}
+      {/* Divider */}
+      <CogDivider />
+
+      {/* CTA */}
+      <section>
+        <CTASection />
+      </section>
+
+      {/* Divider */}
+      <CogDivider size="sm" />
+
+      {/* System Status (moved to bottom) */}
       <section className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <ServoSkull className="w-6 h-6 text-mars-base/50" />

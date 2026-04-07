@@ -7,18 +7,14 @@ import { cn } from "@/lib/utils";
 import {
   CogMechanicum,
   NavCogIcon,
-  NavVoxIcon,
   NavScrollIcon,
-  NavForgeIcon,
   NavAquilaIcon,
   NavOmniIcon,
 } from "@/components/ui/MechanicusIcons";
 
 const NAV_LINKS = [
   { href: "/", label: "Command Deck", icon: <NavCogIcon /> },
-  { href: "/grimoire", label: "The Codex", icon: <NavScrollIcon /> },
-  { href: "/chronicles", label: "Dispatches", icon: <NavVoxIcon /> },
-  { href: "/quest-log", label: "Mission Log", icon: <NavForgeIcon /> },
+  { href: "/work", label: "War Campaigns", icon: <NavScrollIcon /> },
   { href: "/character-sheet", label: "Service Record", icon: <NavAquilaIcon /> },
   { href: "/armory", label: "Arsenal", icon: <NavOmniIcon /> },
 ];

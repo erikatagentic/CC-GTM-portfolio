@@ -180,22 +180,22 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 
 ### Navigation
 
-6 pages accessible via sticky top navbar:
+4 pages accessible via sticky top navbar:
 
 | Route | Label | Icon (SVG) | Status |
 |-------|-------|------------|--------|
-| `/` | Command Deck | NavCogIcon (gear) | Complete |
-| `/grimoire` | The Codex | NavScrollIcon (data-scroll) | Scaffolded (chapters listed, content "classified") |
-| `/chronicles` | Dispatches | NavVoxIcon (vox-caster) | Placeholder |
-| `/quest-log` | Mission Log | NavForgeIcon (anvil) | Placeholder |
+| `/` | Command Deck | NavCogIcon (gear) | Complete (hero + projects preview + social proof + CTA) |
+| `/work` | War Campaigns | NavScrollIcon (data-scroll) | Complete (5 case studies, placeholder content) |
 | `/character-sheet` | Service Record | NavAquilaIcon (aquila badge) | Complete (includes Campaign History timeline) |
 | `/armory` | Arsenal | NavOmniIcon (wrench-cog) | Complete |
 
+Redirects: `/grimoire` -> `/work`, `/chronicles` -> `/`, `/quest-log` -> `/`
+
 ### Page Content Summary
 
-**Command Deck** (`/`) — CharacterCard hero + Operations Board (5 section cards) + System Status indicators.
+**Command Deck** (`/`) — Hero with value prop + CharacterCard + Projects preview (3 compact ProjectCards) + Social proof (TestimonialCards) + CTA (CTASection) + System Status indicators.
 
-**The Codex** (`/grimoire`) — 8 GTM knowledge chapters: Cold Email Fundamentals, Deliverability, Clay & Data Enrichment, Campaign Architecture, LinkedIn Outbound, Automation with n8n, GTM Engineering, ICP & Targeting. All marked "classified" pending content.
+**War Campaigns** (`/work`) — 5 project case studies: Clay Enrichment Pipeline (Archaeotech), Cold Email Infrastructure (Relic), n8n Automation Stack (Relic), LinkedIn Outbound System (Sanctified), Honey Product Work (Sanctified). Each with problem/solution/outcome sections.
 
 **Service Record** (`/character-sheet`) — Nameplate with tier badges, XP bar, 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements), 8 specializations, service history (Recruitment / Campaign History / Current Deployment), campaign history timeline (4 acts from Initiate to Arch-Mechanicus), connect links.
 
@@ -211,15 +211,13 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 src/
 ├── app/
 │   ├── layout.tsx              # Root layout (metadata, fonts, nav, footer)
-│   ├── page.tsx                # Command Deck (home)
+│   ├── page.tsx                # Command Deck (hero + projects + social proof + CTA)
 │   ├── globals.css             # Design tokens, utilities, animations
-│   ├── grimoire/page.tsx       # The Codex
-│   ├── chronicles/page.tsx     # Dispatches
-│   ├── quest-log/page.tsx      # Mission Log
+│   ├── work/page.tsx           # War Campaigns (project case studies)
 │   ├── character-sheet/page.tsx # Service Record (includes Campaign History)
 │   └── armory/page.tsx         # Arsenal
 ├── components/
-│   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client"), Mechanicus SVG icons
+│   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client"), 4 links
 │   ├── Footer.tsx              # CogMechanicum logo + Aquila seal + binary cant (server)
 │   ├── CharacterCard.tsx       # Hero card with stats + XP ("use client")
 │   └── ui/
@@ -231,10 +229,15 @@ src/
 │       ├── GradeCard.tsx       # S-D performance grade display
 │       ├── MechanicusIcons.tsx # 11 Mechanicus SVG icons (CogMechanicum, ServoSkull, Aquila, 6 nav icons, CogIcon)
 │       ├── CogDivider.tsx      # Cog-centered divider (replaces forge-divider), size: sm/md/lg
-│       └── ToolIcons.tsx       # 8 tool-specific SVG icons for Arsenal page
+│       ├── ToolIcons.tsx       # 8 tool-specific SVG icons for Arsenal page
+│       ├── ProjectCard.tsx     # Case study card (compact + full modes)
+│       ├── TestimonialCard.tsx # Quote card for social proof
+│       └── CTASection.tsx      # Reusable CTA block with contact links
 └── lib/
     ├── utils.ts                # cn(), formatNumber(), formatDate()
-    └── rpg.ts                  # Tier system, XP values, character stats
+    ├── rpg.ts                  # Tier system, XP values, character stats
+    ├── projects.ts             # Project case study data + TOOL_RARITY map
+    └── testimonials.ts         # Testimonial data (placeholder)
 ```
 
 ### Key Component Interfaces
@@ -255,7 +258,22 @@ src/
 
 ### Client vs. Server Components
 
-- **Server (default)**: All page files, Footer, UI components (Badge, Panel, StatBlock, GradeCard)
+**ProjectCard** — Case study card with two modes:
+- `compact: true`: designation + title + summary + tool badges + link to full case study. Used on homepage preview.
+- `compact: false`: full case study with problem/solution/outcome sections. Used on /work page.
+- Props: `ProjectCardProps extends ProjectData { compact?: boolean }`
+
+**TestimonialCard** — Quote card for social proof:
+- Props: `quote`, `name`, `title`, `company`
+- Uses Panel variant="bordered" with decorative quotation mark
+
+**CTASection** — Reusable CTA block:
+- Props: optional `heading` (default "VOX CHANNEL OPEN"), optional `subtext`
+- Three contact links: LinkedIn (primary mars-base), Email (secondary), Hey Agentic (secondary)
+
+### Client vs. Server Components
+
+- **Server (default)**: All page files, Footer, UI components (Badge, Panel, StatBlock, GradeCard, ProjectCard, TestimonialCard, CTASection)
 - **Client (`"use client"`)**: Navigation (uses `usePathname`, `useState`), CharacterCard (uses Framer Motion)
 
 ---
