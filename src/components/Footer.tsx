@@ -48,10 +48,6 @@ export function Footer() {
             </Link>
           </div>
         </div>
-        {/* Binary cant decoration */}
-        <div className="mt-6 overflow-hidden text-[7px] font-mono tracking-[0.2em] text-mars-base/[0.04] leading-tight select-none" aria-hidden="true">
-          01001101 01000101 01000011 01001000 01000001 01001110 01001001 01000011 01010101 01010011 00100000 01001101 01000101 01000011 01001000 01000001 01001110 01001001 01000011 01010101 01010011
-        </div>
       </div>
     </footer>
   );

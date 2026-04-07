@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Badge } from "./Badge";
+import { Badge, RARITY_LABELS } from "./Badge";
 
 type Rarity = "standard" | "field-tested" | "sanctified" | "relic" | "archaeotech";
 
@@ -60,7 +60,7 @@ export function EquipmentSlot({
           <span className="text-[10px] font-[family-name:var(--font-ui)] uppercase tracking-widest text-text-muted">
             {slot}
           </span>
-          <Badge rarity={rarity}>{rarity.replace("-", " ")}</Badge>
+          <Badge rarity={rarity}>{RARITY_LABELS[rarity]}</Badge>
           {deployments && (
             <span className="text-[10px] font-[family-name:var(--font-ui)] text-text-muted">
               {deployments} projects

@@ -8,6 +8,14 @@ interface BadgeProps {
   className?: string;
 }
 
+export const RARITY_LABELS: Record<Rarity, string> = {
+  standard: "Basic",
+  "field-tested": "Familiar",
+  sanctified: "Proficient",
+  relic: "Expert",
+  archaeotech: "Mastered",
+};
+
 const rarityStyles: Record<Rarity, string> = {
   standard: "border-rarity-common/50 text-rarity-common bg-rarity-common/10",
   "field-tested": "border-rarity-uncommon/50 text-rarity-uncommon bg-rarity-uncommon/10",

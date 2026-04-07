@@ -27,7 +27,7 @@ export function CharacterCard() {
           </div>
           <div className="flex items-center gap-2">
             <Badge rarity="archaeotech">
-              Tier {stats.currentTier.level}
+              Level {stats.currentTier.level}
             </Badge>
             <Badge rarity="sanctified">
               {stats.currentTier.title}

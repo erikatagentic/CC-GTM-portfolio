@@ -216,11 +216,11 @@ export default function Home() {
             Proficiency:
           </span>
           {[
-            { label: "Standard", color: "text-rarity-common" },
-            { label: "Field-Tested", color: "text-rarity-uncommon" },
-            { label: "Sanctified", color: "text-rarity-rare" },
-            { label: "Relic", color: "text-rarity-very-rare" },
-            { label: "Archaeotech", color: "text-rarity-legendary" },
+            { label: "Basic", color: "text-rarity-common" },
+            { label: "Familiar", color: "text-rarity-uncommon" },
+            { label: "Proficient", color: "text-rarity-rare" },
+            { label: "Expert", color: "text-rarity-very-rare" },
+            { label: "Mastered", color: "text-rarity-legendary" },
           ].map((r) => (
             <span key={r.label} className={`text-xs font-[family-name:var(--font-ui)] ${r.color}`}>
               {r.label}

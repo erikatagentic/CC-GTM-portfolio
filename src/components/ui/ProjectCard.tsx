@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Panel } from "./Panel";
-import { Badge } from "./Badge";
+import { Badge, RARITY_LABELS } from "./Badge";
 import type { ProjectData } from "@/lib/projects";
 import { TOOL_RARITY } from "@/lib/projects";
 
@@ -35,7 +35,7 @@ export function ProjectCard({
               <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-text-primary">
                 {title}
               </h3>
-              <Badge rarity={rarity}>{rarity.replace("-", " ")}</Badge>
+              <Badge rarity={rarity}>{RARITY_LABELS[rarity]}</Badge>
             </div>
             <span className="text-xs font-[family-name:var(--font-ui)] text-text-muted">
               {context}
