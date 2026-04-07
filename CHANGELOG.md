@@ -10,6 +10,8 @@ Format: `[hash] Description of change`
 
 ### Portfolio Restructure (santifer.io-inspired)
 
+`79e9afa` **Arsenal project links + Service Record social proof.** Added projectLink, projectLabel, deployments props to EquipmentSlot. Each Arsenal tool now links to its case study on /work with deployment counts. Service Record: added Field Commendations section with TestimonialCards, replaced Connect section with CTASection component.
+
 `476f5aa` **Site restructure: 6 pages to 4, conversion-focused layout.** Consolidated from 6 pages (2 empty placeholders) to 4 content-rich pages. Homepage rewritten from nav hub to conversion page: hero with value prop, project previews, social proof, CTA. Created War Campaigns page (/work) replacing The Codex with 5 project case studies. Deleted Dispatches (/chronicles) and Mission Log (/quest-log) placeholders. Added redirects for old URLs. Navigation reduced from 6 to 4 items. New components: ProjectCard (compact + full modes), TestimonialCard, CTASection. New data files: projects.ts (with TOOL_RARITY map), testimonials.ts. All case study content uses [PLACEHOLDER:] markers for Erik to fill in.
 
 ---
