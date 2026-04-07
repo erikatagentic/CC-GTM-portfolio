@@ -6,6 +6,14 @@ Format: `[hash] Description of change`
 
 ---
 
+## 2026-04-07
+
+### Single-Page Conversion
+
+`pending` **Convert 4-page site to single-page with anchor navigation.** Consolidated all content into one scrollable page: Hero, War Campaigns (5 full case studies), Arsenal (8 tools), Service Record (ability scores + campaign timeline), Social Proof, and CTA. Navigation converted from route links to anchor links with smooth scrolling. Removed System Status section, Name Plate (redundant with CharacterCard), Proficiencies (covered by Arsenal), and Service History panels (covered by timeline). Deleted work, character-sheet, and armory page files. All old routes redirect to /.
+
+---
+
 ## 2026-04-06
 
 ### Portfolio Restructure (santifer.io-inspired)

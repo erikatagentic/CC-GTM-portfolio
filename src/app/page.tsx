@@ -1,19 +1,151 @@
-import Link from "next/link";
 import { CharacterCard } from "@/components/CharacterCard";
 import { Panel } from "@/components/ui/Panel";
-import { CogMechanicum, ServoSkull } from "@/components/ui/MechanicusIcons";
+import { Badge } from "@/components/ui/Badge";
+import { CogMechanicum } from "@/components/ui/MechanicusIcons";
 import { CogDivider } from "@/components/ui/CogDivider";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import { CTASection } from "@/components/ui/CTASection";
+import { EquipmentSlot } from "@/components/ui/EquipmentSlot";
+import { StatBlock } from "@/components/ui/StatBlock";
+import {
+  ClayIcon,
+  N8nIcon,
+  InstantlyIcon,
+  SalesNavIcon,
+  HeyReachIcon,
+  PhantomBusterIcon,
+  AirtableIcon,
+  CursorClaudeIcon,
+} from "@/components/ui/ToolIcons";
 import { PROJECTS } from "@/lib/projects";
 import { TESTIMONIALS } from "@/lib/testimonials";
+
+const STATS = [
+  { name: "Strength", abbreviation: "STR", value: 18, description: "200+ campaigns audited" },
+  { name: "Dexterity", abbreviation: "DEX", value: 16, description: "Clay Top 1% (5M+ contacts)" },
+  { name: "Constitution", abbreviation: "CON", value: 15, description: "3yr Head of Growth @ Cleverly" },
+  { name: "Intelligence", abbreviation: "INT", value: 17, description: "GTM Engineer @ Hey Agentic" },
+  { name: "Wisdom", abbreviation: "WIS", value: 14, description: "PM @ Medely, Honey (PayPal)" },
+  { name: "Charisma", abbreviation: "CHA", value: 13, description: "Founder @ Lumos" },
+];
+
+const ACTS = [
+  {
+    act: "I",
+    title: "The Initiate",
+    period: "Pre-2018",
+    description: "Health science background. Learning how systems work at the biological level. Developing the analytical mindset that would later define every campaign audit.",
+    lesson: "Complex systems have patterns. Find the pattern, find the lever.",
+    rarity: "standard" as const,
+  },
+  {
+    act: "II",
+    title: "The Forge Apprentice",
+    period: "2018 - 2020",
+    description: "Product Management at Honey (acquired by PayPal for $4B), GrowthPhysics, and Medely. Building products, understanding users, learning what makes people act.",
+    lesson: "Users don't care about features. They care about outcomes.",
+    rarity: "field-tested" as const,
+  },
+  {
+    act: "III",
+    title: "The Campaign Marshal",
+    period: "2020 - 2023",
+    description: "Head of Growth at Cleverly for 3 years. Running outbound at scale. 200+ campaigns audited. Learning what actually moves pipeline vs. what just looks good on a slide.",
+    lesson: "Most outbound fails because of targeting, not copy. Fix the list first.",
+    rarity: "sanctified" as const,
+  },
+  {
+    act: "IV",
+    title: "The Archmagos",
+    period: "2023 - Present",
+    description: "Founded Lumos. GTM Engineer at Hey Agentic. Building systems that replace SDR headcount with automation. Clay, n8n, cold email, LinkedIn -- the full stack.",
+    lesson: "The best GTM teams don't need more people. They need better plumbing.",
+    rarity: "archaeotech" as const,
+  },
+];
+
+const EQUIPMENT = [
+  {
+    slot: "Primary Weapon",
+    name: "Clay",
+    description: "Data enrichment engine. Waterfall logic, signal stacking, 5M+ contacts enriched. The core weapon in every GTM system I build.",
+    rarity: "archaeotech" as const,
+    icon: <ClayIcon />,
+    projectLink: "#clay-enrichment",
+    projectLabel: "Clay Enrichment Pipeline",
+    deployments: 47, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Secondary System",
+    name: "n8n",
+    description: "Workflow automation. CRM syncs, Slack approvals, intent detection, multi-step orchestration. The connective tissue.",
+    rarity: "relic" as const,
+    icon: <N8nIcon />,
+    projectLink: "#n8n-automation",
+    projectLabel: "n8n Automation Stack",
+    deployments: 32, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Armor Plating",
+    name: "Instantly",
+    description: "Cold email sending infrastructure. Domain rotation, warming, deliverability monitoring. The outbound backbone.",
+    rarity: "sanctified" as const,
+    icon: <InstantlyIcon />,
+    projectLink: "#cold-email",
+    projectLabel: "Cold Email Infrastructure",
+    deployments: 85, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Tactical Helm",
+    name: "Sales Navigator",
+    description: "Targeting and lead list building. Boolean search, saved searches, account lists. Precision targeting.",
+    rarity: "sanctified" as const,
+    icon: <SalesNavIcon />,
+    projectLink: "#linkedin-outbound",
+    projectLabel: "LinkedIn Outbound System",
+    deployments: 60, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Interface Gauntlets",
+    name: "HeyReach",
+    description: "LinkedIn automation at scale. Connection requests, messaging sequences, multi-account management.",
+    rarity: "sanctified" as const,
+    icon: <HeyReachIcon />,
+    projectLink: "#linkedin-outbound",
+    projectLabel: "LinkedIn Outbound System",
+    deployments: 28, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Servo-Boots",
+    name: "PhantomBuster",
+    description: "Scraping and LinkedIn data extraction. Profile scraping, post scraping, search scraping. The data harvester.",
+    rarity: "field-tested" as const,
+    icon: <PhantomBusterIcon />,
+    deployments: 15, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Augmetic Implant",
+    name: "Airtable",
+    description: "CRM, content OS, campaign tracking. The single source of truth for everything that matters.",
+    rarity: "field-tested" as const,
+    icon: <AirtableIcon />,
+    deployments: 40, /* [PLACEHOLDER: Erik confirm count] */
+  },
+  {
+    slot: "Reliquary",
+    name: "Cursor + Claude",
+    description: "AI-assisted development and content creation. Building systems, analyzing data, writing at machine speed.",
+    rarity: "relic" as const,
+    icon: <CursorClaudeIcon />,
+  },
+];
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-12">
-      {/* Hero */}
-      <section className="flex flex-col gap-6">
+      {/* ===== HERO ===== */}
+      <section id="hero" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <CogMechanicum className="w-10 h-10 sm:w-12 sm:h-12 text-mars-base" />
@@ -37,42 +169,157 @@ export default function Home() {
         <CharacterCard />
       </section>
 
-      {/* Divider */}
       <CogDivider size="lg" />
 
-      {/* Projects Preview */}
-      <section className="flex flex-col gap-6">
+      {/* ===== WAR CAMPAIGNS ===== */}
+      <section id="work" className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-            // WAR CAMPAIGNS
+            // FIELD REPORTS
           </span>
-          <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
-            Field Reports
+          <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+            War Campaigns
           </h2>
+          <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
+            Real systems built for real pipelines. Each campaign below is a project with outcomes,
+            not a slide deck.
+          </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {PROJECTS.slice(0, 3).map((project) => (
-            <ProjectCard key={project.slug} {...project} compact />
+
+        <div className="flex flex-col gap-8">
+          {PROJECTS.map((project, i) => (
+            <div key={project.slug}>
+              <ProjectCard {...project} compact={false} />
+              {i < PROJECTS.length - 1 && <CogDivider size="sm" className="mt-8" />}
+            </div>
           ))}
         </div>
-        <Link
-          href="/work"
-          className="text-sm font-[family-name:var(--font-ui)] text-mars-base hover:text-mars-bright transition-colors uppercase tracking-wider"
-        >
-          View all campaigns &rarr;
-        </Link>
       </section>
 
-      {/* Divider */}
-      <CogDivider />
+      <CogDivider size="lg" />
 
-      {/* Social Proof */}
-      <section className="flex flex-col gap-6">
+      {/* ===== ARSENAL ===== */}
+      <section id="arsenal" className="flex flex-col gap-6">
+        <div>
+          <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+            // EQUIPMENT MANIFEST
+          </span>
+          <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+            Arsenal
+          </h2>
+          <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary max-w-2xl">
+            Every tool in the GTM arsenal. Equipped, battle-tested, and ranked by classification.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {EQUIPMENT.map((item) => (
+            <EquipmentSlot key={item.slot} {...item} />
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-4 p-4 border border-border-subtle bg-bg-panel/50">
+          <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-text-muted mr-2">
+            Classification:
+          </span>
+          {[
+            { label: "Standard", color: "text-rarity-common" },
+            { label: "Field-Tested", color: "text-rarity-uncommon" },
+            { label: "Sanctified", color: "text-rarity-rare" },
+            { label: "Relic", color: "text-rarity-very-rare" },
+            { label: "Archaeotech", color: "text-rarity-legendary" },
+          ].map((r) => (
+            <span key={r.label} className={`text-xs font-[family-name:var(--font-ui)] ${r.color}`}>
+              {r.label}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <CogDivider size="lg" />
+
+      {/* ===== SERVICE RECORD ===== */}
+      <section id="service-record" className="flex flex-col gap-6">
+        <div>
+          <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+            // IMPERIAL RECORD
+          </span>
+          <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
+            Service Record
+          </h2>
+          <p className="mt-2 font-[family-name:var(--font-heading)] text-text-secondary">
+            Credentials, aptitudes, and deployment history.
+          </p>
+        </div>
+
+        {/* Ability Scores */}
+        <div>
+          <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+            // APTITUDE ASSESSMENT
+          </span>
+          <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
+            Ability Scores
+          </h3>
+          <StatBlock stats={STATS} />
+        </div>
+
+        <CogDivider size="sm" />
+
+        {/* Campaign History Timeline */}
+        <div>
+          <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
+            // TEMPORAL LOG
+          </span>
+          <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider mb-4">
+            Campaign History
+          </h3>
+          <div className="relative">
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-border-mars via-border-default to-transparent" />
+
+            <div className="flex flex-col gap-6">
+              {ACTS.map((act) => (
+                <div key={act.act} className="relative pl-16">
+                  <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center border border-border-mars bg-bg-darkest">
+                    <span className="font-[family-name:var(--font-display)] text-sm font-bold text-mars-base">
+                      {act.act}
+                    </span>
+                  </div>
+
+                  <Panel variant="default" hover>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center gap-3">
+                        <h4 className="font-[family-name:var(--font-heading)] text-lg font-bold text-text-primary">
+                          {act.title}
+                        </h4>
+                        <Badge rarity={act.rarity}>{act.period}</Badge>
+                      </div>
+                      <p className="text-sm text-text-secondary leading-relaxed">{act.description}</p>
+                      <div className="border-t border-border-subtle pt-2 mt-1">
+                        <span className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-gold-muted">
+                          Intel gathered:
+                        </span>
+                        <p className="text-sm text-mars-light font-[family-name:var(--font-heading)] italic mt-1">
+                          &ldquo;{act.lesson}&rdquo;
+                        </p>
+                      </div>
+                    </div>
+                  </Panel>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CogDivider size="lg" />
+
+      {/* ===== SOCIAL PROOF ===== */}
+      <section id="social-proof" className="flex flex-col gap-6">
         <div>
           <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
             // COMMENDATIONS FROM THE FIELD
           </span>
-          <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-mars-light forge-glow-strong tracking-wide uppercase">
             Field Commendations
           </h2>
         </div>
@@ -83,51 +330,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider */}
-      <CogDivider />
+      <CogDivider size="lg" />
 
-      {/* CTA */}
-      <section>
+      {/* ===== CTA ===== */}
+      <section id="contact">
         <CTASection />
-      </section>
-
-      {/* Divider */}
-      <CogDivider size="sm" />
-
-      {/* System Status (moved to bottom) */}
-      <section className="flex flex-col gap-4">
-        <div className="flex items-center gap-3">
-          <ServoSkull className="w-6 h-6 text-mars-base/50" />
-          <div>
-            <span className="text-[9px] font-[family-name:var(--font-ui)] uppercase tracking-[0.3em] text-text-muted/60 block mb-1">
-              // DIAGNOSTICS
-            </span>
-            <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-mars-base uppercase tracking-wider forge-glow">
-              System Status
-            </h2>
-          </div>
-        </div>
-        <Panel variant="elevated" className="hazard-stripe">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { label: "Content Engine", status: "Operational", color: "text-rarity-uncommon" },
-              { label: "GTM Pipeline", status: "Operational", color: "text-rarity-uncommon" },
-              { label: "Knowledge Base", status: "Building", color: "text-rarity-legendary" },
-            ].map((system) => (
-              <div key={system.label} className="flex items-center gap-3">
-                <div className={`h-2.5 w-2.5 rounded-full ${system.color} bg-current shadow-[0_0_6px_currentColor]`} />
-                <div>
-                  <div className="text-xs font-[family-name:var(--font-ui)] uppercase tracking-wider text-text-muted">
-                    {system.label}
-                  </div>
-                  <div className={`text-sm font-[family-name:var(--font-ui)] font-medium ${system.color}`}>
-                    {system.status}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Panel>
       </section>
     </div>
   );

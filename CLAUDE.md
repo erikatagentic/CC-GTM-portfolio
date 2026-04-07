@@ -180,26 +180,32 @@ TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "re
 
 ### Navigation
 
-4 pages accessible via sticky top navbar:
+Single-page site with anchor-linked sticky nav:
 
-| Route | Label | Icon (SVG) | Status |
-|-------|-------|------------|--------|
-| `/` | Command Deck | NavCogIcon (gear) | Complete (hero + projects preview + social proof + CTA) |
-| `/work` | War Campaigns | NavScrollIcon (data-scroll) | Complete (5 case studies, placeholder content) |
-| `/character-sheet` | Service Record | NavAquilaIcon (aquila badge) | Complete (includes Campaign History timeline) |
-| `/armory` | Arsenal | NavOmniIcon (wrench-cog) | Complete |
+| Section | Anchor | Nav Icon | Content |
+|---------|--------|----------|---------|
+| Hero | `#hero` | (logo) | Value prop + CharacterCard |
+| War Campaigns | `#work` | NavScrollIcon | 5 full case studies |
+| Arsenal | `#arsenal` | NavOmniIcon | 8 tools with rarity + legend |
+| Service Record | `#service-record` | NavAquilaIcon | Ability Scores + Campaign History timeline |
+| Social Proof | `#social-proof` | — | TestimonialCards |
+| Contact | `#contact` | NavCogIcon | CTASection (LinkedIn, Email, Hey Agentic) |
 
-Redirects: `/grimoire` -> `/work`, `/chronicles` -> `/`, `/quest-log` -> `/`
+Redirects: `/grimoire`, `/work`, `/chronicles`, `/quest-log`, `/character-sheet`, `/armory` all → `/`
 
-### Page Content Summary
+### Section Content Summary
 
-**Command Deck** (`/`) — Hero with value prop + CharacterCard + Projects preview (3 compact ProjectCards) + Social proof (TestimonialCards) + CTA (CTASection) + System Status indicators.
+**Hero** — CogMechanicum icon + "Command Deck" heading + value prop sentence + credential blurb + CharacterCard with stats and XP bar.
 
-**War Campaigns** (`/work`) — 5 project case studies: Clay Enrichment Pipeline (Archaeotech), Cold Email Infrastructure (Relic), n8n Automation Stack (Relic), LinkedIn Outbound System (Sanctified), Honey Product Work (Sanctified). Each with problem/solution/outcome sections.
+**War Campaigns** — 5 project case studies (full mode): Clay Enrichment Pipeline (Archaeotech), Cold Email Infrastructure (Relic), n8n Automation Stack (Relic), LinkedIn Outbound System (Sanctified), Honey Product Work (Sanctified). Each with problem/solution/outcome sections.
 
-**Service Record** (`/character-sheet`) — Nameplate with tier badges, XP bar, 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements), 8 specializations, service history (Recruitment / Campaign History / Current Deployment), campaign history timeline (4 acts from Initiate to Arch-Mechanicus), connect links.
+**Arsenal** — 8 tools with rarity classifications: Clay (Archaeotech), n8n (Relic), Instantly (Sanctified), Sales Navigator (Sanctified), HeyReach (Sanctified), PhantomBuster (Field-Tested), Airtable (Field-Tested), Cursor + Claude (Relic). Each links to its case study anchor. Includes classification legend.
 
-**Arsenal** (`/armory`) — 8 tools with rarity classifications: Clay (Archaeotech), n8n (Relic), Instantly (Sanctified), Sales Navigator (Sanctified), HeyReach (Sanctified), PhantomBuster (Field-Tested), Airtable (Field-Tested), Cursor + Claude (Relic). Includes classification legend.
+**Service Record** — 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements) + Campaign History timeline (4 acts from Initiate to Arch-Mechanicus).
+
+**Social Proof** — TestimonialCards grid (placeholder content).
+
+**Contact** — CTASection with LinkedIn (primary), Email, Hey Agentic links.
 
 ---
 
@@ -211,13 +217,10 @@ Redirects: `/grimoire` -> `/work`, `/chronicles` -> `/`, `/quest-log` -> `/`
 src/
 ├── app/
 │   ├── layout.tsx              # Root layout (metadata, fonts, nav, footer)
-│   ├── page.tsx                # Command Deck (hero + projects + social proof + CTA)
-│   ├── globals.css             # Design tokens, utilities, animations
-│   ├── work/page.tsx           # War Campaigns (project case studies)
-│   ├── character-sheet/page.tsx # Service Record (includes Campaign History)
-│   └── armory/page.tsx         # Arsenal
+│   ├── page.tsx                # Single-page site (all sections)
+│   └── globals.css             # Design tokens, utilities, animations
 ├── components/
-│   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client"), 4 links
+│   ├── Navigation.tsx          # Sticky nav + mobile hamburger ("use client"), anchor links
 │   ├── Footer.tsx              # CogMechanicum logo + Aquila seal + binary cant (server)
 │   ├── CharacterCard.tsx       # Hero card with stats + XP ("use client")
 │   └── ui/

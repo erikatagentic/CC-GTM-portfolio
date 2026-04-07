@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -13,14 +11,13 @@ import {
 } from "@/components/ui/MechanicusIcons";
 
 const NAV_LINKS = [
-  { href: "/", label: "Command Deck", icon: <NavCogIcon /> },
-  { href: "/work", label: "War Campaigns", icon: <NavScrollIcon /> },
-  { href: "/character-sheet", label: "Service Record", icon: <NavAquilaIcon /> },
-  { href: "/armory", label: "Arsenal", icon: <NavOmniIcon /> },
+  { href: "#work", label: "War Campaigns", icon: <NavScrollIcon /> },
+  { href: "#arsenal", label: "Arsenal", icon: <NavOmniIcon /> },
+  { href: "#service-record", label: "Service Record", icon: <NavAquilaIcon /> },
+  { href: "#contact", label: "Contact", icon: <NavCogIcon /> },
 ];
 
 export function Navigation() {
-  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -28,36 +25,25 @@ export function Navigation() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <a href="#hero" className="flex items-center gap-2 group">
             <CogMechanicum className="w-7 h-7 text-mars-base group-hover:text-mars-bright transition-colors" />
             <span className="font-[family-name:var(--font-display)] text-lg font-bold text-mars-base group-hover:text-mars-bright transition-colors forge-glow">
               GTM CODEX
             </span>
-          </Link>
+          </a>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "flex items-center gap-1.5 px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors border-b",
-                    isActive
-                      ? "text-mars-base border-mars-base/50"
-                      : "text-text-muted hover:text-text-primary border-transparent"
-                  )}
-                >
-                  <span className="opacity-70">{link.icon}</span>
-                  {link.label}
-                </Link>
-              );
-            })}
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-[family-name:var(--font-ui)] transition-colors border-b text-text-muted hover:text-text-primary border-transparent"
+              >
+                <span className="opacity-70">{link.icon}</span>
+                {link.label}
+              </a>
+            ))}
           </div>
 
           {/* Mobile hamburger */}
@@ -90,28 +76,17 @@ export function Navigation() {
         {/* Mobile nav */}
         {mobileOpen && (
           <div className="md:hidden border-t border-border-subtle py-3 pb-4">
-            {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={cn(
-                    "flex items-center gap-3 px-3 py-2.5 text-sm font-[family-name:var(--font-ui)]",
-                    isActive
-                      ? "text-mars-base bg-bg-elevated/50"
-                      : "text-text-muted hover:text-text-primary hover:bg-bg-elevated/30"
-                  )}
-                >
-                  <span>{link.icon}</span>
-                  {link.label}
-                </Link>
-              );
-            })}
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-3 px-3 py-2.5 text-sm font-[family-name:var(--font-ui)] text-text-muted hover:text-text-primary hover:bg-bg-elevated/30"
+              >
+                <span>{link.icon}</span>
+                {link.label}
+              </a>
+            ))}
           </div>
         )}
       </div>
