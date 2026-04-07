@@ -1,0 +1,68 @@
+# Career-Ops Profile
+# Source of truth for who Erik is as a candidate.
+# Update this file manually. Skills read it before every evaluation.
+
+candidate:
+  name: Erik Hernal
+  email: erik@heyagentic.ai
+  phone: "" # Add phone number
+  location: Los Angeles, CA
+  linkedin: https://linkedin.com/in/erikhernal/
+  github: "" # Add if relevant
+  portfolio: https://gtm-codex.vercel.app
+
+# What roles are you targeting?
+# fit: primary (direct match), secondary (adjacent), adjacent (stretch)
+target_roles:
+  - title: AI/GTM Consultant
+    fit: primary
+    archetype: ai-gtm-consultant
+  - title: AI Solutions Architect
+    fit: primary
+    archetype: ai-solutions-architect
+  - title: GTM Engineer
+    fit: primary
+    archetype: gtm-engineer
+  - title: AI Transformation Lead
+    fit: primary
+    archetype: ai-transformation-lead
+  - title: AI Product Manager
+    fit: secondary
+    archetype: ai-product-manager
+  - title: AI Forward Deployed Engineer
+    fit: secondary
+    archetype: ai-forward-deployed
+
+# Your pitch in a few lines
+narrative:
+  headline: "GTM Engineer + AI Builder" # One line that goes on top of your CV
+  exit_story: "" # Why you're looking. Fill this in -- it shapes how skills frame you.
+  superpowers:
+    - "Built outbound systems replacing SDR headcount with automation"
+    - "Clay Top 1% -- 5M+ contacts enriched"
+    - "200+ campaigns audited across 3 years as Head of Growth"
+    - "Full-stack GTM: cold email, LinkedIn, n8n, Clay, CRM design"
+  proof_points:
+    - metric: "200+ campaigns audited"
+      context: "Head of Growth @ Cleverly (2020-2023)"
+    - metric: "Clay Top 1% (5M+ contacts)"
+      context: "Data enrichment across agency clients"
+    - metric: "$4B acquisition (Honey/PayPal)"
+      context: "PM at Honey pre-acquisition"
+    - metric: "Founded Lumos"
+      context: "GTM engineering agency, current"
+
+# Salary expectations
+compensation:
+  target_min: 150000 # Update with your actual minimum
+  target_max: 220000 # Update with your actual target
+  currency: USD
+  open_to_equity: true
+  notes: "" # Any comp notes (e.g. "flexible for the right role")
+
+# Location preferences
+location:
+  timezone: America/Los_Angeles
+  remote: preferred # preferred, required, flexible, onsite
+  relocation: false
+  visa_required: false

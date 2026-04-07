@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# MCP config (contains API keys)
+.mcp.json
+
+# Career-ops generated files
+career-ops/output/*.pdf

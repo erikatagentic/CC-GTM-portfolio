@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{name}} - Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    padding: 0.6in 0.65in;
+  }
+
+  /* Header */
+  .header { margin-bottom: 16px; }
+  .header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+  }
+  .header .headline {
+    font-size: 11pt;
+    color: #444;
+    margin-bottom: 6px;
+  }
+  .header .contact {
+    font-size: 9pt;
+    color: #666;
+  }
+  .header .contact a { color: #666; text-decoration: none; }
+  .header .contact span + span::before { content: " | "; }
+
+  /* Section */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #1a1a1a;
+    border-bottom: 1.5px solid #1a1a1a;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  /* Summary */
+  .summary { font-size: 10.5pt; color: #333; }
+
+  /* Experience */
+  .role { margin-bottom: 10px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .role-title { font-weight: 700; font-size: 10.5pt; }
+  .role-date { font-size: 9pt; color: #666; white-space: nowrap; }
+  .role-company { font-size: 10pt; color: #444; margin-bottom: 3px; }
+  .role ul { padding-left: 16px; }
+  .role li { font-size: 10pt; margin-bottom: 2px; color: #333; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 3px 12px;
+    font-size: 10pt;
+  }
+  .skills-grid .label { font-weight: 600; color: #1a1a1a; }
+  .skills-grid .value { color: #333; }
+
+  /* Education */
+  .edu-entry { margin-bottom: 4px; font-size: 10pt; }
+  .edu-entry .school { font-weight: 600; }
+  .edu-entry .degree { color: #444; }
+
+  /* ATS Keywords (hidden but parseable) */
+  .ats-keywords {
+    position: absolute;
+    left: -9999px;
+    font-size: 1px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>{{name}}</h1>
+  <div class="headline">{{headline}}</div>
+  <div class="contact">
+    <span>{{location}}</span>
+    <span>{{email}}</span>
+    <span><a href="{{linkedin}}">LinkedIn</a></span>
+    <!-- Add more contact links as needed -->
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">{{summary}}</p>
+</div>
+
+<div class="section">
+  <div class="section-title">Experience</div>
+  {{experience}}
+  <!--
+  Replace with role blocks like:
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Title</span>
+      <span class="role-date">Date Range</span>
+    </div>
+    <div class="role-company">Company Name</div>
+    <ul>
+      <li>Accomplishment with metric</li>
+    </ul>
+  </div>
+  -->
+</div>
+
+<div class="section">
+  <div class="section-title">Core Skills</div>
+  <div class="skills-grid">
+    {{skills}}
+    <!--
+    Replace with rows like:
+    <span class="label">Category</span>
+    <span class="value">Skill 1, Skill 2, Skill 3</span>
+    -->
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Education</div>
+  {{education}}
+  <!--
+  Replace with entries like:
+  <div class="edu-entry">
+    <span class="school">University Name</span> --
+    <span class="degree">Degree, Year</span>
+  </div>
+  -->
+</div>
+
+<!-- ATS keyword injection zone. The cv-gen skill places role-specific keywords here. -->
+<div class="ats-keywords">{{ats_keywords}}</div>
+
+</body>
+</html>

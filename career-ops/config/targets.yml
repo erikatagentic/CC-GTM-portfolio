@@ -1,0 +1,20 @@
+# Career-Ops Target Companies
+# Add companies you want to monitor. The scan skill checks these career pages.
+# Keep this to 10-20 companies you actually care about.
+
+companies:
+  # Example entries -- replace with your actual targets
+  # - name: Anthropic
+  #   careers_url: https://www.anthropic.com/careers
+  #   keywords: [AI, product, solutions, applied]
+  #   notes: ""
+
+  # - name: OpenAI
+  #   careers_url: https://openai.com/careers
+  #   keywords: [AI, applied, GTM, growth]
+  #   notes: ""
+
+  # - name: Clay
+  #   careers_url: https://www.clay.com/careers
+  #   keywords: [GTM, engineering, growth, sales]
+  #   notes: "Erik is Clay Top 1%"
