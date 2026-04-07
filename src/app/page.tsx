@@ -26,7 +26,7 @@ const STATS = [
   { name: "Dexterity", abbreviation: "DEX", value: 16, description: "Clay Top 1% (5M+ contacts)" },
   { name: "Constitution", abbreviation: "CON", value: 15, description: "3yr Head of Growth @ Cleverly" },
   { name: "Intelligence", abbreviation: "INT", value: 17, description: "GTM Engineer @ Hey Agentic" },
-  { name: "Wisdom", abbreviation: "WIS", value: 14, description: "PM @ Medely, Honey (PayPal)" },
+  { name: "Wisdom", abbreviation: "WIS", value: 14, description: "4,500+ meetings booked" },
   { name: "Charisma", abbreviation: "CHA", value: 13, description: "Founder @ Lumos" },
 ];
 
@@ -43,7 +43,7 @@ const ACTS = [
     act: "II",
     title: "Product Management",
     period: "2018 - 2020",
-    description: "Product Management at Honey (acquired by PayPal for $4B), GrowthPhysics, and Medely. Building products, understanding users, learning what makes people act.",
+    description: "Product management at GrowthPhysics and Medely. Building products, understanding users, learning what makes people act. Developing the product thinking that would later shape every GTM system.",
     lesson: "Users don't care about features. They care about outcomes.",
     rarity: "field-tested" as const,
   },
@@ -74,8 +74,7 @@ const EQUIPMENT = [
     icon: <ClayIcon />,
     projectLink: "#clay-enrichment",
     projectLabel: "Clay Enrichment Pipeline",
-    deployments: 47, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 47,  },
   {
     slot: "Automation",
     name: "n8n",
@@ -84,8 +83,7 @@ const EQUIPMENT = [
     icon: <N8nIcon />,
     projectLink: "#n8n-automation",
     projectLabel: "n8n Automation Stack",
-    deployments: 32, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 32,  },
   {
     slot: "Email Infrastructure",
     name: "Instantly",
@@ -94,8 +92,7 @@ const EQUIPMENT = [
     icon: <InstantlyIcon />,
     projectLink: "#cold-email",
     projectLabel: "Cold Email Infrastructure",
-    deployments: 85, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 85,  },
   {
     slot: "Prospecting",
     name: "Sales Navigator",
@@ -104,8 +101,7 @@ const EQUIPMENT = [
     icon: <SalesNavIcon />,
     projectLink: "#linkedin-outbound",
     projectLabel: "LinkedIn Outbound System",
-    deployments: 60, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 60,  },
   {
     slot: "LinkedIn Automation",
     name: "HeyReach",
@@ -114,24 +110,21 @@ const EQUIPMENT = [
     icon: <HeyReachIcon />,
     projectLink: "#linkedin-outbound",
     projectLabel: "LinkedIn Outbound System",
-    deployments: 28, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 28,  },
   {
     slot: "Data Extraction",
     name: "PhantomBuster",
     description: "Scraping and LinkedIn data extraction. Profile scraping, post scraping, search scraping. The data harvester.",
     rarity: "field-tested" as const,
     icon: <PhantomBusterIcon />,
-    deployments: 15, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 15,  },
   {
     slot: "CRM & Ops",
     name: "Airtable",
     description: "CRM, content OS, campaign tracking. The single source of truth for everything that matters.",
     rarity: "field-tested" as const,
     icon: <AirtableIcon />,
-    deployments: 40, /* [PLACEHOLDER: Erik confirm count] */
-  },
+    deployments: 40,  },
   {
     slot: "AI Development",
     name: "Cursor + Claude",
@@ -162,7 +155,7 @@ export default function Home() {
             I build outbound systems that replace SDR headcount with automation.
           </p>
           <p className="text-sm text-text-muted font-[family-name:var(--font-ui)]">
-            200+ campaigns. 5M+ contacts enriched. Clay Top 1%. Ex-PM at Honey (PayPal $4B).
+            200+ campaigns. 5M+ contacts enriched. Clay Top 1%. 4,500+ meetings booked.
           </p>
         </div>
 

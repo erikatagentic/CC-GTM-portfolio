@@ -8,6 +8,10 @@ Format: `[hash] Description of change`
 
 ## 2026-04-07
 
+### Fill Placeholders with Real Content
+
+`pending` **Replace all placeholder content with real case studies, testimonials, and metrics.** Filled 4 project case studies with real data sourced from LinkedIn, heyagentic.ai, lumosco.ai, outboundsystem.com, cleverly.co, and Upwork profile. Removed Honey/PayPal project (was an internship). Added 3 real client testimonials from Lumos (John Jaufmann, Mike Valdez, Clifton Jackson). Removed all [PLACEHOLDER:] markers. Updated hero credentials, ability scores, and career timeline to remove Honey references.
+
 ### Terminology Pass
 
 `fbc20bd` **Translate 40k jargon to recruiter-readable labels.** Kept all visual effects (forge-glow, rarity borders, CogDividers, metal-brush) but swapped confusing labels: War Campaigns→Projects, Arsenal→Tools, Service Record→Experience, Command Deck→GTM Engineer. Equipment slots now describe actual functions (Core Platform, Automation, Email Infrastructure). Timeline acts use career stages instead of 40k ranks. CTA changed from "VOX CHANNEL OPEN" to "Let's Work Together". CharacterCard class/subclass now shows "GTM Engineer · Outbound Systems" instead of "Tech-Adept · Pipeline Artisan".
