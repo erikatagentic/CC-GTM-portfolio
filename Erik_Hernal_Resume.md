@@ -6,73 +6,72 @@ Los Angeles, CA | erik@heyagentic.ai | [linkedin.com/in/erikhernal](https://link
 
 ## Professional Summary
 
-GTM engineer who builds automated outbound systems that replace SDR headcount. 6+ years designing enrichment waterfalls, signal-based workflows, and multi-channel campaign infrastructure across 200+ B2B campaigns. Clay Top 1% user (5M+ contacts enriched, 187 consecutive days). Built systems responsible for 4,500+ meetings booked, $26M+ in pipeline, and a 4x average reply rate lift. I don't optimize existing tools. I build the plumbing that makes revenue teams work without adding headcount.
+GTM engineer and 0-to-1 builder with 6+ years designing automated outbound systems that replace SDR headcount. Clay Top 1% user (5M+ contacts enriched). Built end-to-end revenue infrastructure across 200+ B2B campaigns: enrichment waterfalls, signal-based routing, AI-powered personalization, CRM integrations, and multi-channel orchestration. Systems I've built are responsible for 4,500+ meetings booked, $26M+ in pipeline, and a 4x average reply rate lift. I don't optimize existing tools. I build what's missing.
 
 ---
 
 ## Core Skills
 
-**GTM Systems**: Clay, Salesforce, HubSpot, Apollo, ZoomInfo, Gong
-**Automation & Orchestration**: n8n, Zapier, Make, API integrations, webhooks, workflow orchestration
-**Outbound Infrastructure**: Instantly, Smartlead, HeyReach, Sales Navigator, PhantomBuster, Outreach
-**AI & LLMs**: Claude, OpenAI, prompt engineering, AI-powered personalization, LLM API integrations, AI agent workflows
-**Data**: Waterfall enrichment, signal stacking, ICP targeting, lead scoring, data hygiene, deduplication, catch-all filtering
+**GTM Systems**: Clay, Salesforce, HubSpot, Gong, Apollo, ZoomInfo, 6sense
+**Automation & Orchestration**: n8n, Zapier, Make, API integrations, webhooks, workflow orchestration, internal tooling
+**Outbound Infrastructure**: Instantly, Smartlead, HeyReach, Sales Navigator, PhantomBuster, Outreach, Salesloft
+**AI & LLMs**: Claude, Claude Code, OpenAI, prompt engineering, AI agent workflows, LLM API integrations, AI-powered personalization at scale
+**Data Engineering**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, data hygiene, deduplication, catch-all filtering
 **Deliverability**: Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation
-**Development**: Python, JavaScript, SQL, HTML/CSS, API fluency, Claude Code
-**Analytics**: Airtable, Google Sheets, campaign attribution, A/B testing, funnel analysis
+**Development**: Python, JavaScript, SQL, HTML/CSS, API fluency, webhook debugging, lightweight internal tools
+**Analytics**: Airtable, Google Sheets, campaign attribution, A/B testing, funnel analysis, pipeline reporting
 
 ---
 
 ## Experience
 
 ### GTM Engineer & Founder | Hey Agentic
-**2024 - Present** | Remote
+**2023 - Present** | Remote
 
-- Build end-to-end GTM automation stacks for B2B clients using Clay, n8n, and cold email infrastructure as fixed-scope projects ($750-$4,000 per build, delivered in 3-10 days)
-- Design data enrichment waterfalls with 4-provider fallback logic, catch-all filtering, verification gates, and spend caps. Valid email rate improvement from 34% to 68% across client engagements
-- Architect AI-powered outbound workflows using Claude + Clay that generate personalized first lines from prospect signals (funding rounds, job changes, tech stack), cutting campaign launch time from 4 hours to 15 minutes
-- Build signal-based channel routing in n8n: prospects scored on LinkedIn activity, job tenure, and tech stack fit, then automatically routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14 with cost per meeting dropping from $840 to $14
-- Implement multi-channel outbound systems combining cold email + LinkedIn with shared intelligence, dedup, and cooldown logic. Eliminated duplicate outreach and increased reply rates from 8% to 22% for SaaS client
+- Build end-to-end GTM automation stacks for B2B clients as fixed-scope projects ($750-$4,000, delivered in 3-10 days). Full systems design from enrichment through CRM integration and reporting
+- Designed 4-provider enrichment waterfall in Clay with automatic fallback logic, catch-all filtering, dual verification gates, and per-provider spend caps. Improved valid email rates from 34% to 68% across client engagements
+- Built AI-powered outbound workflows using Claude + Clay that generate personalized first lines from prospect signals (funding rounds, hiring surges, tech stack changes). Cut campaign launch from 4 hours to 15 minutes
+- Architected signal-based channel routing in n8n: prospects scored on LinkedIn activity, job tenure, and tech stack fit, then auto-routed to LinkedIn-first or email-first sequences with dedup and cooldown logic. One client: 5 meetings/month to 14, cost per meeting from $840 to $14
+- Built internal campaign diagnostics tool using Claude Code that monitors deliverability, flags underperforming sequences, and generates optimization recommendations across 43 active client campaigns
 
 ### Co-Founder | Lumos
 **2023 - Present** | Los Angeles, CA
 
-- Founded GTM engineering agency specializing in automated LinkedIn outbound for 200+ B2B clients across 47 industries
-- Built multi-account LinkedIn automation infrastructure with connection targeting, DM sequences, and integrated CRM reply management. 30%+ average reply rate, 35%+ connection acceptance, 4,500+ total meetings booked
-- Managed 43 active campaigns simultaneously, 105K+ connections, and a 28.1% reply rate across all clients using Claude Code-powered GTM system with automated lead scoring, copy generation, and campaign diagnostics
-- Designed onboarding and campaign management automation that scaled the agency from $1M to $5M annual revenue without proportionally scaling headcount
+- Founded and scaled GTM agency to 200+ B2B clients across 47 industries, building automated LinkedIn outbound infrastructure from scratch (0-to-1)
+- Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management. 30%+ reply rate, 35%+ acceptance rate, 4,500+ meetings booked
+- Built Claude Code-powered GTM operating system managing 43 active campaigns, 105K+ connections, 28.1% reply rate with automated lead scoring, copy generation, and campaign diagnostics
+- Designed onboarding automation and campaign management workflows that scaled operations from $1M to $5M annual revenue without proportionally adding headcount
+- Cross-functional collaboration with client sales teams to define ICPs, map buying signals, and build custom outbound playbooks per vertical
 
-### Head of Growth | Cleverly
+### GTM Operations Lead | Cleverly
 **2020 - 2023** | Los Angeles, CA
 
-- Led growth for 3 years at $5M B2B lead generation agency (1,000+ 5-star reviews, 224K leads generated, $51M in client revenue)
-- Audited 200+ outbound campaigns across dozens of B2B verticals, building systematic campaign audit framework used across the organization to optimize targeting, copy, and deliverability
-- Became Clay Top 1% user with 5M+ contacts enriched through data enrichment workflows including waterfall logic, signal stacking, and provider routing
-- Led end-to-end development of automated messaging platform responsible for $50.4M+ in total B2B sales and 386% increase in monthly recurring revenue
-- Improved affiliate program referrals by 34% through UX optimization identified via 23 usability tests and customer interviews
+- Led growth operations for 3 years at B2B lead generation agency (224K leads generated, $51M in client revenue, 1,000+ five-star reviews)
+- Audited 200+ outbound campaigns across dozens of B2B SaaS verticals. Built systematic campaign audit framework adopted org-wide for targeting, copy, and deliverability optimization
+- Became Clay Top 1% user (187 consecutive days, 5M+ contacts) building waterfall enrichment workflows with signal stacking and provider routing logic
+- Led end-to-end development of automated messaging platform responsible for $50.4M+ in total B2B sales and 386% MRR increase
+- Ran 23 usability tests and customer interviews to identify UX friction, improving affiliate referrals by 34% and retention by 15%
 
 ### Product Manager | Medely
-**2022 - 2023** | Los Angeles, CA
+**2019 - 2020**
 
-- Led development of geofence location feature reducing facility disputes by 3.7% for healthcare staffing platform
-- Achieved 26% increase in user engagement by implementing personalized recommendation system matching healthcare professionals with relevant shift opportunities
-- Led UI redesign resulting in 14% increase in user adoption within 6 months and 24% increase in mobile shift bookings
-- Implemented automated messaging program decreasing time spent per lead by 13% and accelerating onboarding by 17%
+- Built personalized recommendation system matching healthcare professionals with shift opportunities, driving 26% increase in user engagement
+- Led UI redesign increasing user adoption 14% and mobile bookings 24%. Implemented automated messaging reducing time-per-lead by 13%
 
 ### Product Manager | GrowthPhysics
-**2019 - 2020** | Los Angeles, CA
+**2018**
 
-- Led product development of B2C mobile and web platforms resulting in 7% increase in customer retention and 13% increase in lifetime value across e-commerce, EdTech, and consumer services clients
-- Lowered customer acquisition cost by 16% through competitive analysis and market research identifying untapped growth opportunities
+- Led product development of B2C platforms resulting in 7% retention increase and 13% LTV lift. Lowered CAC by 16% through competitive analysis and market research
 
 ---
 
 ## Select Client Results
 
-- **B2B SaaS Company (80 employees)**: Signal-based outbound system. Reply rate from 0.8% to 4.7%, meetings from 2/month to 14/month. Built in 10 days.
-- **Equipment Management SaaS (15 employees)**: Hiring signal + LinkedIn outreach. 36% reply rate, consistent weekly meetings with decision-makers. Built in 7 days.
-- **EdTech Company**: End-to-end lifecycle email marketing automation responsible for $10M+ in revenue.
-- **Healthcare Staffing Marketplace**: Automatic lead generation system saving internal team 300+ hours/month on manual tasks.
+- **B2B SaaS (80 employees)**: Signal-based outbound. Reply rate 0.8% to 4.7%, meetings 2/month to 14. System built in 10 days.
+- **Equipment SaaS (15 employees)**: Hiring signal + LinkedIn. 36% reply rate, weekly decision-maker meetings. Built in 7 days.
+- **EdTech Company**: End-to-end lifecycle email automation responsible for $10M+ in revenue.
+- **Healthcare Marketplace**: Automated lead gen system saving 300+ hours/month on manual tasks.
+- **B2B Outreach Agency**: Claude Code-powered system managing 43 campaigns, 105K+ connections, 28.1% reply rate.
 
 ---
 
