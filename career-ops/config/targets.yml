@@ -3,18 +3,90 @@
 # Keep this to 10-20 companies you actually care about.
 
 companies:
-  # Example entries -- replace with your actual targets
-  # - name: Anthropic
-  #   careers_url: https://www.anthropic.com/careers
-  #   keywords: [AI, product, solutions, applied]
-  #   notes: ""
+  # Tier 1: GTM tool companies Erik already uses
+  - name: Clay
+    careers_url: https://www.clay.com/careers
+    keywords: [GTM, engineering, growth, sales, data]
+    notes: "Erik is Clay Top 1%. Dream match."
 
-  # - name: OpenAI
-  #   careers_url: https://openai.com/careers
-  #   keywords: [AI, applied, GTM, growth]
-  #   notes: ""
+  - name: Apollo.io
+    careers_url: https://www.apollo.io/careers
+    keywords: [GTM, engineer, automation, growth, sales]
+    notes: "GTM platform, hires GTM engineers"
 
-  # - name: Clay
-  #   careers_url: https://www.clay.com/careers
-  #   keywords: [GTM, engineering, growth, sales]
-  #   notes: "Erik is Clay Top 1%"
+  - name: Instantly
+    careers_url: https://instantly.ai/careers
+    keywords: [GTM, engineer, automation, outbound, growth]
+    notes: "Cold email platform Erik uses daily"
+
+  - name: Outreach
+    careers_url: https://www.outreach.io/company/working-at-outreach
+    keywords: [GTM, engineer, automation, sales, RevOps]
+    notes: "Sales engagement leader"
+
+  - name: Gong
+    careers_url: https://www.gong.io/careers
+    keywords: [GTM, engineer, revenue, sales, automation]
+    notes: "Revenue intelligence platform"
+
+  # Tier 1: AI companies with GTM/Solutions roles
+  - name: Anthropic
+    careers_url: https://www.anthropic.com/careers
+    keywords: [solutions, applied, GTM, product, growth]
+    notes: "AI safety company, Erik uses Claude daily"
+
+  - name: OpenAI
+    careers_url: https://openai.com/careers
+    keywords: [solutions, applied, GTM, growth, sales]
+    notes: "AI leader"
+
+  # Tier 2: High-growth companies with RevOps/GTM engineering teams
+  - name: Ramp
+    careers_url: https://ramp.com/careers
+    keywords: [GTM, engineer, growth, RevOps, automation]
+    notes: "Fast-growing fintech, strong eng culture"
+
+  - name: Rippling
+    careers_url: https://www.rippling.com/careers
+    keywords: [GTM, engineer, RevOps, growth, automation]
+    notes: "HR/IT platform, aggressive GTM"
+
+  - name: Attio
+    careers_url: https://attio.com/careers
+    keywords: [GTM, solutions, engineer, CRM, automation]
+    notes: "Modern CRM, Erik uses Attio MCP"
+
+  - name: Wiz
+    careers_url: https://www.wiz.io/careers
+    keywords: [GTM, systems, engineer, RevOps, sales]
+    notes: "Cloud security, saw Lead GTM Systems Engineer posting"
+
+  - name: Clari
+    careers_url: https://www.clari.com/careers
+    keywords: [GTM, RevOps, engineer, revenue, automation]
+    notes: "Revenue platform"
+
+  - name: 6sense
+    careers_url: https://6sense.com/company/careers
+    keywords: [GTM, engineer, ABM, RevOps, automation]
+    notes: "ABM/intent platform"
+
+  - name: ZoomInfo
+    careers_url: https://www.zoominfo.com/about/careers
+    keywords: [GTM, engineer, RevOps, data, automation]
+    notes: "B2B data platform"
+
+  - name: Salesloft
+    careers_url: https://www.salesloft.com/company/careers
+    keywords: [GTM, engineer, RevOps, automation, sales]
+    notes: "Sales engagement platform"
+
+  - name: Braze
+    careers_url: https://www.braze.com/company/careers
+    keywords: [GTM, engineer, growth, automation, marketing]
+    notes: "Customer engagement platform"
+
+  - name: HubSpot
+    careers_url: https://www.hubspot.com/careers
+    keywords: [GTM, engineer, RevOps, automation, growth]
+    notes: "Marketing/CRM giant"

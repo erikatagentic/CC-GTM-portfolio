@@ -74,7 +74,8 @@ GTM engineer and agency founder with 6+ years building outbound systems that rep
 
 ## Education
 
-<!-- Erik: fill in your education details here -->
+### Syracuse University
+**B.S. Health and Exercise Science** | Class of 2018
 
 ---
 
