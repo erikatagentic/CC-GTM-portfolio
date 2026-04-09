@@ -433,6 +433,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 - **Limit em dashes**. Prefer periods or commas.
 - **Concise copy**. Every word must earn its place.
 - **Plans before execution** for multi-step work
+- **Re-audit gate** -- before presenting plans or making code/config changes, re-read key files, verify assumptions, and list what you checked (file paths, field names, data confirmed). Confidence claims without specifics = gate failure. Full rule in `~/.claude/CLAUDE.md`.
 - **No invented data**. Never fabricate stats, testimonials, or numbers.
 
 ---
