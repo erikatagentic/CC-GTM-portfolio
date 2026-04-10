@@ -6,6 +6,14 @@ Format: `[hash] Description of change`
 
 ---
 
+## 2026-04-09
+
+### Progressive Disclosure Refactor
+
+`9b78a9f` **Move situational reference data from CLAUDE.md into companion files.** Design system (color tokens, rarity tiers, typography, spacing, utility classes) moved to CLAUDE-design-system.md. RPG engine (tier system, XP values, character details, key functions) moved to CLAUDE-rpg-engine.md. Career-ops (data contract, Airtable integration, ethical rules, skills table) moved to CLAUDE-career-ops.md. CLAUDE.md slimmed from 525 to 305 lines. Companion files load on demand instead of every turn.
+
+---
+
 ## 2026-04-07
 
 ### Fill Placeholders with Real Content
