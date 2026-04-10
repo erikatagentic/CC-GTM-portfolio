@@ -1,4 +1,4 @@
-# CLAUDE.md — GTM Codex Blueprint
+# CLAUDE.md -- GTM Codex Blueprint
 
 > Single source of truth for AI agents working on the GTM Codex portfolio site.
 > Every design decision, code convention, and content reference lives here. Follow this file exactly.
@@ -46,137 +46,21 @@ The site uses a gamified progression system that tracks real work output (blog p
 | Class Merging | clsx | 2.1.1 |
 | Animation | Framer Motion | 12.x |
 | Fonts | Google Fonts (Rajdhani, Roboto, Inter) | via @import |
-| Package Manager | npm | — |
-| UI Components | Custom (no shadcn/ui) | — |
-| Deployment | Vercel | — |
+| Package Manager | npm | -- |
+| UI Components | Custom (no shadcn/ui) | -- |
+| Deployment | Vercel | -- |
 
 ### Key Files
-- `src/app/globals.css` — All design tokens, utility classes, animations
-- `src/app/layout.tsx` — Root layout, metadata, fonts
-- `src/lib/rpg.ts` — RPG progression engine (tiers, XP, grades)
-- `src/lib/utils.ts` — `cn()`, `formatNumber()`, `formatDate()`
+- `src/app/globals.css` -- All design tokens, utility classes, animations
+- `src/app/layout.tsx` -- Root layout, metadata, fonts
+- `src/lib/rpg.ts` -- RPG progression engine (tiers, XP, grades)
+- `src/lib/utils.ts` -- `cn()`, `formatNumber()`, `formatDate()`
+
+> **Companion files (load on demand):** [CLAUDE-design-system.md](CLAUDE-design-system.md) | [CLAUDE-rpg-engine.md](CLAUDE-rpg-engine.md) | [CLAUDE-career-ops.md](CLAUDE-career-ops.md)
 
 ---
 
-## 3. Design System
-
-### 3.1 Color Tokens
-
-All colors defined as CSS custom properties in `src/app/globals.css` via `@theme inline {}`.
-
-**Backgrounds (cold dark metallics):**
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `bg-darkest` | `#0a0b0d` | Page background, body |
-| `bg-dark` | `#12141a` | Navigation, footer |
-| `bg-panel` | `#1a1c24` | Content panels |
-| `bg-elevated` | `#20242e` | Hover states, elevated cards |
-| `bg-surface` | `#2a2f3d` | Surface elements |
-
-**Mars Red (primary accent):**
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `mars-dark` | `#5c1a1a` | XP bar gradient start |
-| `mars-base` | `#a31919` | Default accent, active links, logo |
-| `mars-bright` | `#d32f2f` | Hover states, glow effects |
-| `mars-light` | `#e57373` | Text highlights, stat values |
-
-**Metallic Gold (secondary, cooler/industrial):**
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `gold-muted` | `#6b6347` | Subtle accents |
-| `gold-base` | `#b8a869` | Secondary accent |
-| `gold-bright` | `#d4af37` | Bright accents, archaeotech rarity |
-| `gold-light` | `#e8d69a` | Light gold |
-| `gold-cream` | `#d8d4c8` | Off-white text tone |
-
-**Tech Teal (HUD/data elements):**
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `tech-dark` | `#1a4d4d` | Dark teal accents |
-| `tech-base` | `#26a69a` | Data readouts, field-tested rarity |
-| `tech-bright` | `#4dd0e1` | Scanlines, grid overlays |
-
-**Text (cool greys):**
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `text-primary` | `#d8d4c8` | Main body text |
-| `text-secondary` | `#b4aea0` | Descriptions, subtitles |
-| `text-muted` | `#8a8578` | Labels, inactive nav |
-| `text-disabled` | `#605c52` | Disabled, future items |
-| `text-dark` | `#4a4640` | Darkest text |
-
-**Borders:**
-| Token | Hex | Usage |
-|-------|-----|-------|
-| `border-subtle` | `#2a2f3d` | Panel borders, nav border |
-| `border-default` | `#3d4252` | Elevated card borders |
-| `border-gold` | `#b8a869` | "Bordered" panel variant |
-| `border-bright` | `#d4af37` | Bright accent borders |
-| `border-mars` | `#a31919` | Active/current item borders |
-
-### 3.2 Rarity Classification System
-
-5-tier classification used by Badge, EquipmentSlot, and page content:
-
-| Tier Name | Type Value | Color Token | Hex |
-|-----------|-----------|-------------|-----|
-| Standard | `"standard"` | `rarity-common` | `#9e9e9e` |
-| Field-Tested | `"field-tested"` | `rarity-uncommon` | `#26a69a` |
-| Sanctified | `"sanctified"` | `rarity-rare` | `#5c6bc0` |
-| Relic | `"relic"` | `rarity-very-rare` | `#ab47bc` |
-| Archaeotech | `"archaeotech"` | `rarity-legendary` | `#d4af37` |
-
-TypeScript type: `type Rarity = "standard" | "field-tested" | "sanctified" | "relic" | "archaeotech"`
-
-### 3.3 Typography
-
-| Variable | Font | Usage |
-|----------|------|-------|
-| `--font-display` | Rajdhani | Page titles, large headings |
-| `--font-heading` | Rajdhani | Section headings, subheadings |
-| `--font-body` | Roboto | Body text, descriptions |
-| `--font-ui` | Inter | Labels, badges, navigation, small text |
-
-**Usage pattern in Tailwind:** `font-[family-name:var(--font-display)]`
-
-### 3.4 Spacing
-
-- **Grid**: 8px base
-- **Container**: `max-w-6xl mx-auto px-4 sm:px-6`
-- **Main padding**: `py-10`
-- **Panel padding**: `p-6`
-- **Section gaps**: `gap-10` between major sections
-- **Card gaps**: `gap-4` in grids
-
-### 3.5 Utility Classes
-
-| Class | Effect |
-|-------|--------|
-| `.forge-glow` | Mars red text-shadow (8px blur, 40% opacity) |
-| `.forge-glow-strong` | Stronger Mars red text-shadow (12px + 24px dual blur) |
-| `.forge-panel-glow` | Hover: Mars red + teal box-shadow on panels |
-| `.metal-overlay` | Pseudo-element with repeating teal scanlines (2% opacity) |
-| `.forge-divider` | 2px horizontal gradient with glow halo: transparent → Mars dark → Mars red → gold → Mars red → Mars dark → transparent |
-| `.tech-grid` | Pseudo-element with 20x20px teal grid (5% opacity) |
-| `.animate-pulse-forge` | 3s infinite Mars red + teal pulsing box-shadow |
-| `.animate-fade-in` | 0.5s ease-out fade-in with 8px Y-translate |
-| `.panel-industrial` | Double-border (outline + offset 3px), inset top-light/bottom-dark, deeper drop shadow |
-| `.shadow-forge` | Triple-layer box-shadow (2/8/16px) for elevated panels |
-| `.shadow-forge-lg` | Extra-deep shadow (4/12/24px) for hero elements |
-| `.corner-accents` | Mars red 12px corner brackets (top-left, top-right) via ::before/::after |
-| `.corner-accents-bottom` | Mars red 12px corner brackets (bottom-left, bottom-right) |
-| `.purity-seal` | Small gold cog seal circle, positioned top-right |
-| `.hazard-stripe` | Diagonal gold stripes at 6% opacity |
-| `.forge-glow-dual` | Combined Mars red + teal text-shadow |
-| `.forge-panel-glow-strong` | Stronger hover glow (dual red + teal) |
-| `.metal-brush` | Faint diagonal brushed-metal sheen (1.5-2% white corners) |
-| `.badge-glow` | Subtle currentColor glow halo via ::after (auto-applied to non-standard rarities) |
-| `.binary-cant-bg` | Faint scrolling binary text background (ASCII "MECHANICUS OMNISSIAH"), Mars red at 1.8% opacity, 120s scroll animation |
-
----
-
-## 4. Site Architecture
+## 3. Site Architecture
 
 ### Navigation
 
@@ -188,28 +72,28 @@ Single-page site with anchor-linked sticky nav:
 | War Campaigns | `#work` | NavScrollIcon | 5 full case studies |
 | Arsenal | `#arsenal` | NavOmniIcon | 8 tools with rarity + legend |
 | Service Record | `#service-record` | NavAquilaIcon | Ability Scores + Campaign History timeline |
-| Social Proof | `#social-proof` | — | TestimonialCards |
+| Social Proof | `#social-proof` | -- | TestimonialCards |
 | Contact | `#contact` | NavCogIcon | CTASection (LinkedIn, Email, Hey Agentic) |
 
-Redirects: `/grimoire`, `/work`, `/chronicles`, `/quest-log`, `/character-sheet`, `/armory` all → `/`
+Redirects: `/grimoire`, `/work`, `/chronicles`, `/quest-log`, `/character-sheet`, `/armory` all -> `/`
 
 ### Section Content Summary
 
-**Hero** — CogMechanicum icon + "Command Deck" heading + value prop sentence + credential blurb + CharacterCard with stats and XP bar.
+**Hero** -- CogMechanicum icon + "Command Deck" heading + value prop sentence + credential blurb + CharacterCard with stats and XP bar.
 
-**War Campaigns** — 5 project case studies (full mode): Clay Enrichment Pipeline (Archaeotech), Cold Email Infrastructure (Relic), n8n Automation Stack (Relic), LinkedIn Outbound System (Sanctified), Honey Product Work (Sanctified). Each with problem/solution/outcome sections.
+**War Campaigns** -- 5 project case studies (full mode): Clay Enrichment Pipeline (Archaeotech), Cold Email Infrastructure (Relic), n8n Automation Stack (Relic), LinkedIn Outbound System (Sanctified), Honey Product Work (Sanctified). Each with problem/solution/outcome sections.
 
-**Arsenal** — 8 tools with rarity classifications: Clay (Archaeotech), n8n (Relic), Instantly (Sanctified), Sales Navigator (Sanctified), HeyReach (Sanctified), PhantomBuster (Field-Tested), Airtable (Field-Tested), Cursor + Claude (Relic). Each links to its case study anchor. Includes classification legend.
+**Arsenal** -- 8 tools with rarity classifications: Clay (Archaeotech), n8n (Relic), Instantly (Sanctified), Sales Navigator (Sanctified), HeyReach (Sanctified), PhantomBuster (Field-Tested), Airtable (Field-Tested), Cursor + Claude (Relic). Each links to its case study anchor. Includes classification legend.
 
-**Service Record** — 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements) + Campaign History timeline (4 acts from Initiate to Arch-Mechanicus).
+**Service Record** -- 6 ability scores (STR/DEX/CON/INT/WIS/CHA mapped to career achievements) + Campaign History timeline (4 acts from Initiate to Arch-Mechanicus).
 
-**Social Proof** — TestimonialCards grid (placeholder content).
+**Social Proof** -- TestimonialCards grid (placeholder content).
 
-**Contact** — CTASection with LinkedIn (primary), Email, Hey Agentic links.
+**Contact** -- CTASection with LinkedIn (primary), Email, Hey Agentic links.
 
 ---
 
-## 5. Component Architecture
+## 4. Component Architecture
 
 ### File Structure
 
@@ -245,32 +129,32 @@ src/
 
 ### Key Component Interfaces
 
-**Panel** — 3 variants:
+**Panel** -- 3 variants:
 - `default`: `bg-bg-panel/90 border-border-subtle`
 - `elevated`: `bg-bg-elevated/90 border-border-default`
 - `bordered`: `bg-bg-panel/90 border-border-gold`
 - Optional `hover` prop adds `forge-panel-glow` effect
 
-**Badge** — 5 rarity tiers: `standard`, `field-tested`, `sanctified`, `relic`, `archaeotech`. Each maps to border + text + bg color from rarity tokens.
+**Badge** -- 5 rarity tiers: `standard`, `field-tested`, `sanctified`, `relic`, `archaeotech`. Each maps to border + text + bg color from rarity tokens.
 
-**XPBar** — Props: `currentXP`, `tierEnd`, `tierTitle`, `nextTierTitle`, `progress`. Mars red gradient bar.
+**XPBar** -- Props: `currentXP`, `tierEnd`, `tierTitle`, `nextTierTitle`, `progress`. Mars red gradient bar.
 
-**StatBlock** — Array of `{ name, abbreviation, value, description }`. Displays D&D-style scores with modifiers.
+**StatBlock** -- Array of `{ name, abbreviation, value, description }`. Displays D&D-style scores with modifiers.
 
-**EquipmentSlot** — Props: `slot`, `name`, `description`, `rarity`, `icon`. Rarity-colored borders with glow on hover.
+**EquipmentSlot** -- Props: `slot`, `name`, `description`, `rarity`, `icon`. Rarity-colored borders with glow on hover.
 
 ### Client vs. Server Components
 
-**ProjectCard** — Case study card with two modes:
+**ProjectCard** -- Case study card with two modes:
 - `compact: true`: designation + title + summary + tool badges + link to full case study. Used on homepage preview.
 - `compact: false`: full case study with problem/solution/outcome sections. Used on /work page.
 - Props: `ProjectCardProps extends ProjectData { compact?: boolean }`
 
-**TestimonialCard** — Quote card for social proof:
+**TestimonialCard** -- Quote card for social proof:
 - Props: `quote`, `name`, `title`, `company`
 - Uses Panel variant="bordered" with decorative quotation mark
 
-**CTASection** — Reusable CTA block:
+**CTASection** -- Reusable CTA block:
 - Props: optional `heading` (default "VOX CHANNEL OPEN"), optional `subtext`
 - Three contact links: LinkedIn (primary mars-base), Email (secondary), Hey Agentic (secondary)
 
@@ -281,54 +165,7 @@ src/
 
 ---
 
-## 6. RPG Progression Engine
-
-**File:** `src/lib/rpg.ts`
-
-### Tier System (10 levels)
-
-| Level | Title | XP Required |
-|-------|-------|-------------|
-| 1 | Menial | 0 |
-| 2 | Acolyte | 1,000 |
-| 3 | Tech-Adept | 2,500 |
-| 4 | Enginseer | 5,000 |
-| 5 | Artisan | 10,000 |
-| 6 | Magos | 20,000 |
-| 7 | Archmagos | 35,000 |
-| 8 | Forge Master | 55,000 |
-| 9 | Fabricator Locum | 80,000 |
-| 10 | Fabricator-General | 100,000 |
-
-### XP Values
-
-| Activity | XP |
-|----------|-----|
-| Blog post | 100 |
-| Playbook chapter | 200 |
-| Daily log | 25 |
-| Campaign audited | 50 |
-| Tool mastered | 150 |
-| Commit pushed | 5 |
-
-### Character
-
-- **Class**: Tech-Adept
-- **Subclass**: Pipeline Artisan
-- **Current XP**: 3,250 (update `CURRENT_XP` in rpg.ts as progress is made)
-- **Character Name**: Erik Hernal
-
-### Key Functions
-
-- `getCurrentTier(xp)` — Returns current tier based on XP
-- `getNextTier(tier)` — Returns next tier or null at max
-- `getProgressToNext(xp, current, next)` — Returns 0-1 progress fraction
-- `getCharacterStats(xp)` — Returns full CharacterStats object
-- `calculateGrade(itemsShipped, wordsWritten)` — Returns S/A/B/C/D grade
-
----
-
-## 7. Code Standards
+## 5. Code Standards
 
 ### Component Rules
 
@@ -383,7 +220,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 
 ---
 
-## 8. Responsive Design
+## 6. Responsive Design
 
 ### Breakpoints (Tailwind defaults)
 
@@ -417,7 +254,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 
 ---
 
-## 9. Content Rules
+## 7. Content Rules
 
 - Page content is co-located in each page file (no shared `constants.ts`)
 - RPG data (tiers, XP, character) lives in `src/lib/rpg.ts`
@@ -427,7 +264,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 
 ---
 
-## 10. User Preferences
+## 8. User Preferences
 
 - **"Co-Founder"** not "Co-founder" (capitalize both words)
 - **Limit em dashes**. Prefer periods or commas.
@@ -438,7 +275,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 
 ---
 
-## 11. What NOT To Do
+## 9. What NOT To Do
 
 | Anti-Pattern | Do Instead |
 |-------------|-----------|
@@ -454,7 +291,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 
 ---
 
-## 12. Gotchas & Known Issues
+## 10. Gotchas & Known Issues
 
 - **Tailwind v4 `@theme inline`**: Color tokens must be registered in the `@theme inline {}` block in `globals.css` to be usable as Tailwind classes (e.g., `bg-bg-panel`, `text-mars-base`).
 - **Framer Motion + SSR**: Components using `motion.*` must be in `"use client"` files. Server Components cannot use Framer Motion directly.
@@ -462,63 +299,6 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 - **Dev server lock file**: If `.next/dev/lock` exists from a previous instance, kill the old process first. Running two `next dev` instances causes conflicts.
 - **Font syntax**: Fonts are loaded via Google Fonts `@import` in globals.css, not `next/font`. Reference in Tailwind as `font-[family-name:var(--font-display)]`.
 - **`cn()` uses clsx only**: Unlike other projects, this repo uses `clsx` directly without `tailwind-merge`. Conflicting classes are not auto-resolved.
-
----
-
-## 13. Career-Ops (Job Search Automation)
-
-The `career-ops/` directory contains an AI-powered job search system with 6 Claude Code skills. The portfolio site itself is unchanged. Career-ops just lives alongside it.
-
-### Data Contract
-
-**User files (never auto-update):** These belong to Erik. Skills read them but don't overwrite without asking.
-- `career-ops/cv.md` — CV source of truth
-- `career-ops/config/profile.yml` — candidate profile, comp targets, narrative
-- `career-ops/interview-prep/story-bank.md` — STAR+R narratives
-- `career-ops/data/pipeline.md` — job URL inbox
-- `career-ops/reports/*` — evaluation reports
-- `career-ops/output/*` — generated PDFs
-- `career-ops/jds/*` — saved job descriptions
-
-**System files (safe to update):** Skills can modify these.
-- `.claude/skills/*/SKILL.md` — skill definitions
-- `career-ops/config/shared.md` — scoring rubric and archetypes
-- `career-ops/config/targets.yml` — company career page URLs
-- `career-ops/templates/*` — CV template
-- `career-ops/generate-pdf.mjs` — PDF generation script
-
-### Before Any Evaluation
-
-Every evaluation skill MUST read these 3 files first:
-1. `career-ops/config/profile.yml`
-2. `career-ops/cv.md`
-3. `career-ops/config/shared.md`
-
-### Airtable Integration
-
-- Base: `appP3XYuyhYRTmEDv`
-- Table: `Job Pipeline`
-- Fields: Company, Role, URL, Score, Status, Archetype, PDF, Report, Date, Notes
-- Status values: Inbox, Evaluated, CV Sent, Applied, Interview, Offer, Rejected, Withdrawn
-
-### Ethical Rules
-
-1. Never invent metrics or claims not in cv.md
-2. Never auto-submit applications. Always present for Erik's review first.
-3. Never apply to roles scoring below 3.5
-4. Anti-AI writing rules apply to all generated text (cover letters, form answers, messages)
-5. Quality over quantity. No spray-and-pray.
-
-### Skills
-
-| Skill | Trigger | What It Does |
-|-------|---------|-------------|
-| `/evaluate` | Job URL or JD | Scores role across 6 dimensions, generates A-F report |
-| `/cv-gen` | After evaluation | Generates ATS-optimized PDF tailored to the role |
-| `/scan` | "scan for jobs" | Checks target company career pages for new openings |
-| `/pipeline` | "run pipeline" | Processes URL inbox, fetches JDs, runs evaluations |
-| `/prep` | "prep for {company}" | Interview preparation with story mapping |
-| `/apply` | "apply to {company}" | Generates form answers and cover letter for review |
 
 ---
 
