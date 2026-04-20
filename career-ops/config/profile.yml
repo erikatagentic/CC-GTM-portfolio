@@ -54,11 +54,10 @@ narrative:
 
 # Salary expectations
 compensation:
-  target_min: 150000 # Update with your actual minimum
-  target_max: 220000 # Update with your actual target
+  target_min: 150000 # Hard minimum -- below this gets auto-skipped
   currency: USD
   open_to_equity: true
-  notes: "" # Any comp notes (e.g. "flexible for the right role")
+  notes: "No upper ceiling. More is always better. Min is the only hard gate."
 
 # Location preferences
 location:
