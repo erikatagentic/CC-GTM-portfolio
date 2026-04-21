@@ -1,4 +1,5 @@
 # CLAUDE.md -- GTM Codex Blueprint
+<!-- brain-project: career-ops -->
 
 > Single source of truth for AI agents working on the GTM Codex portfolio site.
 > Every design decision, code convention, and content reference lives here. Follow this file exactly.
