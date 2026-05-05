@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erik Hernal - Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    padding: 0.6in 0.65in;
+  }
+  .header { margin-bottom: 16px; }
+  .header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+  }
+  .header .headline {
+    font-size: 11pt;
+    color: #444;
+    margin-bottom: 6px;
+  }
+  .header .contact {
+    font-size: 9pt;
+    color: #666;
+  }
+  .header .contact a { color: #666; text-decoration: none; }
+  .header .contact span + span::before { content: " | "; }
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #1a1a1a;
+    border-bottom: 1.5px solid #1a1a1a;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+  .summary { font-size: 10.5pt; color: #333; }
+  .role { margin-bottom: 10px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .role-title { font-weight: 700; font-size: 10.5pt; }
+  .role-date { font-size: 9pt; color: #666; white-space: nowrap; }
+  .role-company { font-size: 10pt; color: #444; margin-bottom: 3px; }
+  .role ul { padding-left: 16px; }
+  .role li { font-size: 10pt; margin-bottom: 2px; color: #333; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 3px 12px;
+    font-size: 10pt;
+  }
+  .skills-grid .label { font-weight: 600; color: #1a1a1a; }
+  .skills-grid .value { color: #333; }
+  .edu-entry { margin-bottom: 4px; font-size: 10pt; }
+  .edu-entry .school { font-weight: 600; }
+  .edu-entry .degree { color: #444; }
+  .ats-keywords {
+    position: absolute;
+    left: -9999px;
+    font-size: 1px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Erik Hernal</h1>
+  <div class="headline">GTM Engineer + AI Builder</div>
+  <div class="contact">
+    <span>Los Angeles, CA</span>
+    <span>erik@heyagentic.ai</span>
+    <span><a href="https://linkedin.com/in/erikhernal/">linkedin.com/in/erikhernal</a></span>
+    <span><a href="https://gtm-codex.vercel.app">gtm-codex.vercel.app</a></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">Founding GTM engineer who's stood up the function from scratch for B2B SMB and SaaS clients. 6+ years across agency, in-house, and product. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited as Head of Growth at Cleverly. Currently shipping AI-powered prospecting and lifecycle workflows on n8n + Apollo + Clay + Instantly + HubSpot at Hey Agentic and Lumos. PM at Honey pre-$4B PayPal acquisition. Hands-on builder who ships quickly and bias-toward-automation by default.</p>
+</div>
+
+<div class="section">
+  <div class="section-title">Experience</div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">GTM Engineer</span>
+      <span class="role-date">2023 - Present</span>
+    </div>
+    <div class="role-company">Hey Agentic &nbsp;|&nbsp; Remote</div>
+    <ul>
+      <li>Build AI-powered outbound prospecting and lifecycle workflows for B2B SaaS and SMB clients on Clay, Apollo, Instantly, n8n, HubSpot, and custom scripts</li>
+      <li>Develop AI-native automations that surface next-best actions, trigger follow-ups, and improve deal velocity across the full customer lifecycle (lead routing, SDR-to-AE handoffs, onboarding, expansion, retention)</li>
+      <li>Integrate HubSpot with marketing automation, enrichment, and third-party data sources via APIs and webhooks; own data integrity across the lead-to-revenue pipeline</li>
+      <li>Experiment with LLM and agentic tools (Claude, OpenAI agent builder) to unlock new capabilities for revenue teams</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Founder</span>
+      <span class="role-date">2023 - Present</span>
+    </div>
+    <div class="role-company">Lumos &nbsp;|&nbsp; Los Angeles, CA</div>
+    <ul>
+      <li>Founded GTM engineering agency; stand up the GTM function from zero for B2B clients ranging from solo founders to mid-stage SaaS</li>
+      <li>Build automated outbound systems using Clay enrichment waterfalls, Apollo prospecting, Instantly cold email infrastructure, and n8n orchestration</li>
+      <li>Translate ICP definitions into account-selection, scoring, and routing systems used in production by client revenue teams</li>
+      <li>Evaluate and integrate new AI tooling with a build-vs-buy lens; replace manual revenue ops with reliable automation</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Head of Growth</span>
+      <span class="role-date">2020 - 2023</span>
+    </div>
+    <div class="role-company">Cleverly &nbsp;|&nbsp; Los Angeles, CA</div>
+    <ul>
+      <li>Led growth for 3 years; audited 200+ outbound campaigns across dozens of B2B SMB and SaaS clients, building a systematic audit framework adopted across the organization</li>
+      <li>Reached Clay Top 1% with 5M+ contacts enriched through waterfall logic and signal-stacking workflows</li>
+      <li>Owned campaign strategy, A/B testing, deliverability engineering, attribution, and funnel diagnostics at scale</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Product Manager</span>
+      <span class="role-date">2019 - 2020</span>
+    </div>
+    <div class="role-company">Medely</div>
+    <ul>
+      <li>PM for healthcare staffing platform; managed product roadmap across engineering, design, and operations</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Product Manager</span>
+      <span class="role-date">2018 - 2019</span>
+    </div>
+    <div class="role-company">Honey (acquired by PayPal for $4B in 2020)</div>
+    <ul>
+      <li>PM at Honey pre-acquisition; shipped product features for the browser extension used by millions, contributing to the growth trajectory that led to the $4B PayPal deal</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title">Core Skills</div>
+  <div class="skills-grid">
+    <span class="label">GTM Stack</span>
+    <span class="value">HubSpot, Clay, Apollo, Instantly, Nooks, Salesforce, Outreach, Gong</span>
+    <span class="label">Automation</span>
+    <span class="value">n8n, Zapier, Make, Workato, Claude Code, OpenAI agent builder, custom scripts</span>
+    <span class="label">AI Workflows</span>
+    <span class="value">LLM-enabled prospecting, AI-assisted research, personalized outreach at scale, agentic tooling</span>
+    <span class="label">Code</span>
+    <span class="value">Python, JavaScript, SQL, REST APIs, web scraping, data pipelines</span>
+    <span class="label">Lifecycle</span>
+    <span class="value">Lead routing, SDR-to-AE handoffs, onboarding, expansion, retention, post-sale workflows</span>
+    <span class="label">Outbound</span>
+    <span class="value">Cold email architecture, deliverability engineering, LinkedIn multi-account automation, sequencing</span>
+    <span class="label">Product</span>
+    <span class="value">Roadmap, user research, A/B testing, cross-functional stakeholder management</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-entry">
+    <span class="school">Syracuse University</span> &mdash;
+    <span class="degree">B.S. Health and Exercise Science, 2018</span>
+  </div>
+</div>
+
+<div class="ats-keywords">
+GTM Engineer, GTM Engineering, Revenue Operations, Business Systems, B2B SaaS, SMB, HubSpot, Clay, Apollo, Instantly, Nooks, Zapier, Make, n8n, Workato, Python, JavaScript, SQL, APIs, web scraping, data pipelines, AI-enabled workflows, AI agents, copilots, LLM, agentic tools, outbound prospecting, lead routing, lead scoring, lead qualification, marketing automation, sales funnels, marketing attribution, customer lifecycle, sales handoffs, post-sale workflows, opportunity management, forecasting, internal tools, data integrity, lead-to-revenue, pipeline health
+</div>
+
+</body>
+</html>
