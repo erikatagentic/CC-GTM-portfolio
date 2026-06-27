@@ -1,6 +1,6 @@
 # Career-Ops Automation — Deployed Workflows
 
-**Last updated:** 2026-04-20 (V2 shipped)
+**Last updated:** 2026-06-27 (Phase 1 source-fix shipped)
 **n8n instance:** https://n8n-tlkm.onrender.com
 **Slack channel:** `C0ATH006BLP`
 **Airtable base:** `appP3XYuyhYRTmEDv` / table `Job Pipeline` (`tblRswSXb3uJQy371`)
@@ -116,6 +116,9 @@ Added to `tblRswSXb3uJQy371`:
 | `Headcount` | number (integer) | Track H |
 | `Glassdoor Rating` | number (1 decimal) | Track H |
 | `Expired` option on Status | singleSelect | Track D |
+| `Apply URL` | url | Phase 1 — resolved real ATS/careers application link |
+| `ATS Type` | singleSelect (Greenhouse/Lever/Ashby/Workday/Company Site/LinkedIn Easy Apply/Other/Unresolved) | Phase 1 |
+| `Eval Failed` option on Status | singleSelect | Phase 1 — eval parse/timeout failures |
 
 ## Credentials
 
@@ -140,6 +143,18 @@ All three workflows reuse existing credentials — no new ones needed:
 - **Track H enrichment source:** Claude with server-side `web_search_20250305` tool (3-5 searches per 4.0+ role). Avg cost ~$0.15 per enrichment.
 - **Score threshold for Q&A + enrichment:** 4.0 (covers both Apply Now and Strong bands). Can raise to 4.5 by editing the `Score >= 4.0?` IF node.
 - **Schedule times:** Daily Discovery 09:00 PT, Housekeeping 10:00 PT (1h after), Weekly Digest Friday 16:00 PT.
+
+## Phase 1 — Source fix (2026-06-27)
+
+Goal: make discovery produce real, deduped ATS apply URLs (prerequisite for Phase 2/3 auto-apply). All changes are in Daily Discovery (`zY89dVddfvtMPEri`). Exported (redacted) to `CC-n8n-builder/workflows/active/career-ops-daily-discovery.json`.
+
+- **LinkedIn → ATS apply-URL resolver.** The `Q&A + Enrich (Claude)` web_search call (runs for score ≥4.0 roles) now also resolves the company's real Greenhouse/Lever/Ashby/careers application URL (TASK 3 in the prompt; `apply_url` + `ats_type` added to its JSON output). No new credential — piggybacks the enrichment call. `Parse Q&A + Enrich` validates it (rejects linkedin.com URLs) and prefers a deterministic match off the posting URL when present.
+- **Deterministic ATS detection.** `Parse Claude Response` tags every row's `ats_type` from its posting URL host; LinkedIn URLs → `Unresolved` (awaiting resolver).
+- **Dedup fix.** `Filter New URLs` now dedups on normalized URL AND normalized `company|role`, plus intra-batch. `Get Existing URLs` fetches `URL, Company, Role`. Kills the Pogo×4 / Equinix×3 duplicates.
+- **Eval-failure handling.** `Claude Evaluate` has `retryOnFail` (maxTries 2). On parse/error, the row is written `Status="Eval Failed"` instead of a silent score-0 `Evaluated` row.
+- **Career-page alert.** `Aggregate Summary` posts a ⚠️ when the Firecrawl career-page branch yields 0 links (it currently yields ~2/17; deep repair deferred since the resolver covers the apply path).
+- **Verified:** validates 0 errors; manual run `25950` succeeded (dedup correctly routed all-already-seen to heartbeat); a throwaway Airtable write confirmed the new fields + `Eval Failed` typecast. Resolver populating a real `apply_url` will first exercise on the next run with genuinely new jobs.
+- **Known debt:** Daily Discovery hardcodes Anthropic/Firecrawl/Apify keys in node params (should move to n8n credentials).
 
 ## Deferred tracks
 
