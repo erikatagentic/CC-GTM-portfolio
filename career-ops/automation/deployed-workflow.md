@@ -1,11 +1,35 @@
 # Career-Ops Automation — Deployed Workflows
 
-**Last updated:** 2026-06-27 (Phase 1 source-fix shipped)
+**Last updated:** 2026-07-30 (whole stack PAUSED)
 **n8n instance:** https://n8n-tlkm.onrender.com
 **Slack channel:** `C0ATH006BLP`
 **Airtable base:** `appP3XYuyhYRTmEDv` / table `Job Pipeline` (`tblRswSXb3uJQy371`)
 
-Three active workflows form the Career-Ops automation stack.
+> ## PAUSED as of 2026-07-30
+>
+> All three workflows are `active=false`. Erik paused the stack while he rebuilds the
+> application pipeline for full automation; the Slack posts into #gtm-eng-jobs were the
+> immediate trigger. Nothing is deleted. The "Status: ACTIVE" lines below are historical.
+>
+> **Side effect to know:** Housekeeping's Airtable `Mark Expired` write is off too, so stale
+> Evaluated rows no longer age out to Expired. They accumulate until the new pipeline handles them.
+>
+> **To bring any of it back:**
+> ```
+> curl -X POST -H "X-N8N-API-KEY: $N8N_TLKM_API_KEY" \
+>   https://n8n-tlkm.onrender.com/api/v1/workflows/<ID>/activate
+> ```
+> (`N8N_TLKM_API_KEY` lives in `CC-agentic/.env`.) Daily Discovery `zY89dVddfvtMPEri` was already
+> inactive before 7/30 and was left alone.
+>
+> **Unresolved:** something external POSTed both "Run Now" webhooks daily at 08:30 UTC
+> (4:30 AM ET), which is why a Friday-only digest was arriving every morning. That caller was
+> never found: not in Erik's crontab, not in any of his 36 launchd plists, not in the Hermes VM's
+> 43 cron entries, not in any of the 132 workflows on this instance, not in a GitHub Action.
+> Probably an external pinger. Both webhook paths now return 404, so wherever it lives it is
+> erroring. That is the best lead for finding it.
+
+Three workflows form the Career-Ops automation stack.
 
 ## 1. Career-Ops Daily Discovery
 
