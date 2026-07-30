@@ -22,12 +22,36 @@
 > (`N8N_TLKM_API_KEY` lives in `CC-agentic/.env`.) Daily Discovery `zY89dVddfvtMPEri` was already
 > inactive before 7/30 and was left alone.
 >
-> **Unresolved:** something external POSTed both "Run Now" webhooks daily at 08:30 UTC
-> (4:30 AM ET), which is why a Friday-only digest was arriving every morning. That caller was
-> never found: not in Erik's crontab, not in any of his 36 launchd plists, not in the Hermes VM's
-> 43 cron entries, not in any of the 132 workflows on this instance, not in a GitHub Action.
-> Probably an external pinger. Both webhook paths now return 404, so wherever it lives it is
-> erroring. That is the best lead for finding it.
+> **Why they fired at 4:31 AM ET (root cause, identified 2026-07-30):** not the cron. It was
+> the Lumos webhook health check, `CC-lumos/scripts/webhook-health-check.js`, running daily at
+> 08:30 UTC from Render (`render.yaml:37`, cron `crn-d7aslgadbo4c73aqqdhg` "Morning Full Sweep";
+> it ran as its own cron `crn-d74nj4nfte5s73bim980` until that was folded in on 2026-07-30).
+>
+> That script enumerates every ACTIVE n8n workflow, then POSTs `?healthcheck=1` with header
+> `X-N8N-Healthcheck: 1` and body `{"healthcheck":true}` to each webhook, to catch endpoints
+> that silently 404 after n8n drops a registration. Proof: the webhook execution payload
+> (n8n execution 38730) carried `x-n8n-healthcheck: 1`, `user-agent: node`, and
+> `cf-connecting-ip: 74.220.48.160`, which reverse-resolves to
+> `ip-74-220-48-160.oregon-egress.render.com`.
+>
+> Receiving workflows are supposed to short-circuit on that sentinel and do no real work.
+> **Neither Career-Ops workflow had the short-circuit**, so each daily ping ran the pipeline end
+> to end and posted to Slack. That is also why a Friday-only digest arrived every morning. Same
+> bug class as the 5 Lumos workflows built 7/11-7/12 (see the troubleshooting plan for those).
+>
+> **Not a risk to this pause:** `discoverWebhooks()` queries `/workflows?active=true` (script
+> line 55), so deactivated workflows drop off its list. It never pings them, so its
+> auto-cycle-on-404 repair path cannot silently reactivate them. Active workflow count is 46
+> against the script's `limit=100`, so no pagination gap either (both probed 2026-07-30).
+>
+> **If you ever reactivate these,** add the sentinel short-circuit as the first statement in
+> `Format Digest` / `Compute Metrics`, or the 4:31 AM posts come straight back:
+> ```js
+> const _hc = $input.first().json;
+> if ((_hc.headers && _hc.headers['x-n8n-healthcheck']) === '1' ||
+>     (_hc.query && _hc.query.healthcheck) === '1' ||
+>     (_hc.body && _hc.body.healthcheck) === true) { return []; }
+> ```
 
 Three workflows form the Career-Ops automation stack.
 
