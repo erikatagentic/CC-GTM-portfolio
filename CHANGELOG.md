@@ -6,6 +6,14 @@ Format: `[hash] Description of change`
 
 ---
 
+## 2026-08-06
+
+### Master GTM Engineer Resume
+
+`138f034` **Master GTM Engineer resume + cv.md rewrite + resume research.** cv.md rebuilt from three reconciled sources: live LinkedIn scrape (dates/titles, Erik's call), the PM resume's 2025-2026 metrics (confirm-or-cut pass pending), repo evidence from CC-lumos and CC-agentic. One-page master resume generated to career-ops/output/. Deep-research report on 2026 resume screening saved to career-ops/reports/resume-research-2026.md; hidden ATS keyword block retired from the resume format.
+
+---
+
 ## 2026-04-09
 
 ### Progressive Disclosure Refactor
