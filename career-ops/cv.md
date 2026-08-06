@@ -21,6 +21,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 - Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear and run a hands-off experimentation loop that launches and scores cold email A/B tests end to end
 - Designed Clay enrichment waterfalls (4 providers, catch-all filtering, per-provider spend caps) and Claude-personalized first lines from prospect signals. Valid email rates went from 34% to 68%; campaign launch dropped from 4 hours to 15 minutes
 - Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
+- Rebuilt signal-based outbound for an 80-person B2B SaaS: reply rate from 0.8% to 4.7%, meetings from 2/month to 14
 - Integrate enrichment and intent data directly into client CRMs (HubSpot, Salesforce) via APIs and webhooks
 
 ### Co-Founder | Lumos
@@ -30,6 +31,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 - Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate, 4,500+ meetings booked
 - Built Claude Code-powered GTM operating system managing 43 active campaigns and 105K+ connections at a 28.1% reply rate, with automated lead scoring, copy generation, campaign diagnostics, and weekly performance reporting
 - Designed onboarding automation and campaign management workflows that scaled operations from $1M to $5M annual revenue without proportionally adding headcount
+- Ran multi-profile LinkedIn + email for a construction equipment SaaS (Activate OS): 32.6% acceptance on 3,505 connections, 36.4% reply rate
 
 ### Senior Product Manager | Medely
 **Aug 2022 - Aug 2023** | Los Angeles, CA
@@ -41,12 +43,15 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 **Jun 2019 - Jul 2022** | Los Angeles, CA
 
 - Led growth for 3 years at B2B lead generation agency serving 5,000+ users (224K leads generated, $51M in client revenue, 1,000+ five-star reviews)
-- Became Clay Top 1% user (187 consecutive days) building waterfall enrichment workflows with signal stacking and provider routing logic
-- (master render drops: campaign-audit-framework bullet — the 200+ audited claim lives in the summary; restore for JDs that stress auditing/QA)
 - Led development of automated messaging platform responsible for $50.4M+ in total B2B sales and a 386% MRR increase
+- Audited 200+ outbound campaigns across B2B SaaS verticals; built the org-wide audit framework for targeting, copy, and deliverability
+- Became Clay Top 1% user (187 consecutive days) building waterfall enrichment workflows with signal stacking and provider routing logic
+- Scaled outbound for a global HR platform to 22 sales meetings in its first week (placed at Cleverly per Erik, 2026-08-06 chat)
 
 ### Product Marketing | Honey (acquired by PayPal for $4B)
 **Jun 2018 - May 2019** | Los Angeles, CA
+
+(DROPPED from master render, Erik 2026-08-06. Kept here as real experience for tailored versions.)
 
 - Product marketing for the browser extension used by millions, pre-acquisition ($4B PayPal deal, 2020)
 
@@ -57,11 +62,8 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 
 ---
 
-## Select Client Results
+## Select Client Results (SECTION DROPPED from master render 2026-08-06 — results woven into role bullets per Erik: B2B SaaS -> Agentic, Activate OS -> Lumos, HR platform -> Cleverly. Bench cards below for tailored versions.)
 
-- **B2B SaaS (80 employees)**: Signal-based outbound. Reply rate 0.8% to 4.7%, meetings 2/month to 14.
-- **Equipment SaaS (15 employees)**: LinkedIn + email outbound across 3 profiles. 3,505 connections at 32.6% acceptance, 449 replies at a 36.4% reply rate.
-- **Global HR Platform**: 22 sales meetings in week 1 via scalable outbound infrastructure.
 - **Healthcare Marketplace**: Automated lead gen system saving 300+ hours/month on manual tasks.
 - **EdTech Company**: End-to-end lifecycle email automation responsible for $10M+ in revenue.
 
