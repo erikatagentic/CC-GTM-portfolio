@@ -1,88 +1,109 @@
 # Erik Hernal
 
-**GTM Engineer + AI Builder**
+**GTM Engineer**
 
-Los Angeles, CA | erik@heyagentic.ai | [LinkedIn](https://linkedin.com/in/erikhernal/)
+Los Angeles, CA | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedin.com/in/erikhernal/) | [Portfolio](https://gtm-codex.vercel.app)
 
 ---
 
 ## Professional Summary
 
-GTM engineer and agency founder with 6+ years building outbound systems that replace SDR headcount with automation. Clay Top 1% (5M+ contacts enriched). 200+ campaigns audited as Head of Growth at Cleverly. Former PM at Honey (acquired by PayPal for $4B). I build the plumbing that makes revenue teams work without adding headcount.
+GTM engineer with 7 years building outbound systems that replace SDR headcount with automation. Clay Top 1% (5M+ contacts enriched), 200+ campaigns audited. Systems responsible for 4,500+ meetings booked and $26M+ in pipeline across 200+ B2B clients. Core stack: Clay, n8n, Claude, Instantly, Smartlead, HeyReach, HubSpot, Python, SQL.
 
 ---
 
 ## Experience
 
-### GTM Engineer | Hey Agentic
-**2023 - Present** | Remote
+### Founder & GTM Engineer | Agentic
+**Sep 2024 - Present** | Remote
 
-- Build end-to-end GTM automation stacks for clients using Clay, n8n, and cold email infrastructure
-- Design data enrichment workflows with waterfall logic and signal stacking
-- Architect CRM integrations and Slack-based approval flows for outbound campaigns
-- Implement LinkedIn automation systems with multi-account management
+- Build custom outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000, delivered in 3-10 days)
+- Designed 4-provider enrichment waterfall in Clay with automatic fallback logic, catch-all filtering, dual verification gates, and per-provider spend caps. Improved valid email rates from 34% to 68% across client engagements
+- Built AI-powered outbound workflows using Claude + Clay that generate personalized first lines from prospect signals (funding rounds, hiring surges, tech stack changes). Cut campaign launch from 4 hours to 15 minutes
+- Architected signal-based channel routing in n8n: prospects scored on LinkedIn activity, job tenure, and tech stack fit, then auto-routed to LinkedIn-first or email-first sequences with dedup and cooldown logic. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
+- Integrate enrichment and intent data directly into client CRMs (HubSpot, Salesforce) via APIs and webhooks
 
-### Founder | Lumos
-**2023 - Present** | Los Angeles, CA
+### Co-Founder | Lumos
+**Jun 2024 - Present** | Los Angeles, CA
 
-- Founded GTM engineering agency specializing in outbound automation
-- Replace SDR headcount with automated systems for B2B clients
-- Full-stack GTM delivery: cold email, LinkedIn outbound, CRM pipeline design, intent detection
-- Build campaign architecture from ICP definition through deliverability monitoring
+- Founded and scaled GTM agency to 200+ B2B clients across 47 industries, building automated LinkedIn outbound infrastructure from scratch
+- Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate, 4,500+ meetings booked
+- Built Claude Code-powered GTM operating system managing 43 active campaigns and 105K+ connections at a 28.1% reply rate, with automated lead scoring, copy generation, and campaign diagnostics
+- Designed onboarding automation and campaign management workflows that scaled operations from $1M to $5M annual revenue without proportionally adding headcount
+
+### Senior Product Manager | Medely
+**Aug 2022 - Aug 2023** | Los Angeles, CA
+
+- Built personalized recommendation system matching healthcare professionals with shift opportunities, driving 26% increase in user engagement
+- Implemented automated messaging reducing time-per-lead by 13%; led UI redesign increasing adoption 14% and mobile bookings 24%
 
 ### Head of Growth | Cleverly
-**2020 - 2023** | Los Angeles, CA
+**Jun 2019 - Jul 2022** | Los Angeles, CA
 
-- Led growth for 3 years, auditing 200+ outbound campaigns across dozens of clients
-- Managed campaign strategy, A/B testing, and performance optimization at scale
-- Became Clay Top 1% user with 5M+ contacts enriched through data enrichment workflows
-- Built systematic campaign audit framework used across the organization
+- Led growth for 3 years at B2B lead generation agency serving 5,000+ users (224K leads generated, $51M in client revenue, 1,000+ five-star reviews)
+- Audited 200+ outbound campaigns across dozens of B2B SaaS verticals; built systematic campaign audit framework adopted org-wide for targeting, copy, and deliverability
+- Became Clay Top 1% user (187 consecutive days, 5M+ contacts enriched) building waterfall enrichment workflows with signal stacking and provider routing logic
+- Led development of automated messaging platform responsible for $50.4M+ in total B2B sales and a 386% MRR increase
 
-### Product Manager | Medely
-**2019 - 2020**
+### Product Marketing | Honey (acquired by PayPal for $4B)
+**Jun 2018 - May 2019** | Los Angeles, CA
 
-- PM for healthcare staffing platform
-- Managed product roadmap and feature prioritization
-- Worked cross-functionally with engineering, design, and operations
-
-### Product Manager | Honey (acquired by PayPal for $4B)
-**2018 - 2019**
-
-- PM at Honey pre-acquisition by PayPal ($4B deal, 2020)
-- Built product features for the browser extension used by millions
-- Contributed to the growth trajectory that led to acquisition
+- Product marketing for the browser extension used by millions, pre-acquisition ($4B PayPal deal, 2020)
 
 ### Product Manager | GrowthPhysics
-**2018**
+**Apr 2018 - Aug 2019** | Remote
 
-- Early-career PM role focused on growth product development
-- Built analytical frameworks for user acquisition and activation
+- Led product development of B2C platforms: 7% retention increase, 13% LTV lift, 16% lower CAC through competitive analysis
+
+---
+
+## Select Client Results
+
+- **B2B SaaS (80 employees)**: Signal-based outbound. Reply rate 0.8% to 4.7%, meetings 2/month to 14. System built in 10 days.
+- **Equipment SaaS (15 employees)**: Hiring signal + LinkedIn. 36% reply rate, weekly decision-maker meetings. Built in 7 days.
+- **Global HR Platform**: 22 sales meetings in week 1 via scalable outbound infrastructure.
+- **Healthcare Marketplace**: Automated lead gen system saving 300+ hours/month on manual tasks.
+- **EdTech Company**: End-to-end lifecycle email automation responsible for $10M+ in revenue.
 
 ---
 
 ## Core Skills
 
-**GTM Engineering**: Clay, n8n, Instantly, HeyReach, Sales Navigator, PhantomBuster, Airtable
-**Automation**: Workflow orchestration, CRM syncs, intent detection, multi-step sequences, Slack approvals
-**Outbound**: Cold email architecture, deliverability engineering, domain rotation, warming infrastructure
-**LinkedIn**: Connection automation, messaging sequences, multi-account management, profile/post scraping
-**Data**: Waterfall enrichment, signal stacking, ICP targeting, boolean search, data hygiene
-**AI/Dev**: Claude, Cursor, AI-assisted development, prompt engineering, system design
-**Product**: Roadmap management, user research, A/B testing, cross-functional leadership
+**GTM Stack**: Clay, HubSpot, Salesforce, Apollo, ZoomInfo, 6sense, Gong
+**Automation**: n8n, Zapier, Make, API integrations, webhooks, internal tooling
+**Outbound Infrastructure**: Instantly, Smartlead, HeyReach, Sales Navigator, Outreach, Salesloft
+**AI & LLMs**: Claude, Claude Code, OpenAI, AI agent workflows, prompt engineering, personalization at scale
+**Data**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, catch-all filtering
+**Deliverability**: Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation
+**Code**: Python, JavaScript, SQL, REST APIs, web scraping, data pipelines
 
 ---
 
 ## Education
 
 ### Syracuse University
-**B.S. Health and Exercise Science** | Class of 2018
+**B.S. Health and Exercise Science** | Class of 2018 | Dean's List, 7 semesters
+
+### Bard College
+**A.A. Liberal Arts and Sciences** (early college program)
+
+---
+
+## Certifications
+
+Make Intermediate, Make Basics, Make Foundation (Make); Product Analytics, AI for Product Management (Pendo); Inbound Certified (HubSpot Academy)
 
 ---
 
 ## Notes for CV Generation
 
-This file is the source of truth. The cv-gen skill reads this file and tailors content per role. Rules:
-- Every claim here must be real and verifiable
-- Metrics are exact (200+ campaigns, 5M+ contacts, $4B acquisition)
+This file is the source of truth, rewritten 2026-08-06 from three reconciled sources:
+- Dates and titles: live LinkedIn scrape 2026-08-06 (Erik's decision: LinkedIn wins over older resume dates)
+- Metrics: Erik's own PM resume (Erik_Hernal_Resume.md, repo root) pending his confirm-or-cut pass
+- Repo evidence: 70 client folders in CC-lumos/clients, operator AI OS in CC-agentic
+
+Rules:
+- Every claim here must be real and verifiable; metrics are Erik's own stated numbers
 - The cv-gen skill can reorder and emphasize sections but can't add experience that isn't here
-- Update this file when your experience changes
+- Head of GTM at Outbound System (Aug 2024-Present, on LinkedIn) is deliberately omitted: white-label brand, Erik's call 2026-08-06
+- Update this file when experience changes
