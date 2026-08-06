@@ -2,13 +2,13 @@
 
 **GTM Engineer**
 
-Los Angeles, CA | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedin.com/in/erikhernal/) | [Portfolio](https://gtm-codex.vercel.app)
+Middletown, CT | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedin.com/in/erikhernal/) | [Portfolio](https://gtm-codex.vercel.app)
 
 ---
 
 ## Professional Summary
 
-GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in pipeline across 200+ B2B clients. Core stack: Clay, n8n, Claude AI agents, Salesforce, HubSpot, Instantly, Smartlead, Python, SQL.
+GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in closed revenue across 200+ B2B clients. Core stack: Clay, n8n, Claude AI agents, Salesforce, HubSpot, Instantly, Smartlead, Python, SQL.
 
 ---
 
@@ -17,7 +17,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 ### Founder & GTM Engineer | Agentic
 **Sep 2024 - Present** | Remote
 
-- Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000, delivered in 3-10 days)
+- Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000)
 - Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear and run a hands-off experimentation loop that launches and scores cold email A/B tests end to end
 - Designed 4-provider enrichment waterfall in Clay with automatic fallback logic, catch-all filtering, dual verification gates, and per-provider spend caps. Improved valid email rates from 34% to 68% across client engagements
 - Built AI-powered outbound workflows using Claude + Clay that generate personalized first lines from prospect signals (funding rounds, hiring surges, tech stack changes). Cut campaign launch from 4 hours to 15 minutes
@@ -60,8 +60,8 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 
 ## Select Client Results
 
-- **B2B SaaS (80 employees)**: Signal-based outbound. Reply rate 0.8% to 4.7%, meetings 2/month to 14. System built in 10 days.
-- **Equipment SaaS (15 employees)**: Hiring signal + LinkedIn. 36% reply rate, weekly decision-maker meetings. Built in 7 days.
+- **B2B SaaS (80 employees)**: Signal-based outbound. Reply rate 0.8% to 4.7%, meetings 2/month to 14.
+- **Equipment SaaS (15 employees)**: LinkedIn + email outbound across 3 profiles. 3,505 connections at 32.6% acceptance, 449 replies at a 36.4% reply rate.
 - **Global HR Platform**: 22 sales meetings in week 1 via scalable outbound infrastructure.
 - **Healthcare Marketplace**: Automated lead gen system saving 300+ hours/month on manual tasks.
 - **EdTech Company**: End-to-end lifecycle email automation responsible for $10M+ in revenue.
@@ -101,7 +101,7 @@ Make Intermediate, Make Basics, Make Foundation (Make); Product Analytics, AI fo
 
 This file is the source of truth, rewritten 2026-08-06 from three reconciled sources:
 - Dates and titles: live LinkedIn scrape 2026-08-06 (Erik's decision: LinkedIn wins over older resume dates)
-- Metrics: Erik's own PM resume (Erik_Hernal_Resume.md, repo root) pending his confirm-or-cut pass
+- Metrics: Erik's own PM resume (Erik_Hernal_Resume.md, repo root); confirm-or-cut pass COMPLETED 2026-08-06 in chat. Erik-vouched: 200+ clients/47 industries, 34-68% valid email, 4hr-15min launch, $840-$14 CPM, 0.8-4.7% card, 22-meetings card. Changed: $26M "pipeline" reframed to "closed revenue" (matches the OS source's "revenue closed for clients"); Equipment SaaS card tightened to receipted Activate OS stats; all "built in X days" lines removed (Erik: not impressive); location corrected to Middletown, CT
 - Repo evidence: 70 client folders in CC-lumos/clients, operator AI OS in CC-agentic
 
 Rules:
