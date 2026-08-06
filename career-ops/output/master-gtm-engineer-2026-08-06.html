@@ -7,11 +7,11 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 9.6pt;
-    line-height: 1.2;
+    font-size: 9.8pt;
+    line-height: 1.27;
     color: #1a1a1a;
   }
-  .header { margin-bottom: 4px; }
+  .header { margin-bottom: 10px; }
   .header h1 {
     font-size: 20pt;
     font-weight: 700;
@@ -21,12 +21,12 @@
   .header .headline {
     font-size: 10.5pt;
     color: #444;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .header .contact { font-size: 8.5pt; color: #666; }
   .header .contact a { color: #666; text-decoration: none; }
   .header .contact span + span::before { content: " | "; }
-  .section { margin-bottom: 4px; }
+  .section { margin-bottom: 7px; }
   .section-title {
     font-size: 9.5pt;
     font-weight: 700;
@@ -34,10 +34,10 @@
     letter-spacing: 1.1px;
     border-bottom: 1.5px solid #1a1a1a;
     padding-bottom: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .summary { font-size: 9.8pt; color: #333; }
-  .role { margin-bottom: 3px; }
+  .role { margin-bottom: 5px; }
   .role-header {
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@
   .role-title .co { font-weight: 400; color: #444; }
   .role-date { font-size: 8.5pt; color: #666; white-space: nowrap; }
   .role ul { padding-left: 14px; }
-  .role li { font-size: 9.5pt; margin-bottom: 0.5px; color: #333; }
+  .role li { font-size: 9.5pt; margin-bottom: 1px; color: #333; }
   .results li { font-size: 9.5pt; margin-bottom: 1px; color: #333; }
   .results ul { padding-left: 14px; }
   .skills-grid {
@@ -94,9 +94,8 @@
     <ul>
       <li>Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope builds</li>
       <li>Operate an AI-agent fulfillment layer on Claude Code: agents work the Linear delivery queue and run a hands-off loop that launches and scores cold email A/B tests</li>
-      <li>Designed 4-provider enrichment waterfall in Clay with fallback logic, catch-all filtering, dual verification gates, and per-provider spend caps. Valid email rates went from 34% to 68% across client engagements</li>
-      <li>Built AI outbound workflows with Claude + Clay that write personalized first lines from prospect signals (funding rounds, hiring surges, tech stack changes). Campaign launch time dropped from 4 hours to 15 minutes</li>
-      <li>Architected signal-based channel routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, then auto-routed to LinkedIn-first or email-first sequences with dedup and cooldown logic. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14</li>
+      <li>Designed Clay enrichment waterfalls (4 providers, catch-all filtering, per-provider spend caps) and Claude-personalized first lines from prospect signals. Valid email rates went from 34% to 68%; campaign launch dropped from 4 hours to 15 minutes</li>
+      <li>Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14</li>
     </ul>
   </div>
 
@@ -130,8 +129,7 @@
     </div>
     <ul>
       <li>Led growth at B2B lead generation agency serving 5,000+ users: 224K leads generated, $51M in client revenue</li>
-      <li>Audited 200+ outbound campaigns across B2B SaaS verticals; built the org-wide audit framework for targeting, copy, and deliverability</li>
-      <li>Became Clay Top 1% user (187 consecutive days, 5M+ contacts enriched) building waterfall enrichment workflows with signal stacking and provider routing</li>
+      <li>Became Clay Top 1% user (187 consecutive days) building waterfall enrichment workflows with signal stacking and provider routing</li>
     </ul>
   </div>
 
@@ -167,7 +165,7 @@
     <span class="label">RevOps</span>
     <span class="value">Lead routing, CRM integrations, funnel reporting, dashboards, data quality</span>
     <span class="label">Data</span>
-    <span class="value">Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, data hygiene, catch-all filtering</span>
+    <span class="value">Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, catch-all filtering</span>
     <span class="label">Deliverability</span>
     <span class="value">Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation</span>
     <span class="label">Code</span>

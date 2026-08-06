@@ -19,9 +19,8 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 
 - Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000)
 - Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear and run a hands-off experimentation loop that launches and scores cold email A/B tests end to end
-- Designed 4-provider enrichment waterfall in Clay with automatic fallback logic, catch-all filtering, dual verification gates, and per-provider spend caps. Improved valid email rates from 34% to 68% across client engagements
-- Built AI-powered outbound workflows using Claude + Clay that generate personalized first lines from prospect signals (funding rounds, hiring surges, tech stack changes). Cut campaign launch from 4 hours to 15 minutes
-- Architected signal-based channel routing in n8n: prospects scored on LinkedIn activity, job tenure, and tech stack fit, then auto-routed to LinkedIn-first or email-first sequences with dedup and cooldown logic. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
+- Designed Clay enrichment waterfalls (4 providers, catch-all filtering, per-provider spend caps) and Claude-personalized first lines from prospect signals. Valid email rates went from 34% to 68%; campaign launch dropped from 4 hours to 15 minutes
+- Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
 - Integrate enrichment and intent data directly into client CRMs (HubSpot, Salesforce) via APIs and webhooks
 
 ### Co-Founder | Lumos
@@ -42,8 +41,8 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 **Jun 2019 - Jul 2022** | Los Angeles, CA
 
 - Led growth for 3 years at B2B lead generation agency serving 5,000+ users (224K leads generated, $51M in client revenue, 1,000+ five-star reviews)
-- Audited 200+ outbound campaigns across dozens of B2B SaaS verticals; built systematic campaign audit framework adopted org-wide for targeting, copy, and deliverability
-- Became Clay Top 1% user (187 consecutive days, 5M+ contacts enriched) building waterfall enrichment workflows with signal stacking and provider routing logic
+- Became Clay Top 1% user (187 consecutive days) building waterfall enrichment workflows with signal stacking and provider routing logic
+- (master render drops: campaign-audit-framework bullet — the 200+ audited claim lives in the summary; restore for JDs that stress auditing/QA)
 - Led development of automated messaging platform responsible for $50.4M+ in total B2B sales and a 386% MRR increase
 
 ### Product Marketing | Honey (acquired by PayPal for $4B)
@@ -75,7 +74,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 **Outbound Infrastructure**: Instantly, Smartlead, HeyReach, Sales Navigator, Outreach, Salesloft
 **AI & LLMs**: Claude, Claude Code, OpenAI, AI agents, agentic workflows, prompt engineering, personalization at scale
 **RevOps**: Lead routing, CRM integrations, funnel reporting, dashboards, data quality
-**Data**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, data hygiene, catch-all filtering
+**Data**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, catch-all filtering
 **Deliverability**: Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation
 **Code**: Python, JavaScript, SQL, REST APIs, web scraping, data pipelines
 
