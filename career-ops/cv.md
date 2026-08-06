@@ -62,7 +62,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 
 ---
 
-## Select Client Results (SECTION DROPPED from master render 2026-08-06 — results woven into role bullets per Erik: B2B SaaS -> Agentic, Activate OS -> Lumos, HR platform -> Cleverly. Bench cards below for tailored versions.)
+## Select Client Results (SECTION DROPPED from master render 2026-08-06, results woven into role bullets per Erik: B2B SaaS -> Agentic, Activate OS -> Lumos, HR platform -> Cleverly. Bench cards below for tailored versions.)
 
 - **Healthcare Marketplace**: Automated lead gen system saving 300+ hours/month on manual tasks.
 - **EdTech Company**: End-to-end lifecycle email automation responsible for $10M+ in revenue.
