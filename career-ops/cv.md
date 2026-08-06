@@ -8,7 +8,7 @@ Middletown, CT | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedin
 
 ## Professional Summary
 
-GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in closed revenue across 200+ B2B clients. Core stack: Clay, n8n, Claude AI agents, Salesforce, HubSpot, Instantly, Smartlead, Python, SQL.
+GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in closed revenue across 200+ B2B clients. Core stack: Clay, n8n, Claude (AI agents), Salesforce, HubSpot, Instantly, Smartlead, Python, SQL.
 
 ---
 
@@ -20,12 +20,12 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 - Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000)
 - Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear and run a hands-off experimentation loop that launches and scores cold email A/B tests end to end
 - Designed Clay enrichment waterfalls (4 providers, catch-all filtering, per-provider spend caps) and Claude-personalized first lines from prospect signals. Valid email rates went from 34% to 68%; campaign launch dropped from 4 hours to 15 minutes
-- Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
 - Rebuilt signal-based outbound for an 80-person B2B SaaS: reply rate from 0.8% to 4.7%, meetings from 2/month to 14
+- Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
 - Integrate enrichment and intent data directly into client CRMs (HubSpot, Salesforce) via APIs and webhooks
 
 ### Co-Founder | Lumos
-**Jun 2024 - Present** | Los Angeles, CA
+**Sep 2023 - Present** | Los Angeles, CA
 
 - Founded and scaled GTM agency to 200+ B2B clients across 47 industries, building automated LinkedIn outbound infrastructure from scratch
 - Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate, 4,500+ meetings booked
@@ -101,7 +101,7 @@ Make Intermediate, Make Basics, Make Foundation (Make); Product Analytics, AI fo
 ## Notes for CV Generation
 
 This file is the source of truth, rewritten 2026-08-06 from three reconciled sources:
-- Dates and titles: live LinkedIn scrape 2026-08-06 (Erik's decision: LinkedIn wins over older resume dates)
+- Dates and titles: live LinkedIn scrape 2026-08-06 (Erik's decision: LinkedIn wins over older resume dates). EXCEPTION (Erik 2026-08-06 chat): Lumos start set to Sep 2023, directly after Medely, closing the 10-month gap; LinkedIn still shows Jun 2024 and needs syncing
 - Metrics: Erik's own PM resume (Erik_Hernal_Resume.md, repo root); confirm-or-cut pass COMPLETED 2026-08-06 in chat. Erik-vouched: 200+ clients/47 industries, 34-68% valid email, 4hr-15min launch, $840-$14 CPM, 0.8-4.7% card, 22-meetings card. Changed: $26M "pipeline" reframed to "closed revenue" (matches the OS source's "revenue closed for clients"); Equipment SaaS card tightened to receipted Activate OS stats; all "built in X days" lines removed (Erik: not impressive); location corrected to Middletown, CT
 - Repo evidence: 70 client folders in CC-lumos/clients, operator AI OS in CC-agentic
 
