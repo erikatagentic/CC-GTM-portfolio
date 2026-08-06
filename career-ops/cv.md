@@ -8,7 +8,7 @@ Los Angeles, CA | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedi
 
 ## Professional Summary
 
-GTM engineer with 7 years building outbound systems that replace SDR headcount with automation. Clay Top 1% (5M+ contacts enriched), 200+ campaigns audited. Systems responsible for 4,500+ meetings booked and $26M+ in pipeline across 200+ B2B clients. Core stack: Clay, n8n, Claude, Instantly, Smartlead, HeyReach, HubSpot, Python, SQL.
+GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in pipeline across 200+ B2B clients. Core stack: Clay, n8n, Claude AI agents, Salesforce, HubSpot, Instantly, Smartlead, Python, SQL.
 
 ---
 
@@ -17,7 +17,8 @@ GTM engineer with 7 years building outbound systems that replace SDR headcount w
 ### Founder & GTM Engineer | Agentic
 **Sep 2024 - Present** | Remote
 
-- Build custom outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000, delivered in 3-10 days)
+- Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000, delivered in 3-10 days)
+- Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear and run a hands-off experimentation loop that launches and scores cold email A/B tests end to end
 - Designed 4-provider enrichment waterfall in Clay with automatic fallback logic, catch-all filtering, dual verification gates, and per-provider spend caps. Improved valid email rates from 34% to 68% across client engagements
 - Built AI-powered outbound workflows using Claude + Clay that generate personalized first lines from prospect signals (funding rounds, hiring surges, tech stack changes). Cut campaign launch from 4 hours to 15 minutes
 - Architected signal-based channel routing in n8n: prospects scored on LinkedIn activity, job tenure, and tech stack fit, then auto-routed to LinkedIn-first or email-first sequences with dedup and cooldown logic. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
@@ -28,7 +29,7 @@ GTM engineer with 7 years building outbound systems that replace SDR headcount w
 
 - Founded and scaled GTM agency to 200+ B2B clients across 47 industries, building automated LinkedIn outbound infrastructure from scratch
 - Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate, 4,500+ meetings booked
-- Built Claude Code-powered GTM operating system managing 43 active campaigns and 105K+ connections at a 28.1% reply rate, with automated lead scoring, copy generation, and campaign diagnostics
+- Built Claude Code-powered GTM operating system managing 43 active campaigns and 105K+ connections at a 28.1% reply rate, with automated lead scoring, copy generation, campaign diagnostics, and weekly performance reporting
 - Designed onboarding automation and campaign management workflows that scaled operations from $1M to $5M annual revenue without proportionally adding headcount
 
 ### Senior Product Manager | Medely
@@ -70,10 +71,11 @@ GTM engineer with 7 years building outbound systems that replace SDR headcount w
 ## Core Skills
 
 **GTM Stack**: Clay, HubSpot, Salesforce, Apollo, ZoomInfo, 6sense, Gong
-**Automation**: n8n, Zapier, Make, API integrations, webhooks, internal tooling
+**Automation**: n8n, Zapier, Make, workflow automation, API integrations, webhooks, internal tooling
 **Outbound Infrastructure**: Instantly, Smartlead, HeyReach, Sales Navigator, Outreach, Salesloft
-**AI & LLMs**: Claude, Claude Code, OpenAI, AI agent workflows, prompt engineering, personalization at scale
-**Data**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, catch-all filtering
+**AI & LLMs**: Claude, Claude Code, OpenAI, AI agents, agentic workflows, prompt engineering, personalization at scale
+**RevOps**: Lead routing, CRM integrations, funnel reporting, dashboards, data quality
+**Data**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, data hygiene, catch-all filtering
 **Deliverability**: Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation
 **Code**: Python, JavaScript, SQL, REST APIs, web scraping, data pipelines
 
@@ -107,3 +109,4 @@ Rules:
 - The cv-gen skill can reorder and emphasize sections but can't add experience that isn't here
 - Head of GTM at Outbound System (Aug 2024-Present, on LinkedIn) is deliberately omitted: white-label brand, Erik's call 2026-08-06
 - Update this file when experience changes
+- Keyword pass 2026-08-06: aligned to a 300-JD LinkedIn scrape (247 core GTM Engineer titles, Fantastic.jobs actor, 6mo window). Added: revenue operations/RevOps (76% of JDs), GTM systems, AI agents/agentic (51%), workflow automation, lead routing, dashboards/reporting (49%), data hygiene (34%), A/B experimentation (26%). Analysis: reports/jd-keyword-analysis-2026-08.md
