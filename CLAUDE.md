@@ -238,7 +238,7 @@ import { getCharacterStats, CURRENT_XP } from "@/lib/rpg";
 
 ## 8. User Preferences
 - **"Co-Founder"** not "Co-founder" (capitalize both words)
-- **Limit em dashes**. Prefer periods or commas.
+- **Zero em dashes** (Erik's global rule, 2026-08-26 audit; the canon at `~/.claude/skills/avoid-ai-writing/anti-ai-writing.md` governs all outward copy here, CVs and cover letters included). Use periods, commas, or parentheses.
 - **Concise copy**. Every word must earn its place.
 - **Plans before execution** for multi-step work
 - **Re-audit gate** -- before presenting plans or making code/config changes, re-read key files, verify assumptions, and list what you checked (file paths, field names, data confirmed). Confidence claims without specifics = gate failure. Full rule in `~/.claude/CLAUDE.md`.
