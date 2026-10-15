@@ -22,6 +22,8 @@ Format: `[hash] Description of change`
 
 `e3469a1` **shared.md's comp check matches the evaluate skill.**
 
+`0876d9c` **Two salary estimates that repeated Erik's removed range are out** (the Pearl and Tanium reports), and the eee5fea entry above now lists all four 9/1 cv.md edits.
+
 ---
 
 ## 2026-08-06
