@@ -10,7 +10,7 @@ Format: `[hash] Description of change`
 
 ### Resume and portfolio corrections
 
-`eee5fea` **Resume: two numbers moved to the right role.** 4,500+ meetings and the revenue climb are Cleverly numbers, and the climb peaked at $8M, not $5M. The 8/6 resume had filed both under Lumos. Also commits the 9/1 cv.md edits (Honey restored, a link to heyagentic.ai/forge, an AI-assisted development skills line) and adds a one-page render, career-ops/output/master-gtm-engineer-2026-10-15.html.
+`eee5fea` **Resume: two numbers moved to the right role.** 4,500+ meetings and the revenue climb are Cleverly numbers, and the climb peaked at $8M, not $5M. The 8/6 resume had filed both under Lumos. Also commits the 9/1 cv.md edits (Honey restored, a link to heyagentic.ai/forge, a summary line on Claude Code directing agent-written Python and SQL into production, and an AI-assisted development skills line) and adds a one-page render, career-ops/output/master-gtm-engineer-2026-10-15.html.
 
 `147c080` **Resume: the cold email loop bullet is past tense,** since the loop no longer runs on its own (approval mode since 10/1).
 
