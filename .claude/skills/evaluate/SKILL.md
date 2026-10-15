@@ -43,7 +43,7 @@ Where NNN is the next sequential report number (001, 002, etc.) and date is YYYY
 
 ### Step 6: Compensation Research
 
-Use WebSearch to find salary data for this role + company + location. Include 2-4 sources. Compare against Erik's target range from profile.yml.
+Use WebSearch to find salary data for this role + company + location. Include 2-4 sources. Compare against Erik's minimum in profile.yml. It's kept out of this public repo, so when it's unset, report the band and mark the comparison pending.
 
 ### Step 7: Interview Strategy
 

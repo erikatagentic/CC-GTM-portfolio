@@ -95,7 +95,7 @@ Added {N} rows to Airtable Job Pipeline with Status=Inbox.
 ## Rules
 
 - **Only "GTM Engineer" queries** -- no "Revenue Operations", "Solutions Engineer", "Sales Automation". Those variants create noise.
-- **US + remote/hybrid only** unless Erik is open to onsite (he's not, per profile.yml).
+- **US + remote only** (profile.yml: remote required, Eastern time). Skip hybrid and onsite roles.
 - **Skip below-min-comp jobs early** -- if a result has disclosed salary and the ceiling is below Erik's `target_min` (kept out of this public repo; when it's unset, keep the result and flag its salary), skip it at the source and don't even add to inbox.
 - **Max 25 results per source per run** to keep costs bounded.
 - **Airtable is the source of truth for dedup.** Pipeline.md is a local convenience file.

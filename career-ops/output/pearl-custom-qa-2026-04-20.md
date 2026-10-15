@@ -24,7 +24,7 @@ Default to speed for v1. Maintainability gets bolted on once the system has earn
 
 ## Salary expectations?
 
-$180-220K base + equity feels right for a Lead title at Pearl's stage. Flexible on mix.
+(range removed from this public copy on 2026-10-15) Flexible on the mix of base and equity.
 
 ## Why are you looking?
 
