@@ -18,7 +18,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 **Sep 2024 - Present** | Remote
 
 - Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope projects ($750-$4,000)
-- Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear and run a hands-off experimentation loop that launches and scores cold email A/B tests end to end
+- Operate an AI-agent fulfillment layer on Claude Code: agents work the delivery queue in Linear, and I built an experimentation loop that launched and scored cold email A/B tests end to end
 - Designed Clay enrichment waterfalls (4 providers, catch-all filtering, per-provider spend caps) and Claude-personalized first lines from prospect signals. Valid email rates went from 34% to 68%; campaign launch dropped from 4 hours to 15 minutes
 - Rebuilt signal-based outbound for an 80-person B2B SaaS: reply rate from 0.8% to 4.7%, meetings from 2/month to 14
 - Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14
