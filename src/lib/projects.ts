@@ -72,7 +72,7 @@ export const PROJECTS: ProjectData[] = [
     summary: "Multi-account LinkedIn automation with targeted connection campaigns, DM sequences, and integrated reply management at scale.",
     problem: "Clients were doing LinkedIn outreach by hand or with basic tools that got their accounts flagged. No targeting beyond job title filters. No tracking. No way to know what was working. One client was getting 3-10 inconsistent leads per month through networking and referrals alone.",
     solution: "Built multi-account LinkedIn infrastructure with connection targeting based on ICP signal scoring. Designed DM sequences that read like peer conversations, not pitches. Integrated with CRM for automatic lead routing and reply management. Set up A/B testing on connection messages and follow-up cadences.",
-    outcome: "30%+ average reply rate across 200+ clients. 35%+ connection acceptance rate. 4,500+ total meetings booked. 105K+ connections managed with 28.1% reply rate across all active campaigns. One client went from networking-only to 5 new clients in 2 months.",
+    outcome: "30%+ average reply rate across 200+ clients. 35%+ connection acceptance rate. 105K+ connections managed with 28.1% reply rate across all active campaigns. One client went from networking-only to 5 new clients in 2 months.",
     tools: ["HeyReach", "Sales Navigator", "PhantomBuster"],
     rarity: "sanctified",
     slug: "linkedin-outbound",

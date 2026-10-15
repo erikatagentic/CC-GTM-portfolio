@@ -1,5 +1,7 @@
 # Erik Hernal
 
+> Superseded by `career-ops/cv.md`, the source of truth since 2026-08-06. Two numbers below sit under the wrong role: 4,500+ meetings and the revenue climb are Cleverly numbers, and the climb peaked at $8M, not $5M (Erik, 2026-10-15).
+
 Los Angeles, CA | erik@heyagentic.ai | [linkedin.com/in/erikhernal](https://linkedin.com/in/erikhernal/) | [heyagentic.ai](https://heyagentic.ai)
 
 ---
