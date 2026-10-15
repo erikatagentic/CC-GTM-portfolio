@@ -6,6 +6,24 @@ Format: `[hash] Description of change`
 
 ---
 
+## 2026-10-15
+
+### Resume and portfolio corrections
+
+`eee5fea` **Resume: two numbers moved to the right role.** 4,500+ meetings and the revenue climb are Cleverly numbers, and the climb peaked at $8M, not $5M. The 8/6 resume had filed both under Lumos. Also commits the 9/1 cv.md edits (Honey restored, a link to heyagentic.ai/forge, an AI-assisted development skills line) and adds a one-page render, career-ops/output/master-gtm-engineer-2026-10-15.html.
+
+`147c080` **Resume: the cold email loop bullet is past tense,** since cold email has been paused since 8/23.
+
+`6e17a38` **Portfolio card IV no longer gives 4,500+ meetings to the LinkedIn system,** and Erik_Hernal_Resume.md now opens with a note that career-ops/cv.md supersedes it.
+
+`49085b9` **Timeline years match the resume** (Act II 2018-2019, Act III 2019-2023 with the Medely year after Cleverly). Personal compensation figures come out of the current career-ops files, and profile.yml moves to Middletown, CT, Eastern time, remote only.
+
+`b71a919` **Old application answers no longer name compensation ranges,** and the job-scan notes, the scan skill and the evaluate skill match the resume and profile.
+
+`e3469a1` **shared.md's comp check matches the evaluate skill.**
+
+---
+
 ## 2026-08-06
 
 ### Master GTM Engineer Resume
