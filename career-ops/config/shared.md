@@ -80,7 +80,7 @@ Table comparing each JD requirement against Erik's experience. Columns: Requirem
 Seniority assessment. Is this role a step up, lateral, or step down? How should Erik position himself? What's the framing strategy for this archetype?
 
 ### Block D: Compensation Research
-Use web search to find salary data for this role + company + location. Compare against Erik's target range. Flag if below minimum.
+Use web search to find salary data for this role + company + location. Compare against Erik's minimum in profile.yml. It's kept out of this public repo, so when it's unset, report the band and mark the comparison pending.
 
 ### Block E: CV Customization Plan
 Which sections of cv.md to emphasize, which keywords from the JD to weave in, what to de-emphasize. Specific, actionable.
