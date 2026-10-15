@@ -6,7 +6,7 @@ candidate:
   name: Erik Hernal
   email: erik@heyagentic.ai
   phone: "347-837-1085"
-  location: Los Angeles, CA
+  location: Middletown, CT
   linkedin: https://linkedin.com/in/erikhernal/
   github: "" # Add if relevant
   portfolio: https://gtm-codex.vercel.app
@@ -44,7 +44,7 @@ narrative:
     - "Full-stack GTM: cold email, LinkedIn, n8n, Clay, CRM design"
   proof_points:
     - metric: "200+ campaigns audited"
-      context: "Head of Growth @ Cleverly (2020-2023)"
+      context: "Head of Growth @ Cleverly (2019-2022)"
     - metric: "Clay Top 1% (5M+ contacts)"
       context: "Data enrichment across agency clients"
     - metric: "$4B acquisition (Honey/PayPal)"
@@ -54,14 +54,14 @@ narrative:
 
 # Salary expectations
 compensation:
-  target_min: 150000 # Hard minimum -- below this gets auto-skipped
+  target_min: null # Kept out of this public repo (Erik 2026-10-15). Ask Erik; don't filter on comp until he gives a number.
   currency: USD
   open_to_equity: true
-  notes: "No upper ceiling. More is always better. Min is the only hard gate."
+  notes: "No upper ceiling. The minimum is kept private."
 
 # Location preferences
 location:
-  timezone: America/Los_Angeles
-  remote: preferred # preferred, required, flexible, onsite
+  timezone: America/New_York
+  remote: required # preferred, required, flexible, onsite (Erik 2026-10-15: remote only, Eastern)
   relocation: false
   visa_required: false
