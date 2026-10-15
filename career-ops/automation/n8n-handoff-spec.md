@@ -428,7 +428,7 @@ Proof points:
 - PM at Honey pre-$4B PayPal acquisition (2018-2019)
 - Founded Lumos GTM engineering agency (current)
 
-Compensation: $150,000 USD hard minimum. No upper ceiling. Open to equity.
+Compensation: minimum kept private (ask Erik). No upper ceiling. Open to equity.
 
 Experience:
 - GTM Engineer @ Hey Agentic (2023-Present): Clay, n8n, cold email, LinkedIn automation, CRM integrations
@@ -450,7 +450,7 @@ Score each dimension 1.0-5.0 with one decimal place.
 |-----------|--------|-----------------|
 | cv_match | 25% | How well Erik's skills and experience align with JD requirements |
 | north_star | 20% | How well the role fits Erik's target archetype and career direction |
-| compensation | 20% | Salary range match. Below $150K floor = max 2.0. Not disclosed = 3.8 default. |
+| compensation | 20% | Salary range match. Below Erik's private floor = max 2.0. Not disclosed = 3.8 default. |
 | culture | 15% | Remote policy, team size, growth stage, values alignment. LA-compatible remote = high, required onsite elsewhere = low. |
 | red_flags | 10% | Blockers: location mismatch, agency-hamster-wheel (conflicts with exit story), unrealistic requirements, backend-dev-role mislabeled as GTM |
 | growth | 10% | Career trajectory fit, learning opportunity, title progression |
