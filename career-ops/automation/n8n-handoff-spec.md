@@ -403,8 +403,8 @@ You are evaluating a job opportunity for Erik Hernal using his career-ops scorin
 # Erik's Profile
 
 Name: Erik Hernal
-Location: Los Angeles, CA (America/Los_Angeles timezone)
-Remote preferred. No relocation.
+Location: Middletown, CT (America/New_York timezone)
+Remote only, Eastern time. No relocation.
 
 Target roles (primary first):
 1. GTM Engineer
@@ -423,20 +423,20 @@ Superpowers:
 - Full-stack GTM: cold email, LinkedIn, n8n, Clay, CRM design
 
 Proof points:
-- 200+ campaigns audited @ Cleverly (2020-2023)
+- 200+ campaigns audited @ Cleverly (2019-2022)
 - Clay Top 1% (5M+ contacts)
-- PM at Honey pre-$4B PayPal acquisition (2018-2019)
+- Product marketing at Honey pre-$4B PayPal acquisition (2018-2019)
 - Founded Lumos GTM engineering agency (current)
 
 Compensation: minimum kept private (ask Erik). No upper ceiling. Open to equity.
 
 Experience:
-- GTM Engineer @ Hey Agentic (2023-Present): Clay, n8n, cold email, LinkedIn automation, CRM integrations
-- Founder @ Lumos (2023-Present): GTM engineering agency
-- Head of Growth @ Cleverly (2020-2023): 200+ campaign audits, Clay mastery
-- PM @ Medely (2019-2020): Healthcare staffing platform
-- PM @ Honey (2018-2019): Pre-$4B PayPal acquisition
-- PM @ GrowthPhysics (2018): Early-career growth PM
+- GTM Engineer @ Hey Agentic (2024-Present): Clay, n8n, cold email, LinkedIn automation, CRM integrations
+- Co-Founder @ Lumos (2023-Present): GTM engineering agency
+- Senior PM @ Medely (2022-2023): Healthcare staffing platform
+- Head of Growth @ Cleverly (2019-2022): 200+ campaign audits, Clay mastery
+- Product Marketing @ Honey (2018-2019): Pre-$4B PayPal acquisition
+- PM @ GrowthPhysics (2018-2019): Early-career growth PM
 
 Core skills: Clay, n8n, Instantly, HeyReach, Sales Navigator, PhantomBuster, Airtable, Salesforce (working), HubSpot (working), cold email deliverability, LinkedIn automation, data enrichment waterfalls, Claude/Cursor AI-assisted dev, product management.
 
@@ -451,7 +451,7 @@ Score each dimension 1.0-5.0 with one decimal place.
 | cv_match | 25% | How well Erik's skills and experience align with JD requirements |
 | north_star | 20% | How well the role fits Erik's target archetype and career direction |
 | compensation | 20% | Salary range match. Below Erik's private floor = max 2.0. Not disclosed = 3.8 default. |
-| culture | 15% | Remote policy, team size, growth stage, values alignment. LA-compatible remote = high, required onsite elsewhere = low. |
+| culture | 15% | Remote policy, team size, growth stage, values alignment. Remote that works on Eastern time = high, required onsite = low. |
 | red_flags | 10% | Blockers: location mismatch, agency-hamster-wheel (conflicts with exit story), unrealistic requirements, backend-dev-role mislabeled as GTM |
 | growth | 10% | Career trajectory fit, learning opportunity, title progression |
 

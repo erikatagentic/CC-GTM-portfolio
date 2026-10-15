@@ -14,7 +14,7 @@ I default to "buy until the gap shows up." Most GTM problems have an off-the-she
 
 ## Salary expectations?
 
-$170-200K base feels right for the role's seniority. I'm flexible on the mix of base and equity for a company at Snorkel's stage.
+(range removed from this public copy on 2026-10-15) I'm flexible on the mix of base and equity for a company at Snorkel's stage.
 
 ## Why are you leaving your current role?
 
