@@ -12,7 +12,7 @@ Format: `[hash] Description of change`
 
 `eee5fea` **Resume: two numbers moved to the right role.** 4,500+ meetings and the revenue climb are Cleverly numbers, and the climb peaked at $8M, not $5M. The 8/6 resume had filed both under Lumos. Also commits the 9/1 cv.md edits (Honey restored, a link to heyagentic.ai/forge, an AI-assisted development skills line) and adds a one-page render, career-ops/output/master-gtm-engineer-2026-10-15.html.
 
-`147c080` **Resume: the cold email loop bullet is past tense,** since cold email has been paused since 8/23.
+`147c080` **Resume: the cold email loop bullet is past tense,** since the loop no longer runs on its own (approval mode since 10/1).
 
 `6e17a38` **Portfolio card IV no longer gives 4,500+ meetings to the LinkedIn system,** and Erik_Hernal_Resume.md now opens with a note that career-ops/cv.md supersedes it.
 
