@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Erik Hernal - Resume</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9.8pt;
+    line-height: 1.25;
+    color: #1a1a1a;
+  }
+  .header { margin-bottom: 10px; }
+  .header h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 1px;
+  }
+  .header .headline {
+    font-size: 10.5pt;
+    color: #444;
+    margin-bottom: 4px;
+  }
+  .header .contact { font-size: 8.5pt; color: #666; }
+  .header .contact a { color: #666; text-decoration: none; }
+  .header .contact span + span::before { content: " | "; }
+  .section { margin-bottom: 5px; }
+  .section-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    border-bottom: 1.5px solid #1a1a1a;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+  }
+  .summary { font-size: 9.8pt; color: #333; }
+  .role { margin-bottom: 4px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  .role-title { font-weight: 700; font-size: 10pt; }
+  .role-title .co { font-weight: 400; color: #444; }
+  .role-date { font-size: 8.5pt; color: #666; white-space: nowrap; }
+  .role ul { padding-left: 14px; }
+  .role li { font-size: 9.5pt; margin-bottom: 0; color: #333; }
+  .results li { font-size: 9.5pt; margin-bottom: 1px; color: #333; }
+  .results ul { padding-left: 14px; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: 1px 10px;
+    font-size: 9.3pt;
+  }
+  .skills-grid .label { font-weight: 600; }
+  .skills-grid .value { color: #333; }
+  .edu-entry { font-size: 9.5pt; }
+  .edu-entry .school { font-weight: 600; }
+  .edu-entry .degree { color: #444; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Erik Hernal</h1>
+  <div class="headline">GTM Engineer</div>
+  <div class="contact">
+    <span>Middletown, CT</span>
+    <span>erik@heyagentic.ai</span>
+    <span>347-837-1085</span>
+    <span><a href="https://linkedin.com/in/erikhernal/">linkedin.com/in/erikhernal</a></span>
+    <span><a href="https://heyagentic.ai/forge">heyagentic.ai/forge</a></span>
+    <span><a href="https://gtm-codex.vercel.app">gtm-codex.vercel.app</a></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in closed revenue across 200+ B2B clients. Builds with tools and agents rather than by hand: Clay, n8n, Claude Code directing agent-written Python and SQL, plus Salesforce, HubSpot, Instantly and Smartlead.</p>
+</div>
+
+<div class="section">
+  <div class="section-title">Experience</div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Founder &amp; GTM Engineer <span class="co">| Agentic</span></span>
+      <span class="role-date">Sep 2024 - Present</span>
+    </div>
+    <ul>
+      <li>Build custom GTM systems and outbound infrastructure for mid-market and enterprise revenue teams as fixed-scope builds</li>
+      <li>Operate an AI-agent fulfillment layer on Claude Code: agents work the Linear delivery queue and run a hands-off loop that launches and scores cold email A/B tests</li>
+      <li>Designed Clay enrichment waterfalls (4 providers, catch-all filtering, per-provider spend caps) and Claude-personalized first lines from prospect signals. Valid email rates went from 34% to 68%; campaign launch dropped from 4 hours to 15 minutes</li>
+      <li>Rebuilt signal-based outbound for an 80-person B2B SaaS: reply rate from 0.8% to 4.7%, meetings from 2/month to 14</li>
+      <li>Architected signal-based lead routing in n8n: prospects scored on LinkedIn activity, job tenure, and stack fit, auto-routed to LinkedIn-first or email-first sequences. One client went from 5 meetings/month to 14, cost per meeting from $840 to $14</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Co-Founder <span class="co">| Lumos</span></span>
+      <span class="role-date">Sep 2023 - Present</span>
+    </div>
+    <ul>
+      <li>Founded and scaled GTM agency to 200+ B2B clients across 47 industries, building automated LinkedIn outbound infrastructure from scratch</li>
+      <li>Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate</li>
+      <li>Built Claude Code-powered GTM operating system managing 43 active campaigns and 105K+ connections at a 28.1% reply rate, with automated lead scoring, copy generation, campaign diagnostics, and weekly performance reporting</li>
+      <li>Ran multi-profile LinkedIn + email for a construction equipment SaaS: 32.6% acceptance on 3,505 connections, 36.4% reply rate</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Senior Product Manager <span class="co">| Medely</span></span>
+      <span class="role-date">Aug 2022 - Aug 2023</span>
+    </div>
+    <ul>
+      <li>Automated lead messaging for a healthcare shift marketplace, cutting time-per-lead 13%</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Head of Growth <span class="co">| Cleverly</span></span>
+      <span class="role-date">Jun 2019 - Jul 2022</span>
+    </div>
+    <ul>
+      <li>Led growth at B2B lead generation agency serving 5,000+ users: 224K leads, 4,500+ meetings, $51M in client revenue</li>
+      <li>Led development of automated messaging platform responsible for $50.4M+ in total B2B sales and a 386% MRR increase</li>
+      <li>Designed onboarding and campaign management automation that scaled operations from $1M to $8M annual revenue without proportionally adding headcount</li>
+      <li>Audited 200+ outbound campaigns across B2B SaaS verticals; built the audit framework for targeting, copy, and deliverability</li>
+      <li>Became Clay Top 1% user (187 consecutive days) building waterfall enrichment workflows with signal stacking and provider routing</li>
+      <li>Scaled outbound for a global HR platform to 22 sales meetings in its first week</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-header">
+      <span class="role-title">Product Marketing <span class="co">| Honey (acquired by PayPal for $4B)</span></span>
+      <span class="role-date">Jun 2018 - May 2019</span>
+    </div>
+    <ul>
+      <li>Product marketing for the browser extension used by millions, pre-acquisition ($4B PayPal deal, 2020)</li>
+      <li>Positioning, messaging and segmentation work that now decides what the outbound systems I build actually say</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title">Skills</div>
+  <div class="skills-grid">
+    <span class="label">GTM Stack</span>
+    <span class="value">Clay, HubSpot, Salesforce, Apollo, ZoomInfo, 6sense, Gong</span>
+    <span class="label">Automation</span>
+    <span class="value">n8n, Zapier, Make, workflow automation, API integrations, webhooks, internal tooling</span>
+    <span class="label">Outbound Infra</span>
+    <span class="value">Instantly, Smartlead, HeyReach, Sales Navigator, Outreach, Salesloft</span>
+    <span class="label">AI &amp; LLMs</span>
+    <span class="value">Claude, Claude Code, OpenAI, AI agents, agentic workflows, prompt engineering, personalization at scale</span>
+    <span class="label">RevOps</span>
+    <span class="value">Lead routing, CRM integrations, funnel reporting, dashboards, data quality</span>
+    <span class="label">Data</span>
+    <span class="value">Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, catch-all filtering</span>
+    <span class="label">Deliverability</span>
+    <span class="value">Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation</span>
+    <span class="label">AI-assisted dev</span>
+    <span class="value">Claude Code, Cursor. Specs and reviews agent-written Python, JavaScript and SQL running in production</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-entry">
+    <span class="school">Syracuse University</span> &nbsp;
+    <span class="degree">B.S. Health and Exercise Science, 2018. Dean's List, 7 semesters.</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -2,13 +2,13 @@
 
 **GTM Engineer**
 
-Middletown, CT | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedin.com/in/erikhernal/) | [Portfolio](https://gtm-codex.vercel.app)
+Middletown, CT | erik@heyagentic.ai | 347-837-1085 | [LinkedIn](https://linkedin.com/in/erikhernal/) | [Live build](https://heyagentic.ai/forge) | [Portfolio](https://gtm-codex.vercel.app)
 
 ---
 
 ## Professional Summary
 
-GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in closed revenue across 200+ B2B clients. Core stack: Clay, n8n, Claude (AI agents), Salesforce, HubSpot, Instantly, Smartlead, Python, SQL.
+GTM engineer with 7 years building GTM systems and revenue operations automation that replace SDR headcount. Clay Top 1% (5M+ contacts enriched), 200+ outbound campaigns audited. Systems I've built are responsible for 4,500+ meetings booked and $26M+ in closed revenue across 200+ B2B clients. Builds with tools and agents rather than by hand: Clay, n8n, Claude Code directing agent-written Python and SQL into production, plus Salesforce, HubSpot, Instantly and Smartlead.
 
 ---
 
@@ -28,9 +28,8 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 **Sep 2023 - Present** | Los Angeles, CA
 
 - Founded and scaled GTM agency to 200+ B2B clients across 47 industries, building automated LinkedIn outbound infrastructure from scratch
-- Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate, 4,500+ meetings booked
+- Designed multi-account LinkedIn automation with connection targeting, DM sequences, and CRM-integrated reply management: 35%+ acceptance rate, 30%+ reply rate
 - Built Claude Code-powered GTM operating system managing 43 active campaigns and 105K+ connections at a 28.1% reply rate, with automated lead scoring, copy generation, campaign diagnostics, and weekly performance reporting
-- Designed onboarding automation and campaign management workflows that scaled operations from $1M to $5M annual revenue without proportionally adding headcount
 - Ran multi-profile LinkedIn + email for a construction equipment SaaS (Activate OS): 32.6% acceptance on 3,505 connections, 36.4% reply rate
 
 ### Senior Product Manager | Medely
@@ -42,8 +41,9 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 ### Head of Growth | Cleverly
 **Jun 2019 - Jul 2022** | Los Angeles, CA
 
-- Led growth for 3 years at B2B lead generation agency serving 5,000+ users (224K leads generated, $51M in client revenue, 1,000+ five-star reviews)
+- Led growth for 3 years at B2B lead generation agency serving 5,000+ users (224K leads generated, 4,500+ meetings booked, $51M in client revenue, 1,000+ five-star reviews)
 - Led development of automated messaging platform responsible for $50.4M+ in total B2B sales and a 386% MRR increase
+- Designed onboarding automation and campaign management workflows that scaled operations from $1M to $8M annual revenue without proportionally adding headcount
 - Audited 200+ outbound campaigns across B2B SaaS verticals; built the org-wide audit framework for targeting, copy, and deliverability
 - Became Clay Top 1% user (187 consecutive days) building waterfall enrichment workflows with signal stacking and provider routing logic
 - Scaled outbound for a global HR platform to 22 sales meetings in its first week (placed at Cleverly per Erik, 2026-08-06 chat)
@@ -51,9 +51,13 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 ### Product Marketing | Honey (acquired by PayPal for $4B)
 **Jun 2018 - May 2019** | Los Angeles, CA
 
-(DROPPED from master render, Erik 2026-08-06. Kept here as real experience for tailored versions.)
+(RESTORED to master render 2026-09-01. It was dropped 8/6 as old and off-stack. The P10
+positioning work reversed that: product marketing is the half of the wedge that separates
+Erik from every other Clay-and-n8n operator, and 3 of the 7 postings in his column ask for
+copywriting or segmentation next to the tool skills. Dropping it removes the proof.)
 
 - Product marketing for the browser extension used by millions, pre-acquisition ($4B PayPal deal, 2020)
+- Positioning, messaging and segmentation work that now decides what the outbound systems I build actually say
 
 ### Product Manager | GrowthPhysics
 **Apr 2018 - Aug 2019** | Remote
@@ -78,7 +82,7 @@ GTM engineer with 7 years building GTM systems and revenue operations automation
 **RevOps**: Lead routing, CRM integrations, funnel reporting, dashboards, data quality
 **Data**: Waterfall enrichment, signal stacking, lead scoring, ICP targeting, deduplication, catch-all filtering
 **Deliverability**: Domain infrastructure, SPF/DKIM/DMARC, inbox warming, send scheduling, sender rotation
-**Code**: Python, JavaScript, SQL, REST APIs, web scraping, data pipelines
+**AI-assisted development**: Claude Code, Cursor. Specs, directs and reviews agent-written Python, JavaScript and SQL running in production: enrichment waterfalls, data pipelines, scrapers, reply pollers, campaign reporting. REST APIs, webhooks
 
 ---
 
@@ -104,6 +108,7 @@ This file is the source of truth, rewritten 2026-08-06 from three reconciled sou
 - Dates and titles: live LinkedIn scrape 2026-08-06 (Erik's decision: LinkedIn wins over older resume dates). EXCEPTION (Erik 2026-08-06 chat): Lumos start set to Sep 2023, directly after Medely, closing the 10-month gap; LinkedIn still shows Jun 2024 and needs syncing
 - Metrics: Erik's own PM resume (Erik_Hernal_Resume.md, repo root); confirm-or-cut pass COMPLETED 2026-08-06 in chat. Erik-vouched: 200+ clients/47 industries, 34-68% valid email, 4hr-15min launch, $840-$14 CPM, 0.8-4.7% card, 22-meetings card. Changed: $26M "pipeline" reframed to "closed revenue" (matches the OS source's "revenue closed for clients"); Equipment SaaS card tightened to receipted Activate OS stats; all "built in X days" lines removed (Erik: not impressive); location corrected to Middletown, CT
 - Repo evidence: 70 client folders in CC-lumos/clients, operator AI OS in CC-agentic
+- Attribution fix 2026-10-15 (Erik chat): 4,500+ meetings and the revenue climb are Cleverly numbers, and the climb peaked at $8M, not $5M. The 8/6 render filed both under Lumos
 
 Rules:
 - Every claim here must be real and verifiable; metrics are Erik's own stated numbers
